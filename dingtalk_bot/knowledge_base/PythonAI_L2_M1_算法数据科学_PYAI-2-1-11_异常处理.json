@@ -1,0 +1,31 @@
+{
+  "title": "[PYAI-2-1-11] 异常处理",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M1_算法数据科学\\PYAI-2-1-11_异常处理.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-11 |\n| **课程名称** | 异常处理 |\n| **认知负荷** | 中-高 |\n| **核心技能** | try...except、程序健壮性、常见异常类型 |\n| **项目内容** | 健壮的程序 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"程序运行时可能出错，比如除以0、文件不存在。如何让程序不崩溃？用**异常处理**！\"\n>\n> \"**try...except基础**：\n> ```python\n> try:\n>     # 可能出错的代码\n>     result = 10 / 0\n> except ZeroDivisionError:\n>     # 出错时执行\n>     print('不能除以0！')\n> ```\n>\n> **常见异常类型**：\n> - `ZeroDivisionError`：除以0\n> - `FileNotFoundError`：文件不存在\n> - `ValueError`：值错误（如int('abc')）\n> - `IndexError`：索引越界\n> - `KeyError`：字典键不存在\n>\n> **捕获多种异常**：\n> ```python\n> try:\n>     num = int(input('输入数字：'))\n>     result = 100 / num\n> except ValueError:\n>     print('请输入有效数字！')\n> except ZeroDivisionError:\n>     print('不能除以0！')\n> except Exception as e:\n>     print(f'未知错误：{e}')\n> ```\n>\n> **finally子句**：无论是否出错都执行\n> ```python\n> try:\n>     f = open('data.txt')\n>     data = f.read()\n> except FileNotFoundError:\n>     print('文件不存在')\n> finally:\n>     f.close()  # 无论如何都关闭文件\n> ```\"\n\n**步骤2：代码实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"让你的程序更健壮：\n> 1. 写一个安全的除法函数\n> 2. 写一个安全的文件读取函数\n> 3. 写一个安全的用户输入函数（只接受数字）\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 捕获所有异常 | 警告风险 | `except:`会隐藏真正的bug |\n| 想主动抛异常 | 介绍raise | `raise ValueError('错误信息')` |\n| 想自定义异常 | 展示class | 高级用法，继承Exception类 |\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\ndef safe_input(prompt, input_type=int):\n    \"\"\"安全的用户输入函数\"\"\"\n    while True:\n        try:\n            value = input_type(input(prompt))\n            return value\n        except ValueError:\n            print(f'请输入有效的{input_type.__name__}类型！')\n\ndef safe_divide(a, b):\n    \"\"\"安全的除法函数\"\"\"\n    try:\n        return a / b\n    except ZeroDivisionError:\n        return None\n```\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 空的except——会隐藏所有错误，难以调试\n- 捕获Exception太宽泛——应该捕获具体异常\n- finally中有return——会覆盖try/except中的return\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- try...except：捕获并处理异常\n- 常见异常：ZeroDivisionError, ValueError, FileNotFoundError等\n- finally：无论是否出错都执行的清理代码\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-11-001]\n\n---\n\n[上一课](PYAI-2-1-10_文件读写.md) | [下一课](PYAI-2-1-12_阶段复习.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-1-11] 异常处理\n\n> **模块**：L2-M1 算法数据科学\n> **认知负荷**：中-高\n> **核心技能**：try...except、程序健壮性、常见异常类型\n> **UID**：PYAI-21-11-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-11 |\n| **课程名称** | 异常处理 |\n| **认知负荷** | 中-高 |\n| **核心技能** | try...except、程序健壮性、常见异常类型 |\n| **项目内容** | 健壮的程序 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"程序运行时可能出错，比如除以0、文件不存在。如何让程序不崩溃？用**异常处理**！\"\n>\n> \"**try...except基础**：\n> ```python\n> try:\n>     # 可能出错的代码\n>     result = 10 / 0\n> except ZeroDivisionError:\n>     # 出错时执行\n>     print('不能除以0！')\n> ```\n>\n> **常见异常类型**：\n> - `ZeroDivisionError`：除以0\n> - `FileNotFoundError`：文件不存在\n> - `ValueError`：值错误（如int('abc')）\n> - `IndexError`：索引越界\n> - `KeyError`：字典键不存在\n>\n> **捕获多种异常**：\n> ```python\n> try:\n>     num = int(input('输入数字：'))\n>     result = 100 / num\n> except ValueError:\n>     print('请输入有效数字！')\n> except ZeroDivisionError:\n>     print('不能除以0！')\n> except Exception as e:\n>     print(f'未知错误：{e}')\n> ```\n>\n> **finally子句**：无论是否出错都执行\n> ```python\n> try:\n>     f = open('data.txt')\n>     data = f.read()\n> except FileNotFoundError:\n>     print('文件不存在')\n> finally:\n>     f.close()  # 无论如何都关闭文件\n> ```\"\n\n**步骤2：代码实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"让你的程序更健壮：\n> 1. 写一个安全的除法函数\n> 2. 写一个安全的文件读取函数\n> 3. 写一个安全的用户输入函数（只接受数字）\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 捕获所有异常 | 警告风险 | `except:`会隐藏真正的bug |\n| 想主动抛异常 | 介绍raise | `raise ValueError('错误信息')` |\n| 想自定义异常 | 展示class | 高级用法，继承Exception类 |\n\n---\n\n## 核心代码模式\n\n```python\ndef safe_input(prompt, input_type=int):\n    \"\"\"安全的用户输入函数\"\"\"\n    while True:\n        try:\n            value = input_type(input(prompt))\n            return value\n        except ValueError:\n            print(f'请输入有效的{input_type.__name__}类型！')\n\ndef safe_divide(a, b):\n    \"\"\"安全的除法函数\"\"\"\n    try:\n        return a / b\n    except ZeroDivisionError:\n        return None\n```\n\n---\n\n## 禁忌提醒\n\n- 空的except——会隐藏所有错误，难以调试\n- 捕获Exception太宽泛——应该捕获具体异常\n- finally中有return——会覆盖try/except中的return\n\n---\n\n## 核心知识点\n\n- try...except：捕获并处理异常\n- 常见异常：ZeroDivisionError, ValueError, FileNotFoundError等\n- finally：无论是否出错都执行的清理代码\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-11-001]\n\n---\n\n[上一课](PYAI-2-1-10_文件读写.md) | [下一课](PYAI-2-1-12_阶段复习.md) | [返回模块概览](_模块概览.md)\n"
+}

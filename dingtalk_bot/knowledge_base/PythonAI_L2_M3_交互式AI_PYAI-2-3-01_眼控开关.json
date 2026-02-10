@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-2-3-01] 眼控开关",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M3_交互式AI\\PYAI-2-3-01_眼控开关.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI 2-3-1/2 |\n| **课程名称** | 眼控开关 |\n| **认知负荷** | 高 |\n| **核心技能** | MediaPipe FaceMesh、enumerate()、abs()/int()、阈值判定、状态机逻辑、cv2.putText |\n| **项目内容** | 眨眼检测基础、智能灯控 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们来做一个神奇的功能——**眨眼开灯**！用眼睛控制开关，是不是很酷？\"\n>\n> \"原理是用**FaceMesh**检测面部468个关键点，计算上下眼睑的距离：\n> ```python\n> import mediapipe as mp\n>\n> face_mesh = mp.solutions.face_mesh.FaceMesh()\n> results = face_mesh.process(frame)\n>\n> # 获取眼睛关键点\n> upper_lid = results.multi_face_landmarks[0].landmark[159]\n> lower_lid = results.multi_face_landmarks[0].landmark[145]\n>\n> # 计算眼睛开合度\n> eye_distance = abs(upper_lid.y - lower_lid.y)\n> ```\n>\n> 当距离小于阈值（比如0.01），判定为闭眼！\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 阈值不准 | 实测调整 | 打印eye_distance观察正常值 |\n| 想检测嘴巴 | 换关键点 | 用嘴唇的关键点检测张嘴 |\n| 检测不稳定 | 添加滤波 | 连续N帧闭眼才判定为闭眼 |\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- **FaceMesh**：面部网格模型，468个关键点\n- **眨眼检测**：计算上下眼睑关键点的垂直距离\n- **阈值判定**：距离差 < 阈值 → 判定为闭眼\n\n---"
+    },
+    {
+      "title": "导航",
+      "content": "| 上一课 | 返回模块 | 下一课 |\n|--------|----------|--------|\n| - | [M3 交互式AI](_模块概览.md) | [PYAI-2-3-03 眼控开关进阶](PYAI-2-3-03_眼控开关进阶.md) |"
+    }
+  ],
+  "full_content": "# [PYAI-2-3-01] 眼控开关\n\n> **模块**：L2-M3 交互式AI\n> **认知负荷**：高\n> **核心技能**：FaceMesh、眨眼检测、阈值判定\n> **UID**：PYAI-23-01-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI 2-3-1/2 |\n| **课程名称** | 眼控开关 |\n| **认知负荷** | 高 |\n| **核心技能** | MediaPipe FaceMesh、enumerate()、abs()/int()、阈值判定、状态机逻辑、cv2.putText |\n| **项目内容** | 眨眼检测基础、智能灯控 |\n\n---\n\n## 详细教学流程\n\n### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们来做一个神奇的功能——**眨眼开灯**！用眼睛控制开关，是不是很酷？\"\n>\n> \"原理是用**FaceMesh**检测面部468个关键点，计算上下眼睑的距离：\n> ```python\n> import mediapipe as mp\n>\n> face_mesh = mp.solutions.face_mesh.FaceMesh()\n> results = face_mesh.process(frame)\n>\n> # 获取眼睛关键点\n> upper_lid = results.multi_face_landmarks[0].landmark[159]\n> lower_lid = results.multi_face_landmarks[0].landmark[145]\n>\n> # 计算眼睛开合度\n> eye_distance = abs(upper_lid.y - lower_lid.y)\n> ```\n>\n> 当距离小于阈值（比如0.01），判定为闭眼！\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 阈值不准 | 实测调整 | 打印eye_distance观察正常值 |\n| 想检测嘴巴 | 换关键点 | 用嘴唇的关键点检测张嘴 |\n| 检测不稳定 | 添加滤波 | 连续N帧闭眼才判定为闭眼 |\n\n---\n\n## 核心知识点\n\n- **FaceMesh**：面部网格模型，468个关键点\n- **眨眼检测**：计算上下眼睑关键点的垂直距离\n- **阈值判定**：距离差 < 阈值 → 判定为闭眼\n\n---\n\n## 导航\n\n| 上一课 | 返回模块 | 下一课 |\n|--------|----------|--------|\n| - | [M3 交互式AI](_模块概览.md) | [PYAI-2-3-03 眼控开关进阶](PYAI-2-3-03_眼控开关进阶.md) |\n"
+}

@@ -1,0 +1,31 @@
+{
+  "title": "[PYAI-2-3-10] 机械手游戏",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M3_交互式AI\\PYAI-2-3-10_机械手游戏.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI 2-3-10/11 |\n| **课程名称** | 机械手游戏（猜拳） |\n| **认知负荷** | 中-高（第10课）/ 高（第11课） |\n| **核心技能** | random库、石头剪刀布判定、random.choices()权重随机、概率算法 |\n| **项目内容** | 猜拳机器人、无敌猜拳王 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天做一个猜拳机器人！先学习基础版：\n>\n> **识别玩家手势**：\n> - 石头：所有手指弯曲\n> - 剪刀：食指+中指伸直\n> - 布：所有手指伸直\n>\n> **电脑出拳**：\n> ```python\n> import random\n> computer = random.choice(['rock', 'scissors', 'paper'])\n> ```\n>\n> **进阶版：无敌猜拳王**\n> 记录玩家出拳习惯，用权重随机针对性出拳：\n> ```python\n> # 如果玩家喜欢出石头，电脑就多出布\n> weights = [0.2, 0.3, 0.5]  # 石头、剪刀、布的权重\n> computer = random.choices(['rock', 'scissors', 'paper'], weights)[0]\n> ```\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 不理解权重 | 用概率类比 | \"就像抽奖，奖品越多越容易抽到\" |\n| 想让AI更强 | 增加策略 | 记录最近3次出拳，预测下一次 |\n| 想做GUI | 加入pygame | 用pygame做游戏界面 |\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\n# 猜拳机器人完整框架\nimport random\nimport mediapipe as mp\n\nclass RockPaperScissors:\n    def __init__(self):\n        self.hands = mp.solutions.hands.Hands()\n        self.player_history = {'rock': 0, 'scissors': 0, 'paper': 0}\n        self.wins = {'rock': 'scissors', 'scissors': 'paper', 'paper': 'rock'}\n\n    def detect_gesture(self, fingers_up):\n        \"\"\"识别玩家手势\"\"\"\n        if fingers_up == [0, 0, 0, 0, 0]:\n            return 'rock'\n        elif fingers_up == [0, 1, 1, 0, 0]:\n            return 'scissors'\n        elif fingers_up == [1, 1, 1, 1, 1]:\n            return 'paper'\n        return None\n\n    def computer_choice_basic(self):\n        \"\"\"基础版：随机出拳\"\"\"\n        return random.choice(['rock', 'scissors', 'paper'])\n\n    def computer_choice_smart(self):\n        \"\"\"进阶版：根据玩家习惯出拳\"\"\"\n        total = sum(self.player_history.values())\n        if total == 0:\n            return self.computer_choice_basic()\n\n        # 计算玩家最常出的手势\n        most_common = max(self.player_history, key=self.player_history.get)\n        # 出能赢它的手势\n        counter = {'rock': 'paper', 'scissors': 'rock', 'paper': 'scissors'}\n        return counter[most_common]\n\n    def judge(self, player, computer):\n        \"\"\"判定胜负\"\"\"\n        if player == computer:\n            return 'draw'\n        elif self.wins[player] == computer:\n            return 'player'\n        else:\n            return 'computer'\n\n    def update_history(self, player_gesture):\n        \"\"\"更新玩家出拳历史\"\"\"\n        if player_gesture:\n            self.player_history[player_gesture] += 1\n```\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- **random.choice()**：随机选择\n- **random.choices()**：权重随机\n- **概率算法**：记录玩家出拳习惯，针对性出拳\n\n---"
+    },
+    {
+      "title": "导航",
+      "content": "| 上一课 | 返回模块 | 下一课 |\n|--------|----------|--------|\n| [PYAI-2-3-09 手势绘画板](PYAI-2-3-09_手势绘画板.md) | [M3 交互式AI](_模块概览.md) | - |"
+    }
+  ],
+  "full_content": "# [PYAI-2-3-10] 机械手游戏\n\n> **模块**：L2-M3 交互式AI\n> **认知负荷**：中-高/高\n> **核心技能**：random库、概率算法\n> **UID**：PYAI-23-10-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI 2-3-10/11 |\n| **课程名称** | 机械手游戏（猜拳） |\n| **认知负荷** | 中-高（第10课）/ 高（第11课） |\n| **核心技能** | random库、石头剪刀布判定、random.choices()权重随机、概率算法 |\n| **项目内容** | 猜拳机器人、无敌猜拳王 |\n\n---\n\n## 详细教学流程\n\n### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天做一个猜拳机器人！先学习基础版：\n>\n> **识别玩家手势**：\n> - 石头：所有手指弯曲\n> - 剪刀：食指+中指伸直\n> - 布：所有手指伸直\n>\n> **电脑出拳**：\n> ```python\n> import random\n> computer = random.choice(['rock', 'scissors', 'paper'])\n> ```\n>\n> **进阶版：无敌猜拳王**\n> 记录玩家出拳习惯，用权重随机针对性出拳：\n> ```python\n> # 如果玩家喜欢出石头，电脑就多出布\n> weights = [0.2, 0.3, 0.5]  # 石头、剪刀、布的权重\n> computer = random.choices(['rock', 'scissors', 'paper'], weights)[0]\n> ```\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 不理解权重 | 用概率类比 | \"就像抽奖，奖品越多越容易抽到\" |\n| 想让AI更强 | 增加策略 | 记录最近3次出拳，预测下一次 |\n| 想做GUI | 加入pygame | 用pygame做游戏界面 |\n\n---\n\n## 核心代码模式\n\n```python\n# 猜拳机器人完整框架\nimport random\nimport mediapipe as mp\n\nclass RockPaperScissors:\n    def __init__(self):\n        self.hands = mp.solutions.hands.Hands()\n        self.player_history = {'rock': 0, 'scissors': 0, 'paper': 0}\n        self.wins = {'rock': 'scissors', 'scissors': 'paper', 'paper': 'rock'}\n\n    def detect_gesture(self, fingers_up):\n        \"\"\"识别玩家手势\"\"\"\n        if fingers_up == [0, 0, 0, 0, 0]:\n            return 'rock'\n        elif fingers_up == [0, 1, 1, 0, 0]:\n            return 'scissors'\n        elif fingers_up == [1, 1, 1, 1, 1]:\n            return 'paper'\n        return None\n\n    def computer_choice_basic(self):\n        \"\"\"基础版：随机出拳\"\"\"\n        return random.choice(['rock', 'scissors', 'paper'])\n\n    def computer_choice_smart(self):\n        \"\"\"进阶版：根据玩家习惯出拳\"\"\"\n        total = sum(self.player_history.values())\n        if total == 0:\n            return self.computer_choice_basic()\n\n        # 计算玩家最常出的手势\n        most_common = max(self.player_history, key=self.player_history.get)\n        # 出能赢它的手势\n        counter = {'rock': 'paper', 'scissors': 'rock', 'paper': 'scissors'}\n        return counter[most_common]\n\n    def judge(self, player, computer):\n        \"\"\"判定胜负\"\"\"\n        if player == computer:\n            return 'draw'\n        elif self.wins[player] == computer:\n            return 'player'\n        else:\n            return 'computer'\n\n    def update_history(self, player_gesture):\n        \"\"\"更新玩家出拳历史\"\"\"\n        if player_gesture:\n            self.player_history[player_gesture] += 1\n```\n\n---\n\n## 核心知识点\n\n- **random.choice()**：随机选择\n- **random.choices()**：权重随机\n- **概率算法**：记录玩家出拳习惯，针对性出拳\n\n---\n\n## 导航\n\n| 上一课 | 返回模块 | 下一课 |\n|--------|----------|--------|\n| [PYAI-2-3-09 手势绘画板](PYAI-2-3-09_手势绘画板.md) | [M3 交互式AI](_模块概览.md) | - |\n"
+}

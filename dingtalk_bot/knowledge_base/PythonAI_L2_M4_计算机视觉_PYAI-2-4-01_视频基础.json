@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-2-4-01] 视频基础",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M4_计算机视觉\\PYAI-2-4-01_视频基础.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI-2-4-01 |\n| **课程名称** | 视频基础 - 视频播放器 |\n| **认知负荷** | 中 |\n| **核心技能** | cv2.VideoCapture、帧率控制、循环播放 |\n| **项目内容** | 视频播放器 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们来揭开视频的秘密！大家知道视频是什么吗？其实视频就是**很多张图片快速播放**！\n>\n> 就像翻书动画一样，每秒播放24张以上的图片，人眼就会觉得是连续的动作。这个'每秒多少张'就叫做**帧率(FPS)**。\n>\n> ```python\n> import cv2\n>\n> # 打开视频文件\n> cap = cv2.VideoCapture('video.mp4')\n>\n> # 获取视频信息\n> fps = cap.get(cv2.CAP_PROP_FPS)  # 帧率\n> width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)  # 宽度\n> height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)  # 高度\n> print(f'帧率: {fps}, 尺寸: {width}x{height}')\n> ```\"\n\n**变体示例**\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 不理解帧率 | 用翻书动画演示 | 准备一本翻页动画书 |\n| 想用摄像头 | 改用设备编号 | `cv2.VideoCapture(0)` 打开默认摄像头 |\n| 视频打不开 | 检查路径 | 确认文件路径正确，使用绝对路径 |\n\n---\n\n### 步骤2：代码实��（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"现在我们来写一个视频播放器！关键是用**while循环**不断读取每一帧：\n>\n> ```python\n> while True:\n>     ret, frame = cap.read()  # 读取一帧\n>\n>     if not ret:  # 视频结束\n>         cap.set(cv2.CAP_PROP_POS_FRAMES, 0)  # 回到开头，循环播放\n>         continue\n>\n>     cv2.imshow('Video Player', frame)\n>\n>     # 按Q键退出\n>     if cv2.waitKey(30) & 0xFF == ord('q'):\n>         break\n>\n> cap.release()  # 释放资源\n> cv2.destroyAllWindows()\n> ```\n>\n> **重点**：`cv2.waitKey(30)` 控制播放速度，30毫秒约等于33帧/秒。\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\n# 视频播放标准模板\ncap = cv2.VideoCapture('video.mp4')\nwhile True:\n    ret, frame = cap.read()\n    if not ret:\n        break  # 或循环播放\n    cv2.imshow('Window', frame)\n    if cv2.waitKey(30) & 0xFF == ord('q'):\n        break\ncap.release()\ncv2.destroyAllWindows()\n```\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 忘记`cv2.waitKey()`——窗口会卡死无响应\n- 忘记`cap.release()`——下次无法打开摄像头\n- waitKey参数为0——会暂停等待按键\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- 视频本质：连续图片帧的快速播放\n- 帧率(FPS)：每秒播放的帧数，通常24-60fps\n- VideoCapture：OpenCV读取视频/摄像头的核心类\n- waitKey：控制播放速度和键盘响应\n\n`#执行层` `#测评项`\n[UID: PYAI-24-01-001]\n[关联: PYAI-24-03-001 图像编辑（后续课程）]\n\n---\n\n[上一课](../_模块概览.md) | [模块概览](_模块概览.md) | [下一课](PYAI-2-4-03_图像编辑1.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-4-01] 视频基础\n\n> **模块**：L2-M4 计算机视觉\n> **认知负荷**：中\n> **核心技能**：cv2.VideoCapture、帧率控制、循环播放\n> **UID**：PYAI-24-01-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI-2-4-01 |\n| **课程名称** | 视频基础 - 视频播放器 |\n| **认知负荷** | 中 |\n| **核心技能** | cv2.VideoCapture、帧率控制、循环播放 |\n| **项目内容** | 视频播放器 |\n\n---\n\n## 详细教学流程\n\n### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们来揭开视频的秘密！大家知道视频是什么吗？其实视频就是**很多张图片快速播放**！\n>\n> 就像翻书动画一样，每秒播放24张以上的图片，人眼就会觉得是连续的动作。这个'每秒多少张'就叫做**帧率(FPS)**。\n>\n> ```python\n> import cv2\n>\n> # 打开视频文件\n> cap = cv2.VideoCapture('video.mp4')\n>\n> # 获取视频信息\n> fps = cap.get(cv2.CAP_PROP_FPS)  # 帧率\n> width = cap.get(cv2.CAP_PROP_FRAME_WIDTH)  # 宽度\n> height = cap.get(cv2.CAP_PROP_FRAME_HEIGHT)  # 高度\n> print(f'帧率: {fps}, 尺寸: {width}x{height}')\n> ```\"\n\n**变体示例**\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 不理解帧率 | 用翻书动画演示 | 准备一本翻页动画书 |\n| 想用摄像头 | 改用设备编号 | `cv2.VideoCapture(0)` 打开默认摄像头 |\n| 视频打不开 | 检查路径 | 确认文件路径正确，使用绝对路径 |\n\n---\n\n### 步骤2：代码实��（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"现在我们来写一个视频播放器！关键是用**while循环**不断读取每一帧：\n>\n> ```python\n> while True:\n>     ret, frame = cap.read()  # 读取一帧\n>\n>     if not ret:  # 视频结束\n>         cap.set(cv2.CAP_PROP_POS_FRAMES, 0)  # 回到开头，循环播放\n>         continue\n>\n>     cv2.imshow('Video Player', frame)\n>\n>     # 按Q键退出\n>     if cv2.waitKey(30) & 0xFF == ord('q'):\n>         break\n>\n> cap.release()  # 释放资源\n> cv2.destroyAllWindows()\n> ```\n>\n> **重点**：`cv2.waitKey(30)` 控制播放速度，30毫秒约等于33帧/秒。\"\n\n---\n\n## 核心代码模式\n\n```python\n# 视频播放标准模板\ncap = cv2.VideoCapture('video.mp4')\nwhile True:\n    ret, frame = cap.read()\n    if not ret:\n        break  # 或循环播放\n    cv2.imshow('Window', frame)\n    if cv2.waitKey(30) & 0xFF == ord('q'):\n        break\ncap.release()\ncv2.destroyAllWindows()\n```\n\n---\n\n## 禁忌提醒\n\n- 忘记`cv2.waitKey()`——窗口会卡死无响应\n- 忘记`cap.release()`——下次无法打开摄像头\n- waitKey参数为0——会暂停等待按键\n\n---\n\n## 核心知识点\n\n- 视频本质：连续图片帧的快速播放\n- 帧率(FPS)：每秒播放的帧数，通常24-60fps\n- VideoCapture：OpenCV读取视频/摄像头的核心类\n- waitKey：控制播放速度和键盘响应\n\n`#执行层` `#测评项`\n[UID: PYAI-24-01-001]\n[关联: PYAI-24-03-001 图像编辑（后续课程）]\n\n---\n\n[上一课](../_模块概览.md) | [模块概览](_模块概览.md) | [下一课](PYAI-2-4-03_图像编辑1.md)\n"
+}

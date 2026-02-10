@@ -1,0 +1,23 @@
+{
+  "title": "[PYAI-2-4-10] 虚拟墨镜",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M4_计算机视觉\\PYAI-2-4-10_虚拟墨镜.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI-2-4-10/11 |\n| **课程名称** | 虚拟墨镜 - AR试戴 |\n| **认知负荷** | 高 |\n| **核心技能** | FaceMesh 468点、Alpha通道、AR增强现实 |\n| **项目内容** | AR试戴 |\n| **课时** | 2节课（10-11） |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们做AR虚拟试戴墨镜！需要解决三个问题：\n>\n> 1. **找到眼睛位置**：用FaceMesh模型，它能识别脸上468个关键点\n> 2. **缩放墨镜大小**：根据两眼间距调整墨镜尺寸\n> 3. **透明叠加**：墨镜PNG图片有Alpha通道（透明度）\n>\n> ```python\n> # 获取FaceMesh关键点\n> face_mesh = mp.solutions.face_mesh.FaceMesh()\n> results = face_mesh.process(frame)\n>\n> # 关键点索引：左眼外角33，右眼外角263\n> left_eye = results.multi_face_landmarks[0].landmark[33]\n> right_eye = results.multi_face_landmarks[0].landmark[263]\n> ```\"\n\n**变体示例**\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 墨镜位置偏 | 调整关键点索引 | 尝试不同的landmark索引 |\n| 想换其他贴图 | 提供素材库 | 帽子、胡子、耳环等 |\n| 多人同时检测 | 遍历所有face_landmarks | 循环处理每张脸 |\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 像素坐标用浮点数——必须用int()转换为整数\n- 忘记处理Alpha通道——墨镜会有白色背景\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- FaceMesh：468个关键点\n- Alpha通道：透明图片叠加\n- 几何计算：根据眼距缩放贴图\n\n`#执行层` `#测评项`\n[UID: PYAI-24-10-001]\n[关联: PYAI-24-08-001 人像分割（前置课程）]\n[关联: PYAI-24-12-001 动物伙伴（后续课程）]\n\n---\n\n[上一课](PYAI-2-4-08_人像分割.md) | [模块概览](_模块概览.md) | [下一课](PYAI-2-4-12_动物伙伴.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-4-10] 虚拟墨镜\n\n> **模块**：L2-M4 计算机视觉\n> **认知负荷**：高\n> **核心技能**：FaceMesh 468点、Alpha通道、AR增强现实\n> **UID**：PYAI-24-10-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI-2-4-10/11 |\n| **课程名称** | 虚拟墨镜 - AR试戴 |\n| **认知负荷** | 高 |\n| **核心技能** | FaceMesh 468点、Alpha通道、AR增强现实 |\n| **项目内容** | AR试戴 |\n| **课时** | 2节课（10-11） |\n\n---\n\n## 详细教学流程\n\n### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们做AR虚拟试戴墨镜！需要解决三个问题：\n>\n> 1. **找到眼睛位置**：用FaceMesh模型，它能识别脸上468个关键点\n> 2. **缩放墨镜大小**：根据两眼间距调整墨镜尺寸\n> 3. **透明叠加**：墨镜PNG图片有Alpha通道（透明度）\n>\n> ```python\n> # 获取FaceMesh关键点\n> face_mesh = mp.solutions.face_mesh.FaceMesh()\n> results = face_mesh.process(frame)\n>\n> # 关键点索引：左眼外角33，右眼外角263\n> left_eye = results.multi_face_landmarks[0].landmark[33]\n> right_eye = results.multi_face_landmarks[0].landmark[263]\n> ```\"\n\n**变体示例**\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 墨镜位置偏 | 调整关键点索引 | 尝试不同的landmark索引 |\n| 想换其他贴图 | 提供素材库 | 帽子、胡子、耳环等 |\n| 多人同时检测 | 遍历所有face_landmarks | 循环处理每张脸 |\n\n---\n\n## 禁忌提醒\n\n- 像素坐标用浮点数——必须用int()转换为整数\n- 忘记处理Alpha通道——墨镜会有白色背景\n\n---\n\n## 核心知识点\n\n- FaceMesh：468个关键点\n- Alpha通道：透明图片叠加\n- 几何计算：根据眼距缩放贴图\n\n`#执行层` `#测评项`\n[UID: PYAI-24-10-001]\n[关联: PYAI-24-08-001 人像分割（前置课程）]\n[关联: PYAI-24-12-001 动物伙伴（后续课程）]\n\n---\n\n[上一课](PYAI-2-4-08_人像分割.md) | [模块概览](_模块概览.md) | [下一课](PYAI-2-4-12_动物伙伴.md)\n"
+}

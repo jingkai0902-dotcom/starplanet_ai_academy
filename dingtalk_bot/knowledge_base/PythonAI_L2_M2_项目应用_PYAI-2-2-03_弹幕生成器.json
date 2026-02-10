@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-2-2-03] 弹幕生成器",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M2_项目应用\\PYAI-2-2-03_弹幕生成器.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-2-3 |\n| **课程名称** | 弹幕生成器 |\n| **认知负荷** | 高 |\n| **核心技能** | Pygame综合、Random/Time模块、类实例应用 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们做一个**弹幕生成器**！就像B站视频上飘过的弹幕一样。这个项目会用到上节课学的类和Pygame。\"\n>\n> \"**弹幕的本质**：\n> - 每条弹幕是一个**对象**（有位置、速度、内容）\n> - 弹幕从右边出现，向左移动\n> - 用**列表**管理多条弹幕\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\nimport pygame\nimport random\n\n# 弹幕类\nclass Danmaku:\n    def __init__(self, text, y):\n        self.text = text\n        self.x = 800  # 从右边开始\n        self.y = y\n        self.speed = random.randint(3, 8)\n        self.color = (random.randint(0,255), random.randint(0,255), random.randint(0,255))\n\n    def move(self):\n        self.x -= self.speed  # 向左移动\n\n    def draw(self, screen, font):\n        text_surface = font.render(self.text, True, self.color)\n        screen.blit(text_surface, (self.x, self.y))\n\n# 主程序\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\nfont = pygame.font.Font(None, 36)\n\ndanmaku_list = []\nmessages = ['Hello!', 'Pygame真好玩', '666', '前方高能']\n\nrunning = True\nframe_count = 0\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n\n    # 每60帧生成一条弹幕\n    frame_count += 1\n    if frame_count % 60 == 0:\n        text = random.choice(messages)\n        y = random.randint(50, 550)\n        danmaku_list.append(Danmaku(text, y))\n\n    screen.fill((0, 0, 0))\n\n    # 更新和绘制所有弹幕\n    for d in danmaku_list:\n        d.move()\n        d.draw(screen, font)\n\n    # 移除已经飘出屏幕的弹幕\n    danmaku_list = [d for d in danmaku_list if d.x > -200]\n\n    pygame.display.flip()\n    pygame.time.delay(16)  # 约60FPS\n\npygame.quit()\n```\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 弹幕太快/太慢 | 调整speed范围 | 修改random.randint的参数 |\n| 想添加自定义弹幕 | 加入input | 用pygame.KEYDOWN捕获输入 |\n| 弹幕重叠 | 优化y坐标 | 检测已有弹幕位置避免重叠 |\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- 类的综合应用：封装弹幕的属性和行为\n- 列表管理对象：存储多个弹幕实例\n- 列表推导式：过滤已消失的弹幕\n- 帧率控制：`pygame.time.delay()`\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-22-03-001]\n\n---\n\n[上一课](PYAI-2-2-02_电子成绩单.md) | [下一课](PYAI-2-2-04_规矩方圆.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-2-03] 弹幕生成器\n\n> **模块**：L2-M2 项目应用\n> **认知负荷**：高\n> **核心技能**：Pygame综合、Random/Time模块、类实例应用\n> **UID**：PYAI-22-03-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-2-3 |\n| **课程名称** | 弹幕生成器 |\n| **认知负荷** | 高 |\n| **核心技能** | Pygame综合、Random/Time模块、类实例应用 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们做一个**弹幕生成器**！就像B站视频上飘过的弹幕一样。这个项目会用到上节课学的类和Pygame。\"\n>\n> \"**弹幕的本质**：\n> - 每条弹幕是一个**对象**（有位置、速度、内容）\n> - 弹幕从右边出现，向左移动\n> - 用**列表**管理多条弹幕\"\n\n---\n\n## 核心代码模式\n\n```python\nimport pygame\nimport random\n\n# 弹幕类\nclass Danmaku:\n    def __init__(self, text, y):\n        self.text = text\n        self.x = 800  # 从右边开始\n        self.y = y\n        self.speed = random.randint(3, 8)\n        self.color = (random.randint(0,255), random.randint(0,255), random.randint(0,255))\n\n    def move(self):\n        self.x -= self.speed  # 向左移动\n\n    def draw(self, screen, font):\n        text_surface = font.render(self.text, True, self.color)\n        screen.blit(text_surface, (self.x, self.y))\n\n# 主程序\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\nfont = pygame.font.Font(None, 36)\n\ndanmaku_list = []\nmessages = ['Hello!', 'Pygame真好玩', '666', '前方高能']\n\nrunning = True\nframe_count = 0\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n\n    # 每60帧生成一条弹幕\n    frame_count += 1\n    if frame_count % 60 == 0:\n        text = random.choice(messages)\n        y = random.randint(50, 550)\n        danmaku_list.append(Danmaku(text, y))\n\n    screen.fill((0, 0, 0))\n\n    # 更新和绘制所有弹幕\n    for d in danmaku_list:\n        d.move()\n        d.draw(screen, font)\n\n    # 移除已经飘出屏幕的弹幕\n    danmaku_list = [d for d in danmaku_list if d.x > -200]\n\n    pygame.display.flip()\n    pygame.time.delay(16)  # 约60FPS\n\npygame.quit()\n```\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 弹幕太快/太慢 | 调整speed范围 | 修改random.randint的参数 |\n| 想添加自定义弹幕 | 加入input | 用pygame.KEYDOWN捕获输入 |\n| 弹幕重叠 | 优化y坐标 | 检测已有弹幕位置避免重叠 |\n\n---\n\n## 核心知识点\n\n- 类的综合应用：封装弹幕的属性和行为\n- 列表管理对象：存储多个弹幕实例\n- 列表推导式：过滤已消失的弹幕\n- 帧率控制：`pygame.time.delay()`\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-22-03-001]\n\n---\n\n[上一课](PYAI-2-2-02_电子成绩单.md) | [下一课](PYAI-2-2-04_规矩方圆.md) | [返回模块概览](_模块概览.md)\n"
+}

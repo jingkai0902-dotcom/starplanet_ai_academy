@@ -1,0 +1,23 @@
+{
+  "title": "[PYAI-1-2-05] 众志成城",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L1\\M2_算法逻辑\\PYAI-1-2-05_众志成城.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 1-2-5 |\n| **课程名称** | 众志成城 |\n| **认知负荷** | 高 |\n| **核心技能** | 逻辑与/或、break语句 |\n| **项目内容** | 蚂蚁方阵 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们学习两个重要的逻辑运算符：\n>\n> **逻辑与(and)**：两个条件都满足才为True\n> ```python\n> if health > 0 and has_weapon:\n>     attack()\n> ```\n>\n> **逻辑或(or)**：满足其一即为True\n> ```python\n> if is_enemy or is_trap:\n>     avoid()\n> ```\n>\n> 还有**break语句**：跳出循环\n> ```python\n> while True:\n>     if victory:\n>         break  # 跳出循环\n> ```\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 混淆and/or | 用真值表 | 画表格对比两者区别 |\n| break用错位置 | 强调位置 | break只能在循环内使用 |\n| 死循环 | 检查条件 | 确保break的条件能达成 |\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- 逻辑与(and)：两个条件都满足才为True\n- 逻辑或(or)：满足其一即为True\n- break语句：跳出死循环\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-12-05-001]\n\n---\n\n[上一课](PYAI-1-2-04_排沙简金.md) | [返回模块](_模块概览.md) | [下一课](PYAI-1-2-06_人靠衣装.md)"
+    }
+  ],
+  "full_content": "# [PYAI-1-2-05] 众志成城\n\n> **模块**：L1-M2 算法逻辑\n> **认知负荷**：高\n> **核心技能**：逻辑与/或(and, or)、break语句\n> **UID**：PYAI-12-05-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 1-2-5 |\n| **课程名称** | 众志成城 |\n| **认知负荷** | 高 |\n| **核心技能** | 逻辑与/或、break语句 |\n| **项目内容** | 蚂蚁方阵 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们学习两个重要的逻辑运算符：\n>\n> **逻辑与(and)**：两个条件都满足才为True\n> ```python\n> if health > 0 and has_weapon:\n>     attack()\n> ```\n>\n> **逻辑或(or)**：满足其一即为True\n> ```python\n> if is_enemy or is_trap:\n>     avoid()\n> ```\n>\n> 还有**break语句**：跳出循环\n> ```python\n> while True:\n>     if victory:\n>         break  # 跳出循环\n> ```\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 混淆and/or | 用真值表 | 画表格对比两者区别 |\n| break用错位置 | 强调位置 | break只能在循环内使用 |\n| 死循环 | 检查条件 | 确保break的条件能达成 |\n\n---\n\n## 核心知识点\n\n- 逻辑与(and)：两个条件都满足才为True\n- 逻辑或(or)：满足其一即为True\n- break语句：跳出死循环\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-12-05-001]\n\n---\n\n[上一课](PYAI-1-2-04_排沙简金.md) | [返回模块](_模块概览.md) | [下一课](PYAI-1-2-06_人靠衣装.md)\n"
+}

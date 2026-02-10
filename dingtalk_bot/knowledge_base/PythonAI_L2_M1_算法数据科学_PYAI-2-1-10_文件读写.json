@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-2-1-10] 文件读写",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M1_算法数据科学\\PYAI-2-1-10_文件读写.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-10 |\n| **课程名称** | 文件读写 |\n| **认知负荷** | 中-高 |\n| **核心技能** | open/read/write/close、with语法 |\n| **项目内容** | 成绩单助手 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"程序结束后数据就丢了，怎么保存下来？用**文件**！\"\n>\n> \"**文件操作四步骤**：打开→读/写→关闭\n> ```python\n> # 写文件\n> f = open('data.txt', 'w')\n> f.write('Hello World!')\n> f.close()\n>\n> # 读文件\n> f = open('data.txt', 'r')\n> content = f.read()\n> print(content)\n> f.close()\n> ```\n>\n> **推荐用with语法**：自动关闭文件\n> ```python\n> with open('data.txt', 'r') as f:\n>     content = f.read()\n> # 不用手动close，自动关闭\n> ```\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 忘记关闭文件 | 强调with | 用with语法就不会忘 |\n| 文件路径错误 | 演示绝对路径 | 展示如何用完整路径 |\n| 想处理CSV | 介绍csv模块 | 下节课学习结构化数据 |\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 忘记关闭文件——资源泄露\n- 写入非字符串——必须用str()转换\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- 文件操作：`open`, `read`, `write`, `close`\n- CSV格式：逗号分隔值文件处理\n- with语法：`with open(...) as f:` 自动关闭文件\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-10-001]\n\n---\n\n[上一课](PYAI-2-1-09_选贤任能.md) | [下一课](PYAI-2-1-11_异常处理.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-1-10] 文件读写\n\n> **模块**：L2-M1 算法数据科学\n> **认知负荷**：中-高\n> **核心技能**：open/read/write/close、with语法\n> **UID**：PYAI-21-10-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-10 |\n| **课程名称** | 文件读写 |\n| **认知负荷** | 中-高 |\n| **核心技能** | open/read/write/close、with语法 |\n| **项目内容** | 成绩单助手 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"程序结束后数据就丢了，怎么保存下来？用**文件**！\"\n>\n> \"**文件操作四步骤**：打开→读/写→关闭\n> ```python\n> # 写文件\n> f = open('data.txt', 'w')\n> f.write('Hello World!')\n> f.close()\n>\n> # 读文件\n> f = open('data.txt', 'r')\n> content = f.read()\n> print(content)\n> f.close()\n> ```\n>\n> **推荐用with语法**：自动关闭文件\n> ```python\n> with open('data.txt', 'r') as f:\n>     content = f.read()\n> # 不用手动close，自动关闭\n> ```\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 忘记关闭文件 | 强调with | 用with语法就不会忘 |\n| 文件路径错误 | 演示绝对路径 | 展示如何用完整路径 |\n| 想处理CSV | 介绍csv模块 | 下节课学习结构化数据 |\n\n---\n\n## 禁忌提醒\n\n- 忘记关闭文件——资源泄露\n- 写入非字符串——必须用str()转换\n\n---\n\n## 核心知识点\n\n- 文件操作：`open`, `read`, `write`, `close`\n- CSV格式：逗号分隔值文件处理\n- with语法：`with open(...) as f:` 自动关闭文件\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-10-001]\n\n---\n\n[上一课](PYAI-2-1-09_选贤任能.md) | [下一课](PYAI-2-1-11_异常处理.md) | [返回模块概览](_模块概览.md)\n"
+}

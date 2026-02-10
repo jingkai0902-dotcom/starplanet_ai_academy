@@ -1,0 +1,31 @@
+{
+  "title": "[PYAI-2-1-07] 数据画像",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M1_算法数据科学\\PYAI-2-1-07_数据画像.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-7 |\n| **课程名称** | 数据画像 |\n| **认知负荷** | 中-高 |\n| **核心技能** | matplotlib基础、折线图、柱状图 |\n| **项目内容** | 数据可视化 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"数据科学家不只是处理数据，还要**展示数据**！今天学习**matplotlib**画图。\"\n>\n> \"**matplotlib基础**：\n> ```python\n> import matplotlib.pyplot as plt\n>\n> # 折线图\n> x = [1, 2, 3, 4, 5]\n> y = [2, 4, 6, 8, 10]\n> plt.plot(x, y)\n> plt.title('My First Plot')\n> plt.xlabel('X轴')\n> plt.ylabel('Y轴')\n> plt.show()\n> ```\n>\n> **柱状图**：\n> ```python\n> subjects = ['语文', '数学', '英语']\n> scores = [85, 92, 78]\n> plt.bar(subjects, scores)\n> plt.title('成绩单')\n> plt.show()\n> ```\n>\n> **多条曲线**：\n> ```python\n> plt.plot(x, y1, label='学生A')\n> plt.plot(x, y2, label='学生B')\n> plt.legend()  # 显示图例\n> plt.show()\n> ```\"\n\n**步骤2：代码实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"用matplotlib完成：\n> 1. 画出一周的气温变化折线图\n> 2. 画出班级各科平均分柱状图\n> 3. 对比两个同学的成绩曲线\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 中文显示乱码 | 设置字体 | `plt.rcParams['font.sans-serif'] = ['SimHei']` |\n| 想换颜色 | 介绍color参数 | `plt.plot(x, y, color='red')` |\n| 想画饼图 | 介绍pie() | `plt.pie(sizes, labels=labels)` |\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\nimport matplotlib.pyplot as plt\n\n# 解决中文显示问题\nplt.rcParams['font.sans-serif'] = ['SimHei']\nplt.rcParams['axes.unicode_minus'] = False\n\ndef plot_comparison(data_dict, title):\n    \"\"\"通用对比图绑定器\"\"\"\n    for label, values in data_dict.items():\n        plt.plot(values, label=label)\n    plt.title(title)\n    plt.legend()\n    plt.grid(True)  # 显示网格\n    plt.show()\n```\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 忘记`plt.show()`——图像不会显示\n- 中文乱码——需要设置中文字体\n- 数据长度不匹配——x和y的长度必须相同\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- matplotlib：Python数据可视化库\n- 常用图表：折线图plot()、柱状图bar()、饼图pie()\n- 图表美化：标题、标签、图例、网格\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-07-001]\n\n---\n\n[上一课](PYAI-2-1-06_一针见血.md) | [下一课](PYAI-2-1-08_拨乱反正.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-1-07] 数据画像\n\n> **模块**：L2-M1 算法数据科学\n> **认知负荷**：中-高\n> **核心技能**：matplotlib基础、折线图、柱状图\n> **UID**：PYAI-21-07-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-7 |\n| **课程名称** | 数据画像 |\n| **认知负荷** | 中-高 |\n| **核心技能** | matplotlib基础、折线图、柱状图 |\n| **项目内容** | 数据可视化 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"数据科学家不只是处理数据，还要**展示数据**！今天学习**matplotlib**画图。\"\n>\n> \"**matplotlib基础**：\n> ```python\n> import matplotlib.pyplot as plt\n>\n> # 折线图\n> x = [1, 2, 3, 4, 5]\n> y = [2, 4, 6, 8, 10]\n> plt.plot(x, y)\n> plt.title('My First Plot')\n> plt.xlabel('X轴')\n> plt.ylabel('Y轴')\n> plt.show()\n> ```\n>\n> **柱状图**：\n> ```python\n> subjects = ['语文', '数学', '英语']\n> scores = [85, 92, 78]\n> plt.bar(subjects, scores)\n> plt.title('成绩单')\n> plt.show()\n> ```\n>\n> **多条曲线**：\n> ```python\n> plt.plot(x, y1, label='学生A')\n> plt.plot(x, y2, label='学生B')\n> plt.legend()  # 显示图例\n> plt.show()\n> ```\"\n\n**步骤2：代码实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"用matplotlib完成：\n> 1. 画出一周的气温变化折线图\n> 2. 画出班级各科平均分柱状图\n> 3. 对比两个同学的成绩曲线\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 中文显示乱码 | 设置字体 | `plt.rcParams['font.sans-serif'] = ['SimHei']` |\n| 想换颜色 | 介绍color参数 | `plt.plot(x, y, color='red')` |\n| 想画饼图 | 介绍pie() | `plt.pie(sizes, labels=labels)` |\n\n---\n\n## 核心代码模式\n\n```python\nimport matplotlib.pyplot as plt\n\n# 解决中文显示问题\nplt.rcParams['font.sans-serif'] = ['SimHei']\nplt.rcParams['axes.unicode_minus'] = False\n\ndef plot_comparison(data_dict, title):\n    \"\"\"通用对比图绑定器\"\"\"\n    for label, values in data_dict.items():\n        plt.plot(values, label=label)\n    plt.title(title)\n    plt.legend()\n    plt.grid(True)  # 显示网格\n    plt.show()\n```\n\n---\n\n## 禁忌提醒\n\n- 忘记`plt.show()`——图像不会显示\n- 中文乱码——需要设置中文字体\n- 数据长度不匹配——x和y的长度必须相同\n\n---\n\n## 核心知识点\n\n- matplotlib：Python数据可视化库\n- 常用图表：折线图plot()、柱状图bar()、饼图pie()\n- 图表美化：标题、标签、图例、网格\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-07-001]\n\n---\n\n[上一课](PYAI-2-1-06_一针见血.md) | [下一课](PYAI-2-1-08_拨乱反正.md) | [返回模块概览](_模块概览.md)\n"
+}

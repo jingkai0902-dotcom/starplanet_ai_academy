@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-MP-01] 初识MicroPython",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\MP\\PYAI-MP-01_初识MicroPython.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L1 |\n| **课程名称** | 初识MicroPython |\n| **认知负荷** | 中 |\n| **核心技能** | ESP32认知、Web IDE操作、machine模块、Pin类、time模块 |\n| **项目内容** | 点亮LED |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（15分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"同学们，之前我们写的Python代码都是在电脑上运行的。今天开始，我们要让代码控制真实的硬件！这就是**物联网(IoT)**的魅力——用代码控制物理世界。\"\n>\n> \"首先认识我们的主角——**ESP32开发板**！\n> - 一块小型计算机，可以运行MicroPython代码\n> - 内置WiFi和蓝牙，可以联网\n> - 有很多**引脚(Pin)**，用来连接传感器和执行器\n>\n> **引脚类型**：\n> ```\n> VCC (3.3V) - 电源正极，给传感器供电\n> GND        - 电源负极，接地\n> P0-P20     - 数字/模拟引脚，连接传感器\n> ```\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\n# MicroPython基础导入\nfrom machine import Pin\nimport time\n\n# 创建LED对象（假设连接到Pin 2）\nled = Pin(2, Pin.OUT)\n\n# 点亮LED\nled.value(1)  # 或 led.on()\n\n# 熄灭LED\nled.value(0)  # 或 led.off()\n\n# LED闪烁\nwhile True:\n    led.value(1)\n    time.sleep(0.5)  # 亮0.5秒\n    led.value(0)\n    time.sleep(0.5)  # 灭0.5秒\n```\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 不理解引脚 | 用插座类比 | \"引脚就像插座，传感器插上去就能用\" |\n| 混淆VCC和GND | 用水流类比 | \"VCC是水龙头，GND是下水道\" |\n| 代码上传失败 | 检查USB连接 | 确认选择了正确的串口 |\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- **带电接线**——会短路烧毁开发板\n- **VCC直接接GND**——这是短路，绝对禁止\n- **开发板放金属表面通电**——底部引脚会短路\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L1-001]\n\n---\n\n[上一课](../_索引.md) | [模块概览](_模块概览.md) | [下一课](PYAI-MP-02_按钮与数字输入.md)"
+    }
+  ],
+  "full_content": "# [PYAI-MP-01] 初识MicroPython\n\n> **模块**：MicroPython硬件开发\n> **认知负荷**：中\n> **核心技能**：ESP32认知、Web IDE操作、machine模块、Pin类、time模块\n> **UID**：PYAI-MP-01-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L1 |\n| **课程名称** | 初识MicroPython |\n| **认知负荷** | 中 |\n| **核心技能** | ESP32认知、Web IDE操作、machine模块、Pin类、time模块 |\n| **项目内容** | 点亮LED |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（15分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"同学们，之前我们写的Python代码都是在电脑上运行的。今天开始，我们要让代码控制真实的硬件！这就是**物联网(IoT)**的魅力——用代码控制物理世界。\"\n>\n> \"首先认识我们的主角——**ESP32开发板**！\n> - 一块小型计算机，可以运行MicroPython代码\n> - 内置WiFi和蓝牙，可以联网\n> - 有很多**引脚(Pin)**，用来连接传感器和执行器\n>\n> **引脚类型**：\n> ```\n> VCC (3.3V) - 电源正极，给传感器供电\n> GND        - 电源负极，接地\n> P0-P20     - 数字/模拟引脚，连接传感器\n> ```\"\n\n---\n\n## 核心代码模式\n\n```python\n# MicroPython基础导入\nfrom machine import Pin\nimport time\n\n# 创建LED对象（假设连接到Pin 2）\nled = Pin(2, Pin.OUT)\n\n# 点亮LED\nled.value(1)  # 或 led.on()\n\n# 熄灭LED\nled.value(0)  # 或 led.off()\n\n# LED闪烁\nwhile True:\n    led.value(1)\n    time.sleep(0.5)  # 亮0.5秒\n    led.value(0)\n    time.sleep(0.5)  # 灭0.5秒\n```\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 不理解引脚 | 用插座类比 | \"引脚就像插座，传感器插上去就能用\" |\n| 混淆VCC和GND | 用水流类比 | \"VCC是水龙头，GND是下水道\" |\n| 代码上传失败 | 检查USB连接 | 确认选择了正确的串口 |\n\n---\n\n## 禁忌提醒\n\n- **带电接线**——会短路烧毁开发板\n- **VCC直接接GND**——这是短路，绝对禁止\n- **开发板放金属表面通电**——底部引脚会短路\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L1-001]\n\n---\n\n[上一课](../_索引.md) | [模块概览](_模块概览.md) | [下一课](PYAI-MP-02_按钮与数字输入.md)\n"
+}

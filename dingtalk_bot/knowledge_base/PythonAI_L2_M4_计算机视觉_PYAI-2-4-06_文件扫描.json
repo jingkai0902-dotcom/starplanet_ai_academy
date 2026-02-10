@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-2-4-06] 文件扫描",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M4_计算机视觉\\PYAI-2-4-06_文件扫描.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI-2-4-06 |\n| **课程名称** | 文件扫描 - 文档扫描仪 |\n| **认知负荷** | 高 |\n| **核心技能** | 二值化cv2.threshold、去阴影cv2.divide |\n| **项目内容** | 文档扫描仪 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们来做一个**文档扫描仪**！把手机拍的文档照片变成清晰的扫描件。\n>\n> 主要解决两个问题：\n> 1. **去除阴影**：拍照时光线不均匀会有阴影\n> 2. **二值化**：把灰色变成纯黑白，更清晰\n>\n> ```python\n> import cv2\n>\n> # 读取图片并转灰度\n> img = cv2.imread('document.jpg')\n> gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\n>\n> # 二值化：像素值大于阈值变白，否则变黑\n> ret, binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)\n> ```\n>\n> **阈值127**的意思是：灰度值>127的变成255(白)，≤127的变成0(黑)。\"\n\n**变体示例**\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 阈值效果不好 | 用自适应阈值 | `cv2.adaptiveThreshold`自动计算局部阈值 |\n| 有阴影干扰 | 先去阴影 | 用`cv2.divide`消除光照不均 |\n| 想反转黑白 | 改变类型 | 用`cv2.THRESH_BINARY_INV`反转 |\n\n---\n\n### 步骤2：代码实践（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"普通二值化对阴影效果不好，我们用**自适应阈值**和**去阴影**技术：\n>\n> ```python\n> # 方法1：自适应阈值（自动计算局部阈值）\n> adaptive = cv2.adaptiveThreshold(\n>     gray, 255,\n>     cv2.ADAPTIVE_THRESH_GAUSSIAN_C,  # 高斯加权\n>     cv2.THRESH_BINARY,\n>     11,  # 邻域大小\n>     2    # 常数C\n> )\n>\n> # 方法2：去阴影（更专业的方法）\n> # 1. 用高斯模糊获取背景\n> blur = cv2.GaussianBlur(gray, (21, 21), 0)\n> # 2. 用原图除以背景，消除光照不均\n> divided = cv2.divide(gray, blur, scale=255)\n> # 3. 再二值化\n> ret, result = cv2.threshold(divided, 200, 255, cv2.THRESH_BINARY)\n> ```\n>\n> **cv2.divide的原理**：背景亮的地方除以大数，背景暗的地方除以小数，结果就均匀了！\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\n# 文档扫描标准流程\ngray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\nblur = cv2.GaussianBlur(gray, (21, 21), 0)\ndivided = cv2.divide(gray, blur, scale=255)\nret, binary = cv2.threshold(divided, 200, 255, cv2.THRESH_BINARY)\n```\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 阈值设置不当——太高全白，太低全黑\n- 自适应阈值邻域用偶数——必须是奇数\n- 忘记转灰度——threshold只能处理单通道图像\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- 二值化(threshold)：将灰度图转为纯黑白\n- 自适应阈值：根据局部区域自动计算阈值\n- cv2.divide：消除光照不��匀（去阴影）\n- 文档扫描流程：灰度→去阴影→二值化\n\n**底层逻辑**\n- **光照归一化**：divide操作消除光照差异\n- **局部自适应**：不同区域用不同阈值\n\n`#执行层` `#测评项`\n[UID: PYAI-24-06-001]\n[关联: PYAI-24-05-001 滤波降噪（前置课程）]\n[关联: PYAI-24-08-001 人像分割（后续课程）]\n\n---\n\n[上一课](PYAI-2-4-05_滤波降噪.md) | [模块概览](_模块概览.md) | [下一课](PYAI-2-4-08_人像分割.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-4-06] 文件扫描\n\n> **模块**：L2-M4 计算机视觉\n> **认知负荷**：高\n> **核心技能**：二值化cv2.threshold、去阴影cv2.divide\n> **UID**：PYAI-24-06-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI-2-4-06 |\n| **课程名称** | 文件扫描 - 文档扫描仪 |\n| **认知负荷** | 高 |\n| **核心技能** | 二值化cv2.threshold、去阴影cv2.divide |\n| **项目内容** | 文档扫描仪 |\n\n---\n\n## 详细教学流程\n\n### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们来做一个**文档扫描仪**！把手机拍的文档照片变成清晰的扫描件。\n>\n> 主要解决两个问题：\n> 1. **去除阴影**：拍照时光线不均匀会有阴影\n> 2. **二值化**：把灰色变成纯黑白，更清晰\n>\n> ```python\n> import cv2\n>\n> # 读取图片并转灰度\n> img = cv2.imread('document.jpg')\n> gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\n>\n> # 二值化：像素值大于阈值变白，否则变黑\n> ret, binary = cv2.threshold(gray, 127, 255, cv2.THRESH_BINARY)\n> ```\n>\n> **阈值127**的意思是：灰度值>127的变成255(白)，≤127的变成0(黑)。\"\n\n**变体示例**\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 阈值效果不好 | 用自适应阈值 | `cv2.adaptiveThreshold`自动计算局部阈值 |\n| 有阴影干扰 | 先去阴影 | 用`cv2.divide`消除光照不均 |\n| 想反转黑白 | 改变类型 | 用`cv2.THRESH_BINARY_INV`反转 |\n\n---\n\n### 步骤2：代码实践（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"普通二值化对阴影效果不好，我们用**自适应阈值**和**去阴影**技术：\n>\n> ```python\n> # 方法1：自适应阈值（自动计算局部阈值）\n> adaptive = cv2.adaptiveThreshold(\n>     gray, 255,\n>     cv2.ADAPTIVE_THRESH_GAUSSIAN_C,  # 高斯加权\n>     cv2.THRESH_BINARY,\n>     11,  # 邻域大小\n>     2    # 常数C\n> )\n>\n> # 方法2：去阴影（更专业的方法）\n> # 1. 用高斯模糊获取背景\n> blur = cv2.GaussianBlur(gray, (21, 21), 0)\n> # 2. 用原图除以背景，消除光照不均\n> divided = cv2.divide(gray, blur, scale=255)\n> # 3. 再二值化\n> ret, result = cv2.threshold(divided, 200, 255, cv2.THRESH_BINARY)\n> ```\n>\n> **cv2.divide的原理**：背景亮的地方除以大数，背景暗的地方除以小数，结果就均匀了！\"\n\n---\n\n## 核心代码模式\n\n```python\n# 文档扫描标准流程\ngray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)\nblur = cv2.GaussianBlur(gray, (21, 21), 0)\ndivided = cv2.divide(gray, blur, scale=255)\nret, binary = cv2.threshold(divided, 200, 255, cv2.THRESH_BINARY)\n```\n\n---\n\n## 禁忌提醒\n\n- 阈值设置不当——太高全白，太低全黑\n- 自适应阈值邻域用偶数——必须是奇数\n- 忘记转灰度——threshold只能处理单通道图像\n\n---\n\n## 核心知识点\n\n- 二值化(threshold)：将灰度图转为纯黑白\n- 自适应阈值：根据局部区域自动计算阈值\n- cv2.divide：消除光照不��匀（去阴影）\n- 文档扫描流程：灰度→去阴影→二值化\n\n**底层逻辑**\n- **光照归一化**：divide操作消除光照差异\n- **局部自适应**：不同区域用不同阈值\n\n`#执行层` `#测评项`\n[UID: PYAI-24-06-001]\n[关联: PYAI-24-05-001 滤波降噪（前置课程）]\n[关联: PYAI-24-08-001 人像分割（后续课程）]\n\n---\n\n[上一课](PYAI-2-4-05_滤波降噪.md) | [模块概览](_模块概览.md) | [下一课](PYAI-2-4-08_人像分割.md)\n"
+}

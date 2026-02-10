@@ -1,0 +1,12 @@
+{
+    "app_key": "dingnjx6cn8fvhnuwmlt",
+    "app_secret": "bFyFhRodrETIekhA3HKDFc7MyPe56E6DOBZgffzbI4qwZJAZ7vh1NdNpANqd_jPr",
+    "agent_id": "4246209484",
+    "kb_path": "C:/Users/Frank.J/starplanet_ai_academy/dingtalk_bot/knowledge_base",
+    "llm_provider": "zhipu",
+    "llm_api_key": "ee6cd95721c04f0190431c12f3ceca9e.NIhLS2gosWRGYT2s",
+    "llm_base_url": "https://open.bigmodel.cn/api/paas/v4",
+    "llm_model": "glm-4.7",
+    "claude_api_key": "",
+    "claude_base_url": ""
+}

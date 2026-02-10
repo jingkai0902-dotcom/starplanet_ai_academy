@@ -1,0 +1,23 @@
+{
+  "title": "[PYAI-1-2-03] 日积月累",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L1\\M2_算法逻辑\\PYAI-1-2-03_日积月累.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 1-2-3 |\n| **课程名称** | 日积月累 |\n| **认知负荷** | 高 |\n| **核心技能** | 返回值(return)、利息计算模型 |\n| **项目内容** | 银行存取款 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"之前我们的函数只是执行动作，今天学习让函数**返回结果**！\n>\n> **return语句**：让函数把计算结果传回来\n> ```python\n> def add(a, b):\n>     result = a + b\n>     return result  # 返回计算结果\n>\n> total = add(3, 5)  # total = 8\n> ```\n>\n> **利息计算模型**：\n> ```python\n> def calculate_interest(principal, rate, years):\n>     # 复利公式：本金 × (1 + 利率)^年数\n>     amount = principal * (1 + rate) ** years\n>     interest = amount - principal\n>     return interest\n>\n> # 存1000元，年利率5%，存3年\n> profit = calculate_interest(1000, 0.05, 3)\n> print(f'利息：{profit:.2f}元')  # 利息：157.63元\n> ```\"\n\n**步骤2：闯关实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"现在你是银行程序员！设计一个存取款系统：\n> 1. 存款函数：返回存款后的余额\n> 2. 取款函数：检查余额是否足够，返回取款后的余额\n> 3. 利息计算：返回指定年限后的利息\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 忘记return | 强调返回 | 没有return，函数返回None |\n| return后还有代码 | 解释终止 | return会立即结束函数 |\n| 复利不理解 | 用表格演示 | 逐年计算，展示复利增长 |\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- return语句：让函数返回计算结果\n- return特性：执行后立即结束函数\n- 复利公式：本金 × (1 + 利率)^年数\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-12-03-001]\n\n---\n\n[上一课](PYAI-1-2-02_令行禁止.md) | [返回模块](_模块概览.md) | [下一课](PYAI-1-2-04_排沙简金.md)"
+    }
+  ],
+  "full_content": "# [PYAI-1-2-03] 日积月累\n\n> **模块**：L1-M2 算法逻辑\n> **认知负荷**：高\n> **核心技能**：返回值(return)、利息计算模型\n> **UID**：PYAI-12-03-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 1-2-3 |\n| **课程名称** | 日积月累 |\n| **认知负荷** | 高 |\n| **核心技能** | 返回值(return)、利息计算模型 |\n| **项目内容** | 银行存取款 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"之前我们的函数只是执行动作，今天学习让函数**返回结果**！\n>\n> **return语句**：让函数把计算结果传回来\n> ```python\n> def add(a, b):\n>     result = a + b\n>     return result  # 返回计算结果\n>\n> total = add(3, 5)  # total = 8\n> ```\n>\n> **利息计算模型**：\n> ```python\n> def calculate_interest(principal, rate, years):\n>     # 复利公式：本金 × (1 + 利率)^年数\n>     amount = principal * (1 + rate) ** years\n>     interest = amount - principal\n>     return interest\n>\n> # 存1000元，年利率5%，存3年\n> profit = calculate_interest(1000, 0.05, 3)\n> print(f'利息：{profit:.2f}元')  # 利息：157.63元\n> ```\"\n\n**步骤2：闯关实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"现在你是银行程序员！设计一个存取款系统：\n> 1. 存款函数：返回存款后的余额\n> 2. 取款函数：检查余额是否足够，返回取款后的余额\n> 3. 利息计算：返回指定年限后的利息\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 忘记return | 强调返回 | 没有return，函数返回None |\n| return后还有代码 | 解释终止 | return会立即结束函数 |\n| 复利不理解 | 用表格演示 | 逐年计算，展示复利增长 |\n\n---\n\n## 核心知识点\n\n- return语句：让函数返回计算结果\n- return特性：执行后立即结束函数\n- 复利公式：本金 × (1 + 利率)^年数\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-12-03-001]\n\n---\n\n[上一课](PYAI-1-2-02_令行禁止.md) | [返回模块](_模块概览.md) | [下一课](PYAI-1-2-04_排沙简金.md)\n"
+}

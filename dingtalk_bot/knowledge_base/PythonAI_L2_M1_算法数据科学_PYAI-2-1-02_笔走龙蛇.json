@@ -1,0 +1,31 @@
+{
+  "title": "[PYAI-2-1-02] 笔走龙蛇",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M1_算法数据科学\\PYAI-2-1-02_笔走龙蛇.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-2 |\n| **课程名称** | 笔走龙蛇 |\n| **认知负荷** | 高 |\n| **核心技能** | turtle绑定、坐标映射、math函数绘图 |\n| **项目内容** | 函数曲线绑定 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们用Python画数学函数图像！先认识**turtle绑定**——让画笔跟着数学公式走。\"\n>\n> \"**turtle基础**：\n> ```python\n> import turtle\n> import math\n>\n> t = turtle.Turtle()\n> t.speed(0)  # 最快速度\n> t.penup()   # 抬笔移动\n> t.goto(x, y)  # 移动到坐标\n> t.pendown()   # 落笔开始画\n> ```\n>\n> **坐标映射**：数学坐标和屏幕坐标不同，需要转换\n> ```python\n> # 屏幕坐标：中心是(0,0)，向右x增大，向上y增大\n> # 放大系数：让图像更清晰\n> scale = 50\n> screen_x = math_x * scale\n> screen_y = math_y * scale\n> ```\n>\n> **绑定正弦曲线**：\n> ```python\n> for x in range(-360, 361):\n>     rad = math.radians(x)  # 角度转弧度\n>     y = math.sin(rad)\n>     t.goto(x, y * 100)  # y放大100倍\n> ```\"\n\n**步骤2：代码实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"现在来画不同的函数曲线：\n> 1. 正弦曲线 sin(x)\n> 2. 余弦曲线 cos(x)\n> 3. 抛物线 y = x²\n>\n> 挑战：能不能画出心形曲线？\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| turtle窗口卡住 | 添加done() | 程序末尾加`turtle.done()` |\n| 曲线太小看不清 | 调整scale | 增大放大系数 |\n| 想画更复杂图形 | 介绍参数方程 | 用参数t控制x和y |\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\nimport turtle\nimport math\n\ndef draw_function(func, start, end, scale=50):\n    \"\"\"通用函数绑定器\"\"\"\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    for x in range(start, end + 1):\n        y = func(x)\n        t.goto(x * scale / 10, y * scale)\n        t.pendown()\n    turtle.done()\n\n# 使用示例\ndraw_function(math.sin, -360, 360, 100)\n```\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 忘记`turtle.done()`——窗口会立即关闭\n- 角度弧度混淆——math.sin()需要弧度，用`math.radians()`转换\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- turtle绑定：用turtle画笔跟踪数学函数\n- 坐标映射：数学坐标到屏幕坐标的转换\n- math函数：sin, cos, radians等数学函数\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-02-001]\n\n---\n\n[上一课](PYAI-2-1-01_无理取闹.md) | [下一课](PYAI-2-1-03_自我复制.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-1-02] 笔走龙蛇\n\n> **模块**：L2-M1 算法数据科学\n> **认知负荷**：高\n> **核心技能**：turtle绑定、坐标映射、math函数绘图\n> **UID**：PYAI-21-02-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-2 |\n| **课程名称** | 笔走龙蛇 |\n| **认知负荷** | 高 |\n| **核心技能** | turtle绑定、坐标映射、math函数绘图 |\n| **项目内容** | 函数曲线绑定 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们用Python画数学函数图像！先认识**turtle绑定**——让画笔跟着数学公式走。\"\n>\n> \"**turtle基础**：\n> ```python\n> import turtle\n> import math\n>\n> t = turtle.Turtle()\n> t.speed(0)  # 最快速度\n> t.penup()   # 抬笔移动\n> t.goto(x, y)  # 移动到坐标\n> t.pendown()   # 落笔开始画\n> ```\n>\n> **坐标映射**：数学坐标和屏幕坐标不同，需要转换\n> ```python\n> # 屏幕坐标：中心是(0,0)，向右x增大，向上y增大\n> # 放大系数：让图像更清晰\n> scale = 50\n> screen_x = math_x * scale\n> screen_y = math_y * scale\n> ```\n>\n> **绑定正弦曲线**：\n> ```python\n> for x in range(-360, 361):\n>     rad = math.radians(x)  # 角度转弧度\n>     y = math.sin(rad)\n>     t.goto(x, y * 100)  # y放大100倍\n> ```\"\n\n**步骤2：代码实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"现在来画不同的函数曲线：\n> 1. 正弦曲线 sin(x)\n> 2. 余弦曲线 cos(x)\n> 3. 抛物线 y = x²\n>\n> 挑战：能不能画出心形曲线？\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| turtle窗口卡住 | 添加done() | 程序末尾加`turtle.done()` |\n| 曲线太小看不清 | 调整scale | 增大放大系数 |\n| 想画更复杂图形 | 介绍参数方程 | 用参数t控制x和y |\n\n---\n\n## 核心代码模式\n\n```python\nimport turtle\nimport math\n\ndef draw_function(func, start, end, scale=50):\n    \"\"\"通用函数绑定器\"\"\"\n    t = turtle.Turtle()\n    t.speed(0)\n    t.penup()\n    for x in range(start, end + 1):\n        y = func(x)\n        t.goto(x * scale / 10, y * scale)\n        t.pendown()\n    turtle.done()\n\n# 使用示例\ndraw_function(math.sin, -360, 360, 100)\n```\n\n---\n\n## 禁忌提醒\n\n- 忘记`turtle.done()`——窗口会立即关闭\n- 角度弧度混淆——math.sin()需要弧度，用`math.radians()`转换\n\n---\n\n## 核心知识点\n\n- turtle绑定：用turtle画笔跟踪数学函数\n- 坐标映射：数学坐标到屏幕坐标的转换\n- math函数：sin, cos, radians等数学函数\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-02-001]\n\n---\n\n[上一课](PYAI-2-1-01_无理取闹.md) | [下一课](PYAI-2-1-03_自我复制.md) | [返回模块概览](_模块概览.md)\n"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-2-2-02] 电子成绩单",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M2_项目应用\\PYAI-2-2-02_电子成绩单.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-2-2 |\n| **课程名称** | 电子成绩单 |\n| **认知负荷** | 中-高 |\n| **核心技能** | IDLE环境、Pygame初识、文字绘制 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们开始学习**Pygame**——Python最流行的游戏开发库！先从最简单的开始：在窗口上显示文字。\"\n>\n> \"**Pygame基础结构**：\n> ```python\n> import pygame\n>\n> # 1. 初始化\n> pygame.init()\n>\n> # 2. 创建窗口\n> screen = pygame.display.set_mode((800, 600))\n> pygame.display.set_caption('我的第一个Pygame程序')\n>\n> # 3. 游戏主循环\n> running = True\n> while running:\n>     for event in pygame.event.get():\n>         if event.type == pygame.QUIT:\n>             running = False\n>\n>     # 填充背景色\n>     screen.fill((255, 255, 255))\n>\n>     # 更新显示\n>     pygame.display.flip()\n>\n> pygame.quit()\n> ```\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\nimport pygame\n\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\n\n# 创建字体对象\nfont = pygame.font.Font(None, 48)  # None使用默认字体，48是字号\n\n# 渲染文字（文字内容, 抗锯齿, 颜色）\ntext = font.render('Hello Pygame!', True, (0, 0, 0))\n\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n\n    screen.fill((255, 255, 255))\n\n    # 绘制文字到屏幕\n    screen.blit(text, (100, 100))  # (x, y)坐标\n\n    pygame.display.flip()\n\npygame.quit()\n```\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 窗口闪退 | 检查主循环 | 确保while循环正确运行 |\n| 中文显示乱码 | 使用中文字体 | pygame.font.Font('simhei.ttf', 48) |\n| 想改变颜色 | 解释RGB | (255,0,0)红色，(0,255,0)绿色 |\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- Pygame初始化：`pygame.init()`\n- 创建窗口：`pygame.display.set_mode((宽, 高))`\n- 游戏主循环：while循环 + 事件处理\n- 文字渲染：`font.render()` + `screen.blit()`\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-22-02-001]\n\n---\n\n[上一课](PYAI-2-2-01_脚踏实地.md) | [下一课](PYAI-2-2-03_弹幕生成器.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-2-02] 电子成绩单\n\n> **模块**：L2-M2 项目应用\n> **认知负荷**：中-高\n> **核心技能**：IDLE环境、Pygame初识、文字绘制\n> **UID**：PYAI-22-02-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-2-2 |\n| **课程名称** | 电子成绩单 |\n| **认知负荷** | 中-高 |\n| **核心技能** | IDLE环境、Pygame初识、文字绘制 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们开始学习**Pygame**——Python最流行的游戏开发库！先从最简单的开始：在窗口上显示文字。\"\n>\n> \"**Pygame基础结构**：\n> ```python\n> import pygame\n>\n> # 1. 初始化\n> pygame.init()\n>\n> # 2. 创建窗口\n> screen = pygame.display.set_mode((800, 600))\n> pygame.display.set_caption('我的第一个Pygame程序')\n>\n> # 3. 游戏主循环\n> running = True\n> while running:\n>     for event in pygame.event.get():\n>         if event.type == pygame.QUIT:\n>             running = False\n>\n>     # 填充背景色\n>     screen.fill((255, 255, 255))\n>\n>     # 更新显示\n>     pygame.display.flip()\n>\n> pygame.quit()\n> ```\"\n\n---\n\n## 核心代码模式\n\n```python\nimport pygame\n\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\n\n# 创建字体对象\nfont = pygame.font.Font(None, 48)  # None使用默认字体，48是字号\n\n# 渲染文字（文字内容, 抗锯齿, 颜色）\ntext = font.render('Hello Pygame!', True, (0, 0, 0))\n\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n\n    screen.fill((255, 255, 255))\n\n    # 绘制文字到屏幕\n    screen.blit(text, (100, 100))  # (x, y)坐标\n\n    pygame.display.flip()\n\npygame.quit()\n```\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 窗口闪退 | 检查主循环 | 确保while循环正确运行 |\n| 中文显示乱码 | 使用中文字体 | pygame.font.Font('simhei.ttf', 48) |\n| 想改变颜色 | 解释RGB | (255,0,0)红色，(0,255,0)绿色 |\n\n---\n\n## 核心知识点\n\n- Pygame初始化：`pygame.init()`\n- 创建窗口：`pygame.display.set_mode((宽, 高))`\n- 游戏主循环：while循环 + 事件处理\n- 文字渲染：`font.render()` + `screen.blit()`\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-22-02-001]\n\n---\n\n[上一课](PYAI-2-2-01_脚踏实地.md) | [下一课](PYAI-2-2-03_弹幕生成器.md) | [返回模块概览](_模块概览.md)\n"
+}

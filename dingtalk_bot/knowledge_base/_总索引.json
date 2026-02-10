@@ -1,0 +1,2537 @@
+{
+  "total": 506,
+  "updated": "2026-02-10",
+  "version": "V2.0",
+  "documents": [
+    {
+      "title": "品牌萃取：品牌定位与核心价值",
+      "file": "品牌_01_品牌定位.json",
+      "source": "01_品牌定位.md"
+    },
+    {
+      "title": "品牌萃取：教育理念与方法论",
+      "file": "品牌_02_教育理念.json",
+      "source": "02_教育理念.md"
+    },
+    {
+      "title": "品牌萃取：产品体系与成长路径",
+      "file": "品牌_03_产品体系.json",
+      "source": "03_产品体系.md"
+    },
+    {
+      "title": "品牌萃取：销售话术库",
+      "file": "品牌_04_销售话术.json",
+      "source": "04_销售话术.md"
+    },
+    {
+      "title": "品牌萃取：异议处理话术库",
+      "file": "品牌_05_异议处理.json",
+      "source": "05_异议处理.md"
+    },
+    {
+      "title": "品牌萃取：客户分层沟通策略",
+      "file": "品牌_06_客户分层.json",
+      "source": "06_客户分层.md"
+    },
+    {
+      "title": "品牌萃取：竞品对比话术库",
+      "file": "品牌_07_竞品对比.json",
+      "source": "07_竞品对比.md"
+    },
+    {
+      "title": "品牌萃取：产品核心卖点手册",
+      "file": "品牌_08_产品核心卖点手册.json",
+      "source": "08_产品核心卖点手册.md"
+    },
+    {
+      "title": "STEM萃取：课程体系架构",
+      "file": "STEM_00_课程架构.json",
+      "source": "00_课程架构.md"
+    },
+    {
+      "title": "STEM萃取：中班阶段1 - 机械与工具",
+      "file": "STEM_中班_01_机械与工具.json",
+      "source": "中班_01_机械与工具.md"
+    },
+    {
+      "title": "STEM中班阶段1 - 机械与工具 深度萃取报告",
+      "file": "STEM_中班_01_机械与工具_深度萃取.json",
+      "source": "中班_01_机械与工具_深度萃取.md"
+    },
+    {
+      "title": "STEM萃取：中班阶段2 - 建筑与结构",
+      "file": "STEM_中班_02_建筑与结构.json",
+      "source": "中班_02_建筑与结构.md"
+    },
+    {
+      "title": "STEM中班阶段2 - 建筑与结构 深度萃取报告",
+      "file": "STEM_中班_02_建筑与结构_深度萃取.json",
+      "source": "中班_02_建筑与结构_深度萃取.md"
+    },
+    {
+      "title": "STEM萃取：中班阶段3 - 智能机械",
+      "file": "STEM_中班_03_智能机械.json",
+      "source": "中班_03_智能机械.md"
+    },
+    {
+      "title": "STEM中班阶段3 - 智能机械 深度萃取报告",
+      "file": "STEM_中班_03_智能机械_深度萃取.json",
+      "source": "中班_03_智能机械_深度萃取.md"
+    },
+    {
+      "title": "STEM萃取：中班阶段4 - 物理科学",
+      "file": "STEM_中班_04_物理科学.json",
+      "source": "中班_04_物理科学.md"
+    },
+    {
+      "title": "STEM深度萃取：中班阶段4 - 物理科学",
+      "file": "STEM_中班_04_物理科学_深度萃取.json",
+      "source": "中班_04_物理科学_深度萃取.md"
+    },
+    {
+      "title": "STEM大班阶段1：基础机械 深度萃取报告",
+      "file": "STEM_大班_01_基础机械_深度萃取.json",
+      "source": "大班_01_基础机械_深度萃取.md"
+    },
+    {
+      "title": "STEM萃取：大班阶段1 - 复杂机械",
+      "file": "STEM_大班_01_复杂机械.json",
+      "source": "大班_01_复杂机械.md"
+    },
+    {
+      "title": "STEM萃取：大班阶段2 - 地球与空间",
+      "file": "STEM_大班_02_地球与空间.json",
+      "source": "大班_02_地球与空间.md"
+    },
+    {
+      "title": "STEM大班阶段2：地球科学、环境与古老发明 深度萃取报告",
+      "file": "STEM_大班_02_地球科学_深度萃取.json",
+      "source": "大班_02_地球科学_深度萃取.md"
+    },
+    {
+      "title": "STEM萃取：大班阶段3 - 能源科学",
+      "file": "STEM_大班_03_能源科学.json",
+      "source": "大班_03_能源科学.md"
+    },
+    {
+      "title": "STEM大班阶段3：能源科学 深度萃取报告",
+      "file": "STEM_大班_03_能源科学_深度萃取.json",
+      "source": "大班_03_能源科学_深度萃取.md"
+    },
+    {
+      "title": "STEM萃取：大班阶段4 - 智能硬件",
+      "file": "STEM_大班_04_智能硬件.json",
+      "source": "大班_04_智能硬件.md"
+    },
+    {
+      "title": "STEM大班阶段4：智能硬件 深度萃取报告",
+      "file": "STEM_大班_04_智能硬件_深度萃取.json",
+      "source": "大班_04_智能硬件_深度萃取.md"
+    },
+    {
+      "title": "STEM深度萃取：小班阶段1 - 认识我自己",
+      "file": "STEM_小班_01_认识我自己_深度萃取.json",
+      "source": "小班_01_认识我自己_深度萃取.md"
+    },
+    {
+      "title": "STEM深度萃取：小班阶段2 - 动物王国",
+      "file": "STEM_小班_02_动物王国_深度萃取.json",
+      "source": "小班_02_动物王国_深度萃取.md"
+    },
+    {
+      "title": "STEM深度萃取：小班阶段3 - 植物百科",
+      "file": "STEM_小班_03_植物百科_深度萃取.json",
+      "source": "小班_03_植物百科_深度萃取.md"
+    },
+    {
+      "title": "STEM萃取：小班阶段4 - 数理逻辑与物理启蒙",
+      "file": "STEM_小班_04_数理物理.json",
+      "source": "小班_04_数理物理.md"
+    },
+    {
+      "title": "[STEM-1-1-01] 独一无二的我",
+      "file": "STEM_小班_M1_认识我自己_STEM-1-1-01_独一无二的我.json",
+      "source": "小班\\M1_认识我自己\\STEM-1-1-01_独一无二的我.md"
+    },
+    {
+      "title": "[STEM-1-1-02] 自制表情包",
+      "file": "STEM_小班_M1_认识我自己_STEM-1-1-02_自制表情包.json",
+      "source": "小班\\M1_认识我自己\\STEM-1-1-02_自制表情包.md"
+    },
+    {
+      "title": "[STEM-1-1-04] 舌尖的旅行",
+      "file": "STEM_小班_M1_认识我自己_STEM-1-1-04_舌尖的旅行.json",
+      "source": "小班\\M1_认识我自己\\STEM-1-1-04_舌尖的旅行.md"
+    },
+    {
+      "title": "[STEM-1-1-05] 小鼻子大本事",
+      "file": "STEM_小班_M1_认识我自己_STEM-1-1-05_小鼻子大本事.json",
+      "source": "小班\\M1_认识我自己\\STEM-1-1-05_小鼻子大本事.md"
+    },
+    {
+      "title": "[STEM-1-1-06] 奇妙大耳朵",
+      "file": "STEM_小班_M1_认识我自己_STEM-1-1-06_奇妙大耳朵.json",
+      "source": "小班\\M1_认识我自己\\STEM-1-1-06_奇妙大耳朵.md"
+    },
+    {
+      "title": "[STEM-1-1-07] 超级能手",
+      "file": "STEM_小班_M1_认识我自己_STEM-1-1-07_超级能手.json",
+      "source": "小班\\M1_认识我自己\\STEM-1-1-07_超级能手.md"
+    },
+    {
+      "title": "[STEM-1-1-08] 摇摆的身体",
+      "file": "STEM_小班_M1_认识我自己_STEM-1-1-08_摇摆的身体.json",
+      "source": "小班\\M1_认识我自己\\STEM-1-1-08_摇摆的身体.md"
+    },
+    {
+      "title": "[STEM-1-1-09] 深呼吸",
+      "file": "STEM_小班_M1_认识我自己_STEM-1-1-09_深呼吸.json",
+      "source": "小班\\M1_认识我自己\\STEM-1-1-09_深呼吸.md"
+    },
+    {
+      "title": "[STEM-1-1-10] 我的小心脏",
+      "file": "STEM_小班_M1_认识我自己_STEM-1-1-10_我的小心脏.json",
+      "source": "小班\\M1_认识我自己\\STEM-1-1-10_我的小心脏.md"
+    },
+    {
+      "title": "[STEM-1-1-11] 怕酸的牙齿",
+      "file": "STEM_小班_M1_认识我自己_STEM-1-1-11_怕酸的牙齿.json",
+      "source": "小班\\M1_认识我自己\\STEM-1-1-11_怕酸的牙齿.md"
+    },
+    {
+      "title": "小班M1 认识我自己 - 模块概览",
+      "file": "STEM_小班_M1_认识我自己__模块概览.json",
+      "source": "小班\\M1_认识我自己\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-1-2-01] 探秘动物园",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-01_探秘动物园.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-01_探秘动物园.md"
+    },
+    {
+      "title": "[STEM-1-2-02] 动物的后代",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-02_动物的后代.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-02_动物的后代.md"
+    },
+    {
+      "title": "[STEM-1-2-03] 鸟类工程师",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-03_鸟类工程师.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-03_鸟类工程师.md"
+    },
+    {
+      "title": "[STEM-1-2-04] 不怕冷的北极熊",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-04_不怕冷的北极熊.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-04_不怕冷的北极熊.md"
+    },
+    {
+      "title": "[STEM-1-2-05] 动物运动员",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-05_动物运动员.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-05_动物运动员.md"
+    },
+    {
+      "title": "[STEM-1-2-06] 侏罗纪大探索",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-06_侏罗纪大探索.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-06_侏罗纪大探索.md"
+    },
+    {
+      "title": "[STEM-1-2-07] 蚂蚁王国",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-07_蚂蚁王国.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-07_蚂蚁王国.md"
+    },
+    {
+      "title": "[STEM-1-2-08] 平衡蜻蜓",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-08_平衡蜻蜓.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-08_平衡蜻蜓.md"
+    },
+    {
+      "title": "[STEM-1-2-09] 动物保护色",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-09_动物保护色.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-09_动物保护色.md"
+    },
+    {
+      "title": "[STEM-1-2-10] 蚯蚓的故事",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-10_蚯蚓的故事.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-10_蚯蚓的故事.md"
+    },
+    {
+      "title": "[STEM-1-2-11] 鸭子的秘密",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-11_鸭子的秘密.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-11_鸭子的秘密.md"
+    },
+    {
+      "title": "[STEM-1-2-12] 神奇的大自然",
+      "file": "STEM_小班_M2_动物王国_STEM-1-2-12_神奇的大自然.json",
+      "source": "小班\\M2_动物王国\\STEM-1-2-12_神奇的大自然.md"
+    },
+    {
+      "title": "小班M2 动物王国 - 模块概览",
+      "file": "STEM_小班_M2_动物王国__模块概览.json",
+      "source": "小班\\M2_动物王国\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-1-3-01] 植物的身体",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-01_植物的身体.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-01_植物的身体.md"
+    },
+    {
+      "title": "[STEM-1-3-02] 小种子旅行",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-02_小种子旅行.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-02_小种子旅行.md"
+    },
+    {
+      "title": "[STEM-1-3-03] 植物不同的根",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-03_植物不同的根.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-03_植物不同的根.md"
+    },
+    {
+      "title": "[STEM-1-3-04] 植物的茎",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-04_植物的茎.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-04_植物的茎.md"
+    },
+    {
+      "title": "[STEM-1-3-05] 神奇的块茎",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-05_神奇的块茎.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-05_神奇的块茎.md"
+    },
+    {
+      "title": "[STEM-1-3-06] 五颜六色的花",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-06_五颜六色的花.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-06_五颜六色的花.md"
+    },
+    {
+      "title": "[STEM-1-3-07] 花粉传播",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-07_花粉传播.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-07_花粉传播.md"
+    },
+    {
+      "title": "[STEM-1-3-08] 叶子的奥秘",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-08_叶子的奥秘.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-08_叶子的奥秘.md"
+    },
+    {
+      "title": "[STEM-1-3-09] 神奇的叶子",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-09_神奇的叶子.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-09_神奇的叶子.md"
+    },
+    {
+      "title": "[STEM-1-3-10] 植物染色剂",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-10_植物染色剂.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-10_植物染色剂.md"
+    },
+    {
+      "title": "[STEM-1-3-11] 植物科学",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-11_植物科学.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-11_植物科学.md"
+    },
+    {
+      "title": "[STEM-1-3-12] 植物应用",
+      "file": "STEM_小班_M3_植物百科_STEM-1-3-12_植物应用.json",
+      "source": "小班\\M3_植物百科\\STEM-1-3-12_植物应用.md"
+    },
+    {
+      "title": "小班M3 植物百科 - 模块概览",
+      "file": "STEM_小班_M3_植物百科__模块概览.json",
+      "source": "小班\\M3_植物百科\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-1-4-01] 平面与立体",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-01_平面与立体.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-01_平面与立体.md"
+    },
+    {
+      "title": "[STEM-1-4-02] 收纳小达人",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-02_收纳小达人.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-02_收纳小达人.md"
+    },
+    {
+      "title": "[STEM-1-4-03] 寻找视觉线索",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-03_寻找视觉线索.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-03_寻找视觉线索.md"
+    },
+    {
+      "title": "[STEM-1-4-05] 长长短短的路线图",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-05_长长短短的路线图.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-05_长长短短的路线图.md"
+    },
+    {
+      "title": "[STEM-1-4-06] 安全出口",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-06_安全出口.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-06_安全出口.md"
+    },
+    {
+      "title": "[STEM-1-4-07] 走出迷宫",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-07_走出迷宫.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-07_走出迷宫.md"
+    },
+    {
+      "title": "[STEM-1-4-08] 空间方位",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-08_空间方位.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-08_空间方位.md"
+    },
+    {
+      "title": "[STEM-1-4-10] 摇摇摆摆的奥秘",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-10_摇摇摆摆的奥秘.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-10_摇摇摆摆的奥秘.md"
+    },
+    {
+      "title": "[STEM-1-4-11] 高尔夫球",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-11_高尔夫球.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-11_高尔夫球.md"
+    },
+    {
+      "title": "[STEM-1-4-12] 摩擦与斜坡",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-12_摩擦与斜坡.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-12_摩擦与斜坡.md"
+    },
+    {
+      "title": "[STEM-1-4-13] 掉落的小球",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-13_掉落的小球.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-13_掉落的小球.md"
+    },
+    {
+      "title": "[STEM-1-4-14] 弹射炮筒",
+      "file": "STEM_小班_M4_数理物理_STEM-1-4-14_弹射炮筒.json",
+      "source": "小班\\M4_数理物理\\STEM-1-4-14_弹射炮筒.md"
+    },
+    {
+      "title": "小班M4 数理逻辑与物理启蒙 - 模块概览",
+      "file": "STEM_小班_M4_数理物理__模块概览.json",
+      "source": "小班\\M4_数理物理\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-3-1-01] 杠杆与平衡",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-01_杠杆与平衡.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-01_杠杆与平衡.md"
+    },
+    {
+      "title": "[STEM-3-1-02] 齿轮传动",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-02_齿轮传动.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-02_齿轮传动.md"
+    },
+    {
+      "title": "[STEM-3-1-03] 轮轴原理",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-03_轮轴原理.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-03_轮轴原理.md"
+    },
+    {
+      "title": "[STEM-3-1-04] 滑轮系统",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-04_滑轮系统.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-04_滑轮系统.md"
+    },
+    {
+      "title": "[STEM-3-1-05] 斜面与螺旋",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-05_斜面与螺旋.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-05_斜面与螺旋.md"
+    },
+    {
+      "title": "[STEM-3-1-06] 摩擦力探究",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-06_摩擦力探究.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-06_摩擦力探究.md"
+    },
+    {
+      "title": "[STEM-3-1-07] 弹性与弹力",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-07_弹性与弹力.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-07_弹性与弹力.md"
+    },
+    {
+      "title": "[STEM-3-1-08] 重心与稳定",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-08_重心与稳定.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-08_重心与稳定.md"
+    },
+    {
+      "title": "[STEM-3-1-09] 连杆机构",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-09_连杆机构.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-09_连杆机构.md"
+    },
+    {
+      "title": "[STEM-3-1-10] 凸轮机构",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-10_凸轮机构.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-10_凸轮机构.md"
+    },
+    {
+      "title": "[STEM-3-1-11] 棘轮与棘爪",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-11_棘轮与棘爪.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-11_棘轮与棘爪.md"
+    },
+    {
+      "title": "[STEM-3-1-12] 综合机械挑战",
+      "file": "STEM_大班_M1_复杂机械_STEM-3-1-12_综合机械挑战.json",
+      "source": "大班\\M1_复杂机械\\STEM-3-1-12_综合机械挑战.md"
+    },
+    {
+      "title": "STEM大班 M1 复杂机械 模块概览",
+      "file": "STEM_大班_M1_复杂机械__模块概览.json",
+      "source": "大班\\M1_复杂机械\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-3-2-01] 火山爆发",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-01_火山爆发.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-01_火山爆发.md"
+    },
+    {
+      "title": "[STEM-3-2-02] 地震预警",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-02_地震预警.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-02_地震预警.md"
+    },
+    {
+      "title": "[STEM-3-2-03] 水力发电",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-03_水力发电.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-03_水力发电.md"
+    },
+    {
+      "title": "[STEM-3-2-04] 风力发电",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-04_风力发电.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-04_风力发电.md"
+    },
+    {
+      "title": "[STEM-3-2-05] 太阳能应用",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-05_太阳能应用.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-05_太阳能应用.md"
+    },
+    {
+      "title": "[STEM-3-2-06] 古代投石机",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-06_古代投石机.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-06_古代投石机.md"
+    },
+    {
+      "title": "[STEM-3-2-07] 指南针与导航",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-07_指南针与导航.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-07_指南针与导航.md"
+    },
+    {
+      "title": "[STEM-3-2-08] 造纸术",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-08_造纸术.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-08_造纸术.md"
+    },
+    {
+      "title": "[STEM-3-2-09] 活字印刷",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-09_活字印刷.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-09_活字印刷.md"
+    },
+    {
+      "title": "[STEM-3-2-10] 古代水车",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-10_古代水车.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-10_古代水车.md"
+    },
+    {
+      "title": "[STEM-3-2-11] 天文观测",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-11_天文观测.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-11_天文观测.md"
+    },
+    {
+      "title": "[STEM-3-2-12] 综合挑战：古今对话",
+      "file": "STEM_大班_M2_地球与空间_STEM-3-2-12_综合挑战_古今对话.json",
+      "source": "大班\\M2_地球与空间\\STEM-3-2-12_综合挑战_古今对话.md"
+    },
+    {
+      "title": "大班M2 地球与空间 模块概览",
+      "file": "STEM_大班_M2_地球与空间__模块概览.json",
+      "source": "大班\\M2_地球与空间\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-3-3-01] 声音的秘密",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-01_声音的秘密.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-01_声音的秘密.md"
+    },
+    {
+      "title": "[STEM-3-3-02] 光的魔法",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-02_光的魔法.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-02_光的魔法.md"
+    },
+    {
+      "title": "[STEM-3-3-03] 电的初体验",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-03_电的初体验.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-03_电的初体验.md"
+    },
+    {
+      "title": "[STEM-3-3-04] 磁力探索",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-04_磁力探索.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-04_磁力探索.md"
+    },
+    {
+      "title": "[STEM-3-3-05] 热量传递",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-05_热量传递.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-05_热量传递.md"
+    },
+    {
+      "title": "[STEM-3-3-06] 气压与真空",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-06_气压与真空.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-06_气压与真空.md"
+    },
+    {
+      "title": "[STEM-3-3-07] 空气的力量",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-07_空气的力量.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-07_空气的力量.md"
+    },
+    {
+      "title": "[STEM-3-3-08] 浮力实验",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-08_浮力实验.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-08_浮力实验.md"
+    },
+    {
+      "title": "[STEM-3-3-09] 风的力量",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-09_风的力量.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-09_风的力量.md"
+    },
+    {
+      "title": "[STEM-3-3-10] 能量转换",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-10_能量转换.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-10_能量转换.md"
+    },
+    {
+      "title": "[STEM-3-3-11] 电磁铁",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-11_电磁铁.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-11_电磁铁.md"
+    },
+    {
+      "title": "[STEM-3-3-12] 综合挑战：能源小屋",
+      "file": "STEM_大班_M3_能源科学_STEM-3-3-12_综合挑战_能源小屋.json",
+      "source": "大班\\M3_能源科学\\STEM-3-3-12_综合挑战_能源小屋.md"
+    },
+    {
+      "title": "STEM大班 M3 能源科学 模块概览",
+      "file": "STEM_大班_M3_能源科学__模块概览.json",
+      "source": "大班\\M3_能源科学\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-3-4-01] 智能风扇",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-01_智能风扇.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-01_智能风扇.md"
+    },
+    {
+      "title": "[STEM-3-4-02] 智能路灯",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-02_智能路灯.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-02_智能路灯.md"
+    },
+    {
+      "title": "[STEM-3-4-03] 避障小车",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-03_避障小车.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-03_避障小车.md"
+    },
+    {
+      "title": "[STEM-3-4-04] 巡线小车",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-04_巡线小车.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-04_巡线小车.md"
+    },
+    {
+      "title": "[STEM-3-4-05] 遥控机械臂",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-05_遥控机械臂.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-05_遥控机械臂.md"
+    },
+    {
+      "title": "[STEM-3-4-06] 智能垃圾桶",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-06_智能垃圾桶.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-06_智能垃圾桶.md"
+    },
+    {
+      "title": "[STEM-3-4-07] 防近视支架",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-07_防近视支架.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-07_防近视支架.md"
+    },
+    {
+      "title": "[STEM-3-4-08] 尤克里里",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-08_尤克里里.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-08_尤克里里.md"
+    },
+    {
+      "title": "[STEM-3-4-09] 疯狂娃娃机",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-09_疯狂娃娃机.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-09_疯狂娃娃机.md"
+    },
+    {
+      "title": "[STEM-3-4-10] 智能储蓄罐",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-10_智能储蓄罐.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-10_智能储蓄罐.md"
+    },
+    {
+      "title": "[STEM-3-4-11] 数字密码锁",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-11_数字密码锁.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-11_数字密码锁.md"
+    },
+    {
+      "title": "[STEM-3-4-12] 自动售卖机",
+      "file": "STEM_大班_M4_智能硬件_STEM-3-4-12_自动售卖机.json",
+      "source": "大班\\M4_智能硬件\\STEM-3-4-12_自动售卖机.md"
+    },
+    {
+      "title": "STEM大班 M4 智能硬件 模块概览",
+      "file": "STEM_大班_M4_智能硬件__模块概览.json",
+      "source": "大班\\M4_智能硬件\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-2-1-01] 酷酷的直升机",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-01_酷酷的直升机.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-01_酷酷的直升机.md"
+    },
+    {
+      "title": "[STEM-2-1-02] 美丽的独角兽",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-02_美丽的独角兽.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-02_美丽的独角兽.md"
+    },
+    {
+      "title": "[STEM-2-1-03] 快乐跷跷板",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-03_快乐跷跷板.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-03_快乐跷跷板.md"
+    },
+    {
+      "title": "[STEM-2-1-04] 神奇的投石机",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-04_神奇的投石机.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-04_神奇的投石机.md"
+    },
+    {
+      "title": "[STEM-2-1-05] 好玩的秋千",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-05_好玩的秋千.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-05_好玩的秋千.md"
+    },
+    {
+      "title": "[STEM-2-1-06] 神秘的热气球",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-06_神秘的热气球.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-06_神秘的热气球.md"
+    },
+    {
+      "title": "[STEM-2-1-07] 有趣的滑轮",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-07_有趣的滑轮.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-07_有趣的滑轮.md"
+    },
+    {
+      "title": "[STEM-2-1-08] 建筑工地",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-08_建筑工地.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-08_建筑工地.md"
+    },
+    {
+      "title": "[STEM-2-1-09] 环保小卫士",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-09_环保小卫士.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-09_环保小卫士.md"
+    },
+    {
+      "title": "[STEM-2-1-10] 手持钻孔机",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-10_手持钻孔机.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-10_手持钻孔机.md"
+    },
+    {
+      "title": "[STEM-2-1-11] 潜水的奥秘",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-11_潜水的奥秘.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-11_潜水的奥秘.md"
+    },
+    {
+      "title": "[STEM-2-1-12] 极速方程式",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-12_极速方程式.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-12_极速方程式.md"
+    },
+    {
+      "title": "[STEM-2-1-13] 瓦力机器人",
+      "file": "STEM_中班_M1_机械与工具_STEM-2-1-13_瓦力机器人.json",
+      "source": "中班\\M1_机械与工具\\STEM-2-1-13_瓦力机器人.md"
+    },
+    {
+      "title": "STEM中班 M1 机械与工具 模块概览",
+      "file": "STEM_中班_M1_机械与工具__模块概览.json",
+      "source": "中班\\M1_机械与工具\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-2-2-01] 漂亮的砖墙",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-01_漂亮的砖墙.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-01_漂亮的砖墙.md"
+    },
+    {
+      "title": "[STEM-2-2-02] 公园的一角",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-02_公园的一角.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-02_公园的一角.md"
+    },
+    {
+      "title": "[STEM-2-2-03] 雨天的屋顶",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-03_雨天的屋顶.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-03_雨天的屋顶.md"
+    },
+    {
+      "title": "[STEM-2-2-04] 古老的拱桥",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-04_古老的拱桥.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-04_古老的拱桥.md"
+    },
+    {
+      "title": "[STEM-2-2-05] 最美湖心亭",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-05_最美湖心亭.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-05_最美湖心亭.md"
+    },
+    {
+      "title": "[STEM-2-2-06] 老北京四合院",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-06_老北京四合院.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-06_老北京四合院.md"
+    },
+    {
+      "title": "[STEM-2-2-07] 三峡大坝",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-07_三峡大坝.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-07_三峡大坝.md"
+    },
+    {
+      "title": "[STEM-2-2-08] 摩登上海高楼",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-08_摩登上海高楼.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-08_摩登上海高楼.md"
+    },
+    {
+      "title": "[STEM-2-2-09] 浪漫巴黎铁塔",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-09_浪漫巴黎铁塔.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-09_浪漫巴黎铁塔.md"
+    },
+    {
+      "title": "[STEM-2-2-10] 荷兰风车转转转",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-10_荷兰风车转转转.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-10_荷兰风车转转转.md"
+    },
+    {
+      "title": "[STEM-2-2-11] 飞跃万里长城",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-11_飞跃万里长城.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-11_飞跃万里长城.md"
+    },
+    {
+      "title": "[STEM-2-2-12] 见证埃及奇迹",
+      "file": "STEM_中班_M2_建筑与结构_STEM-2-2-12_见证埃及奇迹.json",
+      "source": "中班\\M2_建筑与结构\\STEM-2-2-12_见证埃及奇迹.md"
+    },
+    {
+      "title": "STEM中班 M2 建筑与结构 - 模块概览",
+      "file": "STEM_中班_M2_建筑与结构__模块概览.json",
+      "source": "中班\\M2_建筑与结构\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-2-3-01] 毛毛虫的滑板鞋",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-01_毛毛虫的滑板鞋.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-01_毛毛虫的滑板鞋.md"
+    },
+    {
+      "title": "[STEM-2-3-02] 大象的电风扇",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-02_大象的电风扇.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-02_大象的电风扇.md"
+    },
+    {
+      "title": "[STEM-2-3-03] 小兔子的平衡车",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-03_小兔子的平衡车.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-03_小兔子的平衡车.md"
+    },
+    {
+      "title": "[STEM-2-3-04] 小鸡啄米",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-04_小鸡啄米.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-04_小鸡啄米.md"
+    },
+    {
+      "title": "[STEM-2-3-05] 鳄鱼的电动牙刷",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-05_鳄鱼的电动牙刷.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-05_鳄鱼的电动牙刷.md"
+    },
+    {
+      "title": "[STEM-2-3-06] 小猫钓鱼",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-06_小猫钓鱼.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-06_小猫钓鱼.md"
+    },
+    {
+      "title": "[STEM-2-3-07] 猴子的宝箱",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-07_猴子的宝箱.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-07_猴子的宝箱.md"
+    },
+    {
+      "title": "[STEM-2-3-08] 变色龙的乐器",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-08_变色龙的乐器.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-08_变色龙的乐器.md"
+    },
+    {
+      "title": "[STEM-2-3-09] 河马的收银机",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-09_河马的收银机.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-09_河马的收银机.md"
+    },
+    {
+      "title": "[STEM-2-3-10] 智能人行道",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-10_智能人行道.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-10_智能人行道.md"
+    },
+    {
+      "title": "[STEM-2-3-11] 人脸识别检票口",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-11_人脸识别检票口.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-11_人脸识别检票口.md"
+    },
+    {
+      "title": "[STEM-2-3-12] 动物演唱会",
+      "file": "STEM_中班_M3_智能机械_STEM-2-3-12_动物演唱会.json",
+      "source": "中班\\M3_智能机械\\STEM-2-3-12_动物演唱会.md"
+    },
+    {
+      "title": "STEM中班 M3 智能机械 - 模块概览",
+      "file": "STEM_中班_M3_智能机械__模块概览.json",
+      "source": "中班\\M3_智能机械\\_模块概览.md"
+    },
+    {
+      "title": "[STEM-2-4-01] 看得见的声音",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-01_看得见的声音.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-01_看得见的声音.md"
+    },
+    {
+      "title": "[STEM-2-4-02] 音乐水杯",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-02_音乐水杯.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-02_音乐水杯.md"
+    },
+    {
+      "title": "[STEM-2-4-03] 小小手电筒",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-03_小小手电筒.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-03_小小手电筒.md"
+    },
+    {
+      "title": "[STEM-2-4-04] 潜望镜",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-04_潜望镜.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-04_潜望镜.md"
+    },
+    {
+      "title": "[STEM-2-4-05] 照相机",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-05_照相机.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-05_照相机.md"
+    },
+    {
+      "title": "[STEM-2-4-06] 不一样的光彩",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-06_不一样的光彩.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-06_不一样的光彩.md"
+    },
+    {
+      "title": "[STEM-2-4-07] 七色光",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-07_七色光.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-07_七色光.md"
+    },
+    {
+      "title": "[STEM-2-4-08] 神奇的电",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-08_神奇的电.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-08_神奇的电.md"
+    },
+    {
+      "title": "[STEM-2-4-09] 静电秀",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-09_静电秀.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-09_静电秀.md"
+    },
+    {
+      "title": "[STEM-2-4-10] 点亮一盏小灯",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-10_点亮一盏小灯.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-10_点亮一盏小灯.md"
+    },
+    {
+      "title": "[STEM-2-4-11] 导体与绝缘体",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-11_导体与绝缘体.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-11_导体与绝缘体.md"
+    },
+    {
+      "title": "[STEM-2-4-12] 串联与并联",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-12_串联与并联.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-12_串联与并联.md"
+    },
+    {
+      "title": "[STEM-2-4-13] 热的秘密",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-13_热的秘密.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-13_热的秘密.md"
+    },
+    {
+      "title": "[STEM-2-4-14] 摩擦摩擦",
+      "file": "STEM_中班_M4_物理科学_STEM-2-4-14_摩擦摩擦.json",
+      "source": "中班\\M4_物理科学\\STEM-2-4-14_摩擦摩擦.md"
+    },
+    {
+      "title": "STEM中班 M4 物理科学 - 模块概览",
+      "file": "STEM_中班_M4_物理科学__模块概览.json",
+      "source": "中班\\M4_物理科学\\_模块概览.md"
+    },
+    {
+      "title": "CODE萃取：七步教学法",
+      "file": "CODE_00_七步教学法.json",
+      "source": "00_七步教学法.md"
+    },
+    {
+      "title": "CODE萃取：课程架构",
+      "file": "CODE_00_课程架构.json",
+      "source": "00_课程架构.md"
+    },
+    {
+      "title": "CODE萃取：CODE1阶段1-1 机械结构基础",
+      "file": "CODE_CODE1_01_机械结构.json",
+      "source": "CODE1_01_机械结构.md"
+    },
+    {
+      "title": "CODE萃取：CODE1阶段1-2 智能硬件与仿生",
+      "file": "CODE_CODE1_02_智能硬件.json",
+      "source": "CODE1_02_智能硬件.md"
+    },
+    {
+      "title": "CODE萃取：CODE1阶段1-3 Scratch编程启蒙",
+      "file": "CODE_CODE1_03_编程启蒙.json",
+      "source": "CODE1_03_编程启蒙.md"
+    },
+    {
+      "title": "CODE萃取：CODE1阶段1-4 编程逻辑进阶",
+      "file": "CODE_CODE1_04_编程进阶.json",
+      "source": "CODE1_04_编程进阶.md"
+    },
+    {
+      "title": "CODE萃取：CODE2阶段2-1 智能应用",
+      "file": "CODE_CODE2_01_智能应用.json",
+      "source": "CODE2_01_智能应用.md"
+    },
+    {
+      "title": "CODE萃取：CODE2阶段2-2 智能交互系统",
+      "file": "CODE_CODE2_02_智能交互.json",
+      "source": "CODE2_02_智能交互.md"
+    },
+    {
+      "title": "CODE萃取：CODE2阶段2-3 算法与数学逻辑",
+      "file": "CODE_CODE2_03_算法逻辑.json",
+      "source": "CODE2_03_算法逻辑.md"
+    },
+    {
+      "title": "CODE萃取：CODE3阶段3-1 智能系统",
+      "file": "CODE_CODE3_01_智能系统.json",
+      "source": "CODE3_01_智能系统.md"
+    },
+    {
+      "title": "CODE萃取：CODE3阶段3-2 游戏开发PBL",
+      "file": "CODE_CODE3_02_游戏开发.json",
+      "source": "CODE3_02_游戏开发.md"
+    },
+    {
+      "title": "CODE萃取：CODE3阶段3-3 高级工程",
+      "file": "CODE_CODE3_03_高级工程.json",
+      "source": "CODE3_03_高级工程.md"
+    },
+    {
+      "title": "[CODE3-1-01] 冰箱报警器",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-01_冰箱报警器.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-01_冰箱报警器.md"
+    },
+    {
+      "title": "[CODE3-1-02] 神奇遥控器",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-02_神奇遥控器.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-02_神奇遥控器.md"
+    },
+    {
+      "title": "[CODE3-1-03] 魔力电吉他",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-03_魔力电吉他.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-03_魔力电吉他.md"
+    },
+    {
+      "title": "[CODE3-1-04] 楼梯灯",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-04_楼梯灯.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-04_楼梯灯.md"
+    },
+    {
+      "title": "[CODE3-1-05] 家园卫士",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-05_家园卫士.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-05_家园卫士.md"
+    },
+    {
+      "title": "[CODE3-1-06] 测速试验车",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-06_测速试验车.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-06_测速试验车.md"
+    },
+    {
+      "title": "[CODE3-1-07] 智能浇花器",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-07_智能浇花器.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-07_智能浇花器.md"
+    },
+    {
+      "title": "[CODE3-1-08] 智能停车场",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-08_智能停车场.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-08_智能停车场.md"
+    },
+    {
+      "title": "[CODE3-1-09] 智能温室",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-09_智能温室.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-09_智能温室.md"
+    },
+    {
+      "title": "[CODE3-1-10] 智能路灯系统",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-10_智能路灯系统.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-10_智能路灯系统.md"
+    },
+    {
+      "title": "[CODE3-1-11] 火灾通道门",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-11_火灾通道门.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-11_火灾通道门.md"
+    },
+    {
+      "title": "[CODE3-1-12] 智能家居中控",
+      "file": "CODE_CODE3_M1_智能系统_CODE3-1-12_智能家居中控.json",
+      "source": "CODE3\\M1_智能系统\\CODE3-1-12_智能家居中控.md"
+    },
+    {
+      "title": "CODE3 M1 智能系统 - 模块概览",
+      "file": "CODE_CODE3_M1_智能系统__模块概览.json",
+      "source": "CODE3\\M1_智能系统\\_模块概览.md"
+    },
+    {
+      "title": "[CODE3-2-01] 太空防卫战-基础功能",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-01_太空防卫战-基础功能.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-01_太空防卫战-基础功能.md"
+    },
+    {
+      "title": "[CODE3-2-02] 太空防卫战-变量与克隆",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-02_太空防卫战-变量与克隆.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-02_太空防卫战-变量与克隆.md"
+    },
+    {
+      "title": "[CODE3-2-03] 太空防卫战-大招与平衡",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-03_太空防卫战-大招与平衡.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-03_太空防卫战-大招与平衡.md"
+    },
+    {
+      "title": "[CODE3-2-04] 篮球小子-投篮物理",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-04_篮球小子-投篮物理.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-04_篮球小子-投篮物理.md"
+    },
+    {
+      "title": "[CODE3-2-05] 篮球小子-力度与角度",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-05_篮球小子-力度与角度.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-05_篮球小子-力度与角度.md"
+    },
+    {
+      "title": "[CODE3-2-06] 篮球小子-关卡与判定",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-06_篮球小子-关卡与判定.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-06_篮球小子-关卡与判定.md"
+    },
+    {
+      "title": "[CODE3-2-07] 植物大战僵尸-阳光与种植",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-07_植物大战僵尸-阳光与种植.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-07_植物大战僵尸-阳光与种植.md"
+    },
+    {
+      "title": "[CODE3-2-08] 植物大战僵尸-射手与子弹",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-08_植物大战僵尸-射手与子弹.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-08_植物大战僵尸-射手与子弹.md"
+    },
+    {
+      "title": "[CODE3-2-09] 植物大战僵尸-僵尸潮",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-09_植物大战僵尸-僵尸潮.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-09_植物大战僵尸-僵尸潮.md"
+    },
+    {
+      "title": "[CODE3-2-10] 勇闯黑白岛-重力引擎",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-10_勇闯黑白岛-重力引擎.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-10_勇闯黑白岛-重力引擎.md"
+    },
+    {
+      "title": "[CODE3-2-11] 勇闯黑白岛-卷轴地图",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-11_勇闯黑白岛-卷轴地图.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-11_勇闯黑白岛-卷轴地图.md"
+    },
+    {
+      "title": "[CODE3-2-12] 勇闯黑白岛-交互与AI",
+      "file": "CODE_CODE3_M2_游戏开发_CODE3-2-12_勇闯黑白岛-交互与AI.json",
+      "source": "CODE3\\M2_游戏开发\\CODE3-2-12_勇闯黑白岛-交互与AI.md"
+    },
+    {
+      "title": "CODE3 M2 游戏开发PBL 模块概览",
+      "file": "CODE_CODE3_M2_游戏开发__模块概览.json",
+      "source": "CODE3\\M2_游戏开发\\_模块概览.md"
+    },
+    {
+      "title": "[CODE3-3-01] 六足机器人",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-01_六足机器人.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-01_六足机器人.md"
+    },
+    {
+      "title": "[CODE3-3-02] 投篮机",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-02_投篮机.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-02_投篮机.md"
+    },
+    {
+      "title": "[CODE3-3-03] 自动花瓣机",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-03_自动花瓣机.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-03_自动花瓣机.md"
+    },
+    {
+      "title": "[CODE3-3-04] 自动发牌机",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-04_自动发牌机.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-04_自动发牌机.md"
+    },
+    {
+      "title": "[CODE3-3-05] 两脚怪",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-05_两脚怪.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-05_两脚怪.md"
+    },
+    {
+      "title": "[CODE3-3-06] 投石机",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-06_投石机.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-06_投石机.md"
+    },
+    {
+      "title": "[CODE3-3-07] 坦克大战",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-07_坦克大战.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-07_坦克大战.md"
+    },
+    {
+      "title": "[CODE3-3-08] 横行霸道的螃蟹",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-08_横行霸道的螃蟹.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-08_横行霸道的螃蟹.md"
+    },
+    {
+      "title": "[CODE3-3-09] 巡线小车",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-09_巡线小车.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-09_巡线小车.md"
+    },
+    {
+      "title": "[CODE3-3-10] 舞龙",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-10_舞龙.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-10_舞龙.md"
+    },
+    {
+      "title": "[CODE3-3-11] 机械臂",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-11_机械臂.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-11_机械臂.md"
+    },
+    {
+      "title": "[CODE3-3-12] 小小电梯",
+      "file": "CODE_CODE3_M3_高级工程_CODE3-3-12_小小电梯.json",
+      "source": "CODE3\\M3_高级工程\\CODE3-3-12_小小电梯.md"
+    },
+    {
+      "title": "CODE3 M3 高级工程 - 模块概览",
+      "file": "CODE_CODE3_M3_高级工程__模块概览.json",
+      "source": "CODE3\\M3_高级工程\\_模块概览.md"
+    },
+    {
+      "title": "[CODE2-1-01] 会跳舞的火柴人",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-01_会跳舞的火柴人.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-01_会跳舞的火柴人.md"
+    },
+    {
+      "title": "[CODE2-1-02] 电路的秘密",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-02_电路的秘密.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-02_电路的秘密.md"
+    },
+    {
+      "title": "[CODE2-1-03] 商场自动门",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-03_商场自动门.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-03_商场自动门.md"
+    },
+    {
+      "title": "[CODE2-1-04] 声控小夜灯",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-04_声控小夜灯.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-04_声控小夜灯.md"
+    },
+    {
+      "title": "[CODE2-1-05] 不倒翁",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-05_不倒翁.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-05_不倒翁.md"
+    },
+    {
+      "title": "[CODE2-1-06] 大战龙博士",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-06_大战龙博士.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-06_大战龙博士.md"
+    },
+    {
+      "title": "[CODE2-1-07] 智能风扇",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-07_智能风扇.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-07_智能风扇.md"
+    },
+    {
+      "title": "[CODE2-1-08] 穿衣提示仪",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-08_穿衣提示仪.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-08_穿衣提示仪.md"
+    },
+    {
+      "title": "[CODE2-1-09] 交通信号灯",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-09_交通信号灯.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-09_交通信号灯.md"
+    },
+    {
+      "title": "[CODE2-1-10] 公路大冒险",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-10_公路大冒险.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-10_公路大冒险.md"
+    },
+    {
+      "title": "[CODE2-1-11] 机械手指",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-11_机械手指.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-11_机械手指.md"
+    },
+    {
+      "title": "[CODE2-1-12] 小小抓手",
+      "file": "CODE_CODE2_M1_智能应用_CODE2-1-12_小小抓手.json",
+      "source": "CODE2\\M1_智能应用\\CODE2-1-12_小小抓手.md"
+    },
+    {
+      "title": "CODE2 M1 智能应用 - 模块概览",
+      "file": "CODE_CODE2_M1_智能应用__模块概览.json",
+      "source": "CODE2\\M1_智能应用\\_模块概览.md"
+    },
+    {
+      "title": "[CODE2-2-01] 沙包砸娃娃",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-01_沙包砸娃娃.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-01_沙包砸娃娃.md"
+    },
+    {
+      "title": "[CODE2-2-02] 智能垃圾桶",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-02_智能垃圾桶.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-02_智能垃圾桶.md"
+    },
+    {
+      "title": "[CODE2-2-03] 智能存钱罐",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-03_智能存钱罐.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-03_智能存钱罐.md"
+    },
+    {
+      "title": "[CODE2-2-04] 自动计票器",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-04_自动计票器.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-04_自动计票器.md"
+    },
+    {
+      "title": "[CODE2-2-05] 便携式求救器",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-05_便携式求救器.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-05_便携式求救器.md"
+    },
+    {
+      "title": "[CODE2-2-06] 智能台灯",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-06_智能台灯.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-06_智能台灯.md"
+    },
+    {
+      "title": "[CODE2-2-07] 智能门铃",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-07_智能门铃.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-07_智能门铃.md"
+    },
+    {
+      "title": "[CODE2-2-08] 超级闹钟",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-08_超级闹钟.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-08_超级闹钟.md"
+    },
+    {
+      "title": "[CODE2-2-09] 智能客服",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-09_智能客服.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-09_智能客服.md"
+    },
+    {
+      "title": "[CODE2-2-10] 分贝报警器",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-10_分贝报警器.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-10_分贝报警器.md"
+    },
+    {
+      "title": "[CODE2-2-11] 自动跟随小车",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-11_自动跟随小车.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-11_自动跟随小车.md"
+    },
+    {
+      "title": "[CODE2-2-12] 保护徽章",
+      "file": "CODE_CODE2_M2_智能交互_CODE2-2-12_保护徽章.json",
+      "source": "CODE2\\M2_智能交互\\CODE2-2-12_保护徽章.md"
+    },
+    {
+      "title": "CODE2 M2 智能交互系统 - 模块概览",
+      "file": "CODE_CODE2_M2_智能交互__模块概览.json",
+      "source": "CODE2\\M2_智能交互\\_模块概览.md"
+    },
+    {
+      "title": "[CODE2-3-01] 猜数游戏",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-01_猜数游戏.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-01_猜数游戏.md"
+    },
+    {
+      "title": "[CODE2-3-02] 汉堡店",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-02_汉堡店.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-02_汉堡店.md"
+    },
+    {
+      "title": "[CODE2-3-03] 射击游戏",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-03_射击游戏.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-03_射击游戏.md"
+    },
+    {
+      "title": "[CODE2-3-04] 捕鱼达人",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-04_捕鱼达人.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-04_捕鱼达人.md"
+    },
+    {
+      "title": "[CODE2-3-05] 分西瓜",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-05_分西瓜.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-05_分西瓜.md"
+    },
+    {
+      "title": "[CODE2-3-06] 平年闰年",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-06_平年闰年.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-06_平年闰年.md"
+    },
+    {
+      "title": "[CODE2-3-07] 拆炸弹",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-07_拆炸弹.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-07_拆炸弹.md"
+    },
+    {
+      "title": "[CODE2-3-08] 垃圾分类",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-08_垃圾分类.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-08_垃圾分类.md"
+    },
+    {
+      "title": "[CODE2-3-09] 钢琴大师",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-09_钢琴大师.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-09_钢琴大师.md"
+    },
+    {
+      "title": "[CODE2-3-10] 密码锁",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-10_密码锁.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-10_密码锁.md"
+    },
+    {
+      "title": "[CODE2-3-11] 超级计算机1",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-11_超级计算机1.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-11_超级计算机1.md"
+    },
+    {
+      "title": "[CODE2-3-12] 超级计算机2",
+      "file": "CODE_CODE2_M3_算法逻辑_CODE2-3-12_超级计算机2.json",
+      "source": "CODE2\\M3_算法逻辑\\CODE2-3-12_超级计算机2.md"
+    },
+    {
+      "title": "M3 算法逻辑 - 模块概览",
+      "file": "CODE_CODE2_M3_算法逻辑__模块概览.json",
+      "source": "CODE2\\M3_算法逻辑\\_模块概览.md"
+    },
+    {
+      "title": "[CODE1-1-01] 旋转的小鸟",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-01_旋转的小鸟.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-01_旋转的小鸟.md"
+    },
+    {
+      "title": "[CODE1-1-02] 高低传送带",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-02_高低传送带.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-02_高低传送带.md"
+    },
+    {
+      "title": "[CODE1-1-03] 战斗陀螺",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-03_战斗陀螺.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-03_战斗陀螺.md"
+    },
+    {
+      "title": "[CODE1-1-04] 智能赛车",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-04_智能赛车.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-04_智能赛车.md"
+    },
+    {
+      "title": "[CODE1-1-05] 螃蟹将军",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-05_螃蟹将军.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-05_螃蟹将军.md"
+    },
+    {
+      "title": "[CODE1-1-06] 最佳射手",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-06_最佳射手.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-06_最佳射手.md"
+    },
+    {
+      "title": "[CODE1-1-07] 高空缆车",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-07_高空缆车.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-07_高空缆车.md"
+    },
+    {
+      "title": "[CODE1-1-08] 智能电梯",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-08_智能电梯.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-08_智能电梯.md"
+    },
+    {
+      "title": "[CODE1-1-09] 音乐演奏家",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-09_音乐演奏家.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-09_音乐演奏家.md"
+    },
+    {
+      "title": "[CODE1-1-10] 跳跃的青蛙",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-10_跳跃的青蛙.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-10_跳跃的青蛙.md"
+    },
+    {
+      "title": "[CODE1-1-11] 霸气门神",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-11_霸气门神.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-11_霸气门神.md"
+    },
+    {
+      "title": "[CODE1-1-12] 奶酪老鼠夹",
+      "file": "CODE_CODE1_M1_机械结构_CODE1-1-12_奶酪老鼠夹.json",
+      "source": "CODE1\\M1_机械结构\\CODE1-1-12_奶酪老鼠夹.md"
+    },
+    {
+      "title": "M1 机械结构基础 - 模块概览",
+      "file": "CODE_CODE1_M1_机械结构__模块概览.json",
+      "source": "CODE1\\M1_机械结构\\_模块概览.md"
+    },
+    {
+      "title": "[CODE1-2-01] 超级投石机",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-01_超级投石机.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-01_超级投石机.md"
+    },
+    {
+      "title": "[CODE1-2-02] 感应移动门",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-02_感应移动门.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-02_感应移动门.md"
+    },
+    {
+      "title": "[CODE1-2-03] 饥饿的鳄鱼",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-03_饥饿的鳄鱼.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-03_饥饿的鳄鱼.md"
+    },
+    {
+      "title": "[CODE1-2-04] 蠕动的毛毛虫",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-04_蠕动的毛毛虫.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-04_蠕动的毛毛虫.md"
+    },
+    {
+      "title": "[CODE1-2-05] 螺旋桨飞机",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-05_螺旋桨飞机.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-05_螺旋桨飞机.md"
+    },
+    {
+      "title": "[CODE1-2-06] 小船遇险记",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-06_小船遇险记.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-06_小船遇险记.md"
+    },
+    {
+      "title": "[CODE1-2-07] 吊车大力神",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-07_吊车大力神.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-07_吊车大力神.md"
+    },
+    {
+      "title": "[CODE1-2-08] 叉车大力士",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-08_叉车大力士.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-08_叉车大力士.md"
+    },
+    {
+      "title": "[CODE1-2-09] 爬绳猴子",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-09_爬绳猴子.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-09_爬绳猴子.md"
+    },
+    {
+      "title": "[CODE1-2-10] 智能公交车",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-10_智能公交车.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-10_智能公交车.md"
+    },
+    {
+      "title": "[CODE1-2-11] 智能垃圾桶",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-11_智能垃圾桶.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-11_智能垃圾桶.md"
+    },
+    {
+      "title": "[CODE1-2-12] 摇头风扇",
+      "file": "CODE_CODE1_M2_智能硬件_CODE1-2-12_摇头风扇.json",
+      "source": "CODE1\\M2_智能硬件\\CODE1-2-12_摇头风扇.md"
+    },
+    {
+      "title": "M2 智能硬件与仿生 - 模块概览",
+      "file": "CODE_CODE1_M2_智能硬件__模块概览.json",
+      "source": "CODE1\\M2_智能硬件\\_模块概览.md"
+    },
+    {
+      "title": "[CODE1-3-01] Hello Scratch",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-01_Hello_Scratch.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-01_Hello_Scratch.md"
+    },
+    {
+      "title": "[CODE1-3-02] 冲出包围圈",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-02_冲出包围圈.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-02_冲出包围圈.md"
+    },
+    {
+      "title": "[CODE1-3-03] 百变小白",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-03_百变小白.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-03_百变小白.md"
+    },
+    {
+      "title": "[CODE1-3-04] 黑暗森林",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-04_黑暗森林.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-04_黑暗森林.md"
+    },
+    {
+      "title": "[CODE1-3-05] 保护小爱",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-05_保护小爱.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-05_保护小爱.md"
+    },
+    {
+      "title": "[CODE1-3-06] 小猫钓鱼",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-06_小猫钓鱼.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-06_小猫钓鱼.md"
+    },
+    {
+      "title": "[CODE1-3-07] 小猫钓鱼2",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-07_小猫钓鱼2.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-07_小猫钓鱼2.md"
+    },
+    {
+      "title": "[CODE1-3-08] 海底探险",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-08_海底探险.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-08_海底探险.md"
+    },
+    {
+      "title": "[CODE1-3-09] 海底探险2",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-09_海底探险2.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-09_海底探险2.md"
+    },
+    {
+      "title": "[CODE1-3-10] 海底探险3",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-10_海底探险3.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-10_海底探险3.md"
+    },
+    {
+      "title": "[CODE1-3-11] 逃出迷宫1",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-11_逃出迷宫1.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-11_逃出迷宫1.md"
+    },
+    {
+      "title": "[CODE1-3-12] 逃出迷宫2",
+      "file": "CODE_CODE1_M3_编程启蒙_CODE1-3-12_逃出迷宫2.json",
+      "source": "CODE1\\M3_编程启蒙\\CODE1-3-12_逃出迷宫2.md"
+    },
+    {
+      "title": "M3 编程启蒙 - 模块概览",
+      "file": "CODE_CODE1_M3_编程启蒙__模块概览.json",
+      "source": "CODE1\\M3_编程启蒙\\_模块概览.md"
+    },
+    {
+      "title": "[CODE1-4-01] 捉人游戏",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-01_捉人游戏.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-01_捉人游戏.md"
+    },
+    {
+      "title": "[CODE1-4-02] 斯斯接苹果",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-02_斯斯接苹果.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-02_斯斯接苹果.md"
+    },
+    {
+      "title": "[CODE1-4-03] 避障小白",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-03_避障小白.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-03_避障小白.md"
+    },
+    {
+      "title": "[CODE1-4-04] 躲避星星",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-04_躲避星星.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-04_躲避星星.md"
+    },
+    {
+      "title": "[CODE1-4-05] 小小魔术师",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-05_小小魔术师.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-05_小小魔术师.md"
+    },
+    {
+      "title": "[CODE1-4-06] 我的新朋友",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-06_我的新朋友.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-06_我的新朋友.md"
+    },
+    {
+      "title": "[CODE1-4-07] 单词接龙",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-07_单词接龙.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-07_单词接龙.md"
+    },
+    {
+      "title": "[CODE1-4-08] 万花筒",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-08_万花筒.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-08_万花筒.md"
+    },
+    {
+      "title": "[CODE1-4-09] 春夏秋冬",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-09_春夏秋冬.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-09_春夏秋冬.md"
+    },
+    {
+      "title": "[CODE1-4-10] 救援行动",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-10_救援行动.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-10_救援行动.md"
+    },
+    {
+      "title": "[CODE1-4-11] 生日贺卡1",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-11_生日贺卡1.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-11_生日贺卡1.md"
+    },
+    {
+      "title": "[CODE1-4-12] 生日贺卡2",
+      "file": "CODE_CODE1_M4_编程进阶_CODE1-4-12_生日贺卡2.json",
+      "source": "CODE1\\M4_编程进阶\\CODE1-4-12_生日贺卡2.md"
+    },
+    {
+      "title": "M4 编程进阶 - 模块概览",
+      "file": "CODE_CODE1_M4_编程进阶__模块概览.json",
+      "source": "CODE1\\M4_编程进阶\\_模块概览.md"
+    },
+    {
+      "title": "PythonAI萃取：课程架构",
+      "file": "PythonAI_00_课程架构.json",
+      "source": "00_课程架构.md"
+    },
+    {
+      "title": "PythonAI萃取：L1-0 基础语法与逻辑",
+      "file": "PythonAI_L1_00_基础语法.json",
+      "source": "L1_00_基础语法.md"
+    },
+    {
+      "title": "PythonAI萃取：L1-1 函数封装与交互",
+      "file": "PythonAI_L1_01_函数封装.json",
+      "source": "L1_01_函数封装.md"
+    },
+    {
+      "title": "PythonAI萃取：L1-2 算法逻辑与运算",
+      "file": "PythonAI_L1_02_算法逻辑.json",
+      "source": "L1_02_算法逻辑.md"
+    },
+    {
+      "title": "PythonAI萃取：L1-3 数据结构与复杂逻辑",
+      "file": "PythonAI_L1_03_数据结构.json",
+      "source": "L1_03_数据结构.md"
+    },
+    {
+      "title": "PythonAI萃取：L1-4 智能硬件与AI应用",
+      "file": "PythonAI_L1_04_智能硬件.json",
+      "source": "L1_04_智能硬件.md"
+    },
+    {
+      "title": "PythonAI萃取：L2-3 MicroPython硬件开发（MP系列）",
+      "file": "PythonAI_L2-3_MicroPython硬件开发.json",
+      "source": "L2-3_MicroPython硬件开发.md"
+    },
+    {
+      "title": "PythonAI萃取：L2-1 算法与数据科学",
+      "file": "PythonAI_L2_01_算法数据科学.json",
+      "source": "L2_01_算法数据科学.md"
+    },
+    {
+      "title": "PythonAI萃取：L2-2 项目应用",
+      "file": "PythonAI_L2_02_项目应用.json",
+      "source": "L2_02_项目应用.md"
+    },
+    {
+      "title": "PythonAI萃取：L2-3 交互式AI与仿生控制",
+      "file": "PythonAI_L2_03_交互式AI.json",
+      "source": "L2_03_交互式AI.md"
+    },
+    {
+      "title": "PythonAI萃取：L2-4 计算机视觉CV",
+      "file": "PythonAI_L2_04_计算机视觉.json",
+      "source": "L2_04_计算机视觉.md"
+    },
+    {
+      "title": "[PYAI-MP-01] 初识MicroPython",
+      "file": "PythonAI_MP_PYAI-MP-01_初识MicroPython.json",
+      "source": "MP\\PYAI-MP-01_初识MicroPython.md"
+    },
+    {
+      "title": "[PYAI-MP-02] 按钮与数字输入",
+      "file": "PythonAI_MP_PYAI-MP-02_按钮与数字输入.json",
+      "source": "MP\\PYAI-MP-02_按钮与数字输入.md"
+    },
+    {
+      "title": "[PYAI-MP-03] 模拟信号与PWM",
+      "file": "PythonAI_MP_PYAI-MP-03_模拟信号与PWM.json",
+      "source": "MP\\PYAI-MP-03_模拟信号与PWM.md"
+    },
+    {
+      "title": "[PYAI-MP-04] 类与实例(1)",
+      "file": "PythonAI_MP_PYAI-MP-04_类与实例1.json",
+      "source": "MP\\PYAI-MP-04_类与实例1.md"
+    },
+    {
+      "title": "[PYAI-MP-05] 类与实例(2)",
+      "file": "PythonAI_MP_PYAI-MP-05_类与实例2.json",
+      "source": "MP\\PYAI-MP-05_类与实例2.md"
+    },
+    {
+      "title": "[PYAI-MP-06] 硬件驱动封装",
+      "file": "PythonAI_MP_PYAI-MP-06_硬件驱动封装.json",
+      "source": "MP\\PYAI-MP-06_硬件驱动封装.md"
+    },
+    {
+      "title": "[PYAI-MP-07] 温湿度数据采集",
+      "file": "PythonAI_MP_PYAI-MP-07_温湿度数据采集.json",
+      "source": "MP\\PYAI-MP-07_温湿度数据采集.md"
+    },
+    {
+      "title": "[PYAI-MP-08] 舵机与映射",
+      "file": "PythonAI_MP_PYAI-MP-08_舵机与映射.json",
+      "source": "MP\\PYAI-MP-08_舵机与映射.md"
+    },
+    {
+      "title": "[PYAI-MP-09] 声光互动",
+      "file": "PythonAI_MP_PYAI-MP-09_声光互动.json",
+      "source": "MP\\PYAI-MP-09_声光互动.md"
+    },
+    {
+      "title": "[PYAI-MP-10] 海龟雷达(1)",
+      "file": "PythonAI_MP_PYAI-MP-10_海龟雷达1.json",
+      "source": "MP\\PYAI-MP-10_海龟雷达1.md"
+    },
+    {
+      "title": "[PYAI-MP-11] 海龟雷达(2)",
+      "file": "PythonAI_MP_PYAI-MP-11_海龟雷达2.json",
+      "source": "MP\\PYAI-MP-11_海龟雷达2.md"
+    },
+    {
+      "title": "[PYAI-MP-12] 海龟雷达(3)",
+      "file": "PythonAI_MP_PYAI-MP-12_海龟雷达3.json",
+      "source": "MP\\PYAI-MP-12_海龟雷达3.md"
+    },
+    {
+      "title": "MicroPython硬件开发（MP系列）模块概览",
+      "file": "PythonAI_MP__模块概览.json",
+      "source": "MP\\_模块概览.md"
+    },
+    {
+      "title": "[PYAI-2-1-01] 无理取闹",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-01_无理取闹.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-01_无理取闹.md"
+    },
+    {
+      "title": "[PYAI-2-1-02] 笔走龙蛇",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-02_笔走龙蛇.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-02_笔走龙蛇.md"
+    },
+    {
+      "title": "[PYAI-2-1-03] 自我复制",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-03_自我复制.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-03_自我复制.md"
+    },
+    {
+      "title": "[PYAI-2-1-04] 分而治之",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-04_分而治之.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-04_分而治之.md"
+    },
+    {
+      "title": "[PYAI-2-1-05] 顺藤摸瓜",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-05_顺藤摸瓜.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-05_顺藤摸瓜.md"
+    },
+    {
+      "title": "[PYAI-2-1-06] 一针见血",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-06_一针见血.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-06_一针见血.md"
+    },
+    {
+      "title": "[PYAI-2-1-07] 数据画像",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-07_数据画像.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-07_数据画像.md"
+    },
+    {
+      "title": "[PYAI-2-1-08] 拨乱反正",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-08_拨乱反正.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-08_拨乱反正.md"
+    },
+    {
+      "title": "[PYAI-2-1-09] 选贤任能",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-09_选贤任能.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-09_选贤任能.md"
+    },
+    {
+      "title": "[PYAI-2-1-10] 文件读写",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-10_文件读写.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-10_文件读写.md"
+    },
+    {
+      "title": "[PYAI-2-1-11] 异常处理",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-11_异常处理.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-11_异常处理.md"
+    },
+    {
+      "title": "[PYAI-2-1-12] 阶段复习",
+      "file": "PythonAI_L2_M1_算法数据科学_PYAI-2-1-12_阶段复习.json",
+      "source": "L2\\M1_算法数据科学\\PYAI-2-1-12_阶段复习.md"
+    },
+    {
+      "title": "L2-M1 算法数据科学 模块概览",
+      "file": "PythonAI_L2_M1_算法数据科学__模块概览.json",
+      "source": "L2\\M1_算法数据科学\\_模块概览.md"
+    },
+    {
+      "title": "[PYAI-2-2-01] 脚踏实地",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-01_脚踏实地.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-01_脚踏实地.md"
+    },
+    {
+      "title": "[PYAI-2-2-02] 电子成绩单",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-02_电子成绩单.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-02_电子成绩单.md"
+    },
+    {
+      "title": "[PYAI-2-2-03] 弹幕生成器",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-03_弹幕生成器.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-03_弹幕生成器.md"
+    },
+    {
+      "title": "[PYAI-2-2-04] 规矩方圆",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-04_规矩方圆.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-04_规矩方圆.md"
+    },
+    {
+      "title": "[PYAI-2-2-05] 蒙特卡洛法",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-05_蒙特卡洛法.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-05_蒙特卡洛法.md"
+    },
+    {
+      "title": "[PYAI-2-2-06] 弱肉强食",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-06_弱肉强食.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-06_弱肉强食.md"
+    },
+    {
+      "title": "[PYAI-2-2-07] 积小致巨1",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-07_积小致巨1.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-07_积小致巨1.md"
+    },
+    {
+      "title": "[PYAI-2-2-08] 积小致巨2",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-08_积小致巨2.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-08_积小致巨2.md"
+    },
+    {
+      "title": "[PYAI-2-2-09] 举重若轻1",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-09_举重若轻1.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-09_举重若轻1.md"
+    },
+    {
+      "title": "[PYAI-2-2-10] 举重若轻2",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-10_举重若轻2.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-10_举重若轻2.md"
+    },
+    {
+      "title": "[PYAI-2-2-11] 举重若轻3",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-11_举重若轻3.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-11_举重若轻3.md"
+    },
+    {
+      "title": "[PYAI-2-2-12] 阶段复习",
+      "file": "PythonAI_L2_M2_项目应用_PYAI-2-2-12_阶段复习.json",
+      "source": "L2\\M2_项目应用\\PYAI-2-2-12_阶段复习.md"
+    },
+    {
+      "title": "L2-M2 项目应用 模块概览",
+      "file": "PythonAI_L2_M2_项目应用__模块概览.json",
+      "source": "L2\\M2_项目应用\\_模块概览.md"
+    },
+    {
+      "title": "[PYAI-2-3-01] 眼控开关",
+      "file": "PythonAI_L2_M3_交互式AI_PYAI-2-3-01_眼控开关.json",
+      "source": "L2\\M3_交互式AI\\PYAI-2-3-01_眼控开关.md"
+    },
+    {
+      "title": "[PYAI-2-3-03] 眼控开关进阶",
+      "file": "PythonAI_L2_M3_交互式AI_PYAI-2-3-03_眼控开关进阶.json",
+      "source": "L2\\M3_交互式AI\\PYAI-2-3-03_眼控开关进阶.md"
+    },
+    {
+      "title": "[PYAI-2-3-04] 眼控开关综合应用",
+      "file": "PythonAI_L2_M3_交互式AI_PYAI-2-3-04_眼控开关综合.json",
+      "source": "L2\\M3_交互式AI\\PYAI-2-3-04_眼控开关综合.md"
+    },
+    {
+      "title": "[PYAI-2-3-05] 表情控制",
+      "file": "PythonAI_L2_M3_交互式AI_PYAI-2-3-05_表情控制.json",
+      "source": "L2\\M3_交互式AI\\PYAI-2-3-05_表情控制.md"
+    },
+    {
+      "title": "[PYAI-2-3-06] 表情控制进阶",
+      "file": "PythonAI_L2_M3_交互式AI_PYAI-2-3-06_表情控制进阶.json",
+      "source": "L2\\M3_交互式AI\\PYAI-2-3-06_表情控制进阶.md"
+    },
+    {
+      "title": "[PYAI-2-3-07] 手势识别",
+      "file": "PythonAI_L2_M3_交互式AI_PYAI-2-3-07_手势识别.json",
+      "source": "L2\\M3_交互式AI\\PYAI-2-3-07_手势识别.md"
+    },
+    {
+      "title": "[PYAI-2-3-08] 手势控制应用",
+      "file": "PythonAI_L2_M3_交互式AI_PYAI-2-3-08_手势控制应用.json",
+      "source": "L2\\M3_交互式AI\\PYAI-2-3-08_手势控制应用.md"
+    },
+    {
+      "title": "[PYAI-2-3-09] 手势绘画板",
+      "file": "PythonAI_L2_M3_交互式AI_PYAI-2-3-09_手势绘画板.json",
+      "source": "L2\\M3_交互式AI\\PYAI-2-3-09_手势绘画板.md"
+    },
+    {
+      "title": "[PYAI-2-3-10] 机械手游戏",
+      "file": "PythonAI_L2_M3_交互式AI_PYAI-2-3-10_机械手游戏.json",
+      "source": "L2\\M3_交互式AI\\PYAI-2-3-10_机械手游戏.md"
+    },
+    {
+      "title": "L2-M3 交互式AI与仿生控制",
+      "file": "PythonAI_L2_M3_交互式AI__模块概览.json",
+      "source": "L2\\M3_交互式AI\\_模块概览.md"
+    },
+    {
+      "title": "[PYAI-2-4-01] 视频基础",
+      "file": "PythonAI_L2_M4_计算机视觉_PYAI-2-4-01_视频基础.json",
+      "source": "L2\\M4_计算机视觉\\PYAI-2-4-01_视频基础.md"
+    },
+    {
+      "title": "[PYAI-2-4-03] 图像编辑1",
+      "file": "PythonAI_L2_M4_计算机视觉_PYAI-2-4-03_图像编辑1.json",
+      "source": "L2\\M4_计算机视觉\\PYAI-2-4-03_图像编辑1.md"
+    },
+    {
+      "title": "[PYAI-2-4-04] 图像编辑2",
+      "file": "PythonAI_L2_M4_计算机视觉_PYAI-2-4-04_图像编辑2.json",
+      "source": "L2\\M4_计算机视觉\\PYAI-2-4-04_图像编辑2.md"
+    },
+    {
+      "title": "[PYAI-2-4-05] 滤波降噪",
+      "file": "PythonAI_L2_M4_计算机视觉_PYAI-2-4-05_滤波降噪.json",
+      "source": "L2\\M4_计算机视觉\\PYAI-2-4-05_滤波降噪.md"
+    },
+    {
+      "title": "[PYAI-2-4-06] 文件扫描",
+      "file": "PythonAI_L2_M4_计算机视觉_PYAI-2-4-06_文件扫描.json",
+      "source": "L2\\M4_计算机视觉\\PYAI-2-4-06_文件扫描.md"
+    },
+    {
+      "title": "[PYAI-2-4-08] 人像分割",
+      "file": "PythonAI_L2_M4_计算机视觉_PYAI-2-4-08_人像分割.json",
+      "source": "L2\\M4_计算机视觉\\PYAI-2-4-08_人像分割.md"
+    },
+    {
+      "title": "[PYAI-2-4-10] 虚拟墨镜",
+      "file": "PythonAI_L2_M4_计算机视觉_PYAI-2-4-10_虚拟墨镜.json",
+      "source": "L2\\M4_计算机视觉\\PYAI-2-4-10_虚拟墨镜.md"
+    },
+    {
+      "title": "[PYAI-2-4-12] 动物伙伴",
+      "file": "PythonAI_L2_M4_计算机视觉_PYAI-2-4-12_动物伙伴.json",
+      "source": "L2\\M4_计算机视觉\\PYAI-2-4-12_动物伙伴.md"
+    },
+    {
+      "title": "L2-M4 计算机视觉 模块概览",
+      "file": "PythonAI_L2_M4_计算机视觉__模块概览.json",
+      "source": "L2\\M4_计算机视觉\\_模块概览.md"
+    },
+    {
+      "title": "[PYAI-1-0-01] 字如泉涌",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-01_字如泉涌.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-01_字如泉涌.md"
+    },
+    {
+      "title": "[PYAI-1-0-02] 一触即发",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-02_一触即发.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-02_一触即发.md"
+    },
+    {
+      "title": "[PYAI-1-0-03] 指下生风",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-03_指下生风.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-03_指下生风.md"
+    },
+    {
+      "title": "[PYAI-1-0-04] 密室逃脱",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-04_密室逃脱.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-04_密室逃脱.md"
+    },
+    {
+      "title": "[PYAI-1-0-05] 知己知彼",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-05_知己知彼.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-05_知己知彼.md"
+    },
+    {
+      "title": "[PYAI-1-0-06] 炫彩风车",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-06_炫彩风车.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-06_炫彩风车.md"
+    },
+    {
+      "title": "[PYAI-1-0-07] 无名之人",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-07_无名之人.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-07_无名之人.md"
+    },
+    {
+      "title": "[PYAI-1-0-08] 一举成名",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-08_一举成名.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-08_一举成名.md"
+    },
+    {
+      "title": "[PYAI-1-0-09] 备用计划",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-09_备用计划.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-09_备用计划.md"
+    },
+    {
+      "title": "[PYAI-1-0-10] 三十六计",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-10_三十六计.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-10_三十六计.md"
+    },
+    {
+      "title": "[PYAI-1-0-11] 万事俱备",
+      "file": "PythonAI_L1_M0_基础语法_PYAI-1-0-11_万事俱备.json",
+      "source": "L1\\M0_基础语法\\PYAI-1-0-11_万事俱备.md"
+    },
+    {
+      "title": "L1-M0 基础语法与逻辑",
+      "file": "PythonAI_L1_M0_基础语法__模块概览.json",
+      "source": "L1\\M0_基础语法\\_模块概览.md"
+    },
+    {
+      "title": "[PYAI-1-1-01] 一夫当关",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-01_一夫当关.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-01_一夫当关.md"
+    },
+    {
+      "title": "[PYAI-1-1-02] 未雨绸缪",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-02_未雨绸缪.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-02_未雨绸缪.md"
+    },
+    {
+      "title": "[PYAI-1-1-03] 棱角分明",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-03_棱角分明.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-03_棱角分明.md"
+    },
+    {
+      "title": "[PYAI-1-1-04] 对照实验",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-04_对照实验.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-04_对照实验.md"
+    },
+    {
+      "title": "[PYAI-1-1-05] 电光火石",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-05_电光火石.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-05_电光火石.md"
+    },
+    {
+      "title": "[PYAI-1-1-06] 言听计从1",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-06_言听计从1.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-06_言听计从1.md"
+    },
+    {
+      "title": "[PYAI-1-1-07] 棋逢对手",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-07_棋逢对手.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-07_棋逢对手.md"
+    },
+    {
+      "title": "[PYAI-1-1-08] 量入为出",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-08_量入为出.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-08_量入为出.md"
+    },
+    {
+      "title": "[PYAI-1-1-09] 算术运算",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-09_算术运算.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-09_算术运算.md"
+    },
+    {
+      "title": "[PYAI-1-1-10] 关系运算",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-10_关系运算.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-10_关系运算.md"
+    },
+    {
+      "title": "[PYAI-1-1-11] 碰撞检测",
+      "file": "PythonAI_L1_M1_函数封装_PYAI-1-1-11_碰撞检测.json",
+      "source": "L1\\M1_函数封装\\PYAI-1-1-11_碰撞检测.md"
+    },
+    {
+      "title": "L1-M1 函数封装与交互机制",
+      "file": "PythonAI_L1_M1_函数封装__模块概览.json",
+      "source": "L1\\M1_函数封装\\_模块概览.md"
+    },
+    {
+      "title": "[PYAI-1-2-01] 天涯明月",
+      "file": "PythonAI_L1_M2_算法逻辑_PYAI-1-2-01_天涯明月.json",
+      "source": "L1\\M2_算法逻辑\\PYAI-1-2-01_天涯明月.md"
+    },
+    {
+      "title": "[PYAI-1-2-02] 令行禁止",
+      "file": "PythonAI_L1_M2_算法逻辑_PYAI-1-2-02_令行禁止.json",
+      "source": "L1\\M2_算法逻辑\\PYAI-1-2-02_令行禁止.md"
+    },
+    {
+      "title": "[PYAI-1-2-03] 日积月累",
+      "file": "PythonAI_L1_M2_算法逻辑_PYAI-1-2-03_日积月累.json",
+      "source": "L1\\M2_算法逻辑\\PYAI-1-2-03_日积月累.md"
+    },
+    {
+      "title": "[PYAI-1-2-04] 排沙简金",
+      "file": "PythonAI_L1_M2_算法逻辑_PYAI-1-2-04_排沙简金.json",
+      "source": "L1\\M2_算法逻辑\\PYAI-1-2-04_排沙简金.md"
+    },
+    {
+      "title": "[PYAI-1-2-05] 众志成城",
+      "file": "PythonAI_L1_M2_算法逻辑_PYAI-1-2-05_众志成城.json",
+      "source": "L1\\M2_算法逻辑\\PYAI-1-2-05_众志成城.md"
+    },
+    {
+      "title": "[PYAI-1-2-06] 人靠衣装",
+      "file": "PythonAI_L1_M2_算法逻辑_PYAI-1-2-06_人靠衣装.json",
+      "source": "L1\\M2_算法逻辑\\PYAI-1-2-06_人靠衣装.md"
+    },
+    {
+      "title": "[PYAI-1-2-07] 邯郸学步",
+      "file": "PythonAI_L1_M2_算法逻辑_PYAI-1-2-07_邯郸学步.json",
+      "source": "L1\\M2_算法逻辑\\PYAI-1-2-07_邯郸学步.md"
+    },
+    {
+      "title": "[PYAI-1-2-08] 步履维艰",
+      "file": "PythonAI_L1_M2_算法逻辑_PYAI-1-2-08_步履维艰.json",
+      "source": "L1\\M2_算法逻辑\\PYAI-1-2-08_步履维艰.md"
+    },
+    {
+      "title": "[PYAI-1-2-09] 狭路相逢",
+      "file": "PythonAI_L1_M2_算法逻辑_PYAI-1-2-09_狭路相逢.json",
+      "source": "L1\\M2_算法逻辑\\PYAI-1-2-09_狭路相逢.md"
+    },
+    {
+      "title": "L1-M2 算法逻辑与运算 模块概览",
+      "file": "PythonAI_L1_M2_算法逻辑__模块概览.json",
+      "source": "L1\\M2_算法逻辑\\_模块概览.md"
+    },
+    {
+      "title": "[PYAI-1-3-01] 无中生有",
+      "file": "PythonAI_L1_M3_数据结构_PYAI-1-3-01_无中生有.json",
+      "source": "L1\\M3_数据结构\\PYAI-1-3-01_无中生有.md"
+    },
+    {
+      "title": "[PYAI-1-3-02] 特立独行",
+      "file": "PythonAI_L1_M3_数据结构_PYAI-1-3-02_特立独行.json",
+      "source": "L1\\M3_数据结构\\PYAI-1-3-02_特立独行.md"
+    },
+    {
+      "title": "[PYAI-1-3-03] 移花接木",
+      "file": "PythonAI_L1_M3_数据结构_PYAI-1-3-03_移花接木.json",
+      "source": "L1\\M3_数据结构\\PYAI-1-3-03_移花接木.md"
+    },
+    {
+      "title": "[PYAI-1-3-04] 列表进阶",
+      "file": "PythonAI_L1_M3_数据结构_PYAI-1-3-04_列表进阶.json",
+      "source": "L1\\M3_数据结构\\PYAI-1-3-04_列表进阶.md"
+    },
+    {
+      "title": "[PYAI-1-3-05] 纵横交错",
+      "file": "PythonAI_L1_M3_数据结构_PYAI-1-3-05_纵横交错.json",
+      "source": "L1\\M3_数据结构\\PYAI-1-3-05_纵横交错.md"
+    },
+    {
+      "title": "[PYAI-1-3-06] 落子无悔",
+      "file": "PythonAI_L1_M3_数据结构_PYAI-1-3-06_落子无悔.json",
+      "source": "L1\\M3_数据结构\\PYAI-1-3-06_落子无悔.md"
+    },
+    {
+      "title": "[PYAI-1-3-07] 三人成虎",
+      "file": "PythonAI_L1_M3_数据结构_PYAI-1-3-07_三人成虎.json",
+      "source": "L1\\M3_数据结构\\PYAI-1-3-07_三人成虎.md"
+    },
+    {
+      "title": "[PYAI-1-3-08] 出口成章",
+      "file": "PythonAI_L1_M3_数据结构_PYAI-1-3-08_出口成章.json",
+      "source": "L1\\M3_数据结构\\PYAI-1-3-08_出口成章.md"
+    },
+    {
+      "title": "L1-M3 数据结构与复杂逻辑 - 模块概览",
+      "file": "PythonAI_L1_M3_数据结构__模块概览.json",
+      "source": "L1\\M3_数据结构\\_模块概览.md"
+    },
+    {
+      "title": "[PYAI-1-4-01] 硬件系统 - 认识ESP32",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-01_硬件系统.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-01_硬件系统.md"
+    },
+    {
+      "title": "[PYAI-1-4-02] 按钮控制LED",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-02_按钮控制LED.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-02_按钮控制LED.md"
+    },
+    {
+      "title": "[PYAI-1-4-03] 智能光控(1) - 光控灯搭建",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-03_智能光控1.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-03_智能光控1.md"
+    },
+    {
+      "title": "[PYAI-1-4-04] 智能光控(2) - 自动夜灯",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-04_智能光控2.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-04_智能光控2.md"
+    },
+    {
+      "title": "[PYAI-1-4-05] 智能通风 - 气体检测系统",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-05_智能通风.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-05_智能通风.md"
+    },
+    {
+      "title": "[PYAI-1-4-06] 智能门禁(1) - 人脸捕捉相机",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-06_智能门禁1.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-06_智能门禁1.md"
+    },
+    {
+      "title": "[PYAI-1-4-07] 智能门禁(2) - 人脸比对算法",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-07_智能门禁2.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-07_智能门禁2.md"
+    },
+    {
+      "title": "[PYAI-1-4-08] 智能门禁(3) - 刷脸开门",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-08_智能门禁3.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-08_智能门禁3.md"
+    },
+    {
+      "title": "[PYAI-1-4-09] 音强流水灯",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-09_音强流水灯.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-09_音强流水灯.md"
+    },
+    {
+      "title": "[PYAI-1-4-10] 智能花房(1) - 自动浇水系统",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-10_智能花房1.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-10_智能花房1.md"
+    },
+    {
+      "title": "[PYAI-1-4-11] 智能花房(2) - 可视化智能灌溉",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-11_智能花房2.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-11_智能花房2.md"
+    },
+    {
+      "title": "[PYAI-1-4-12] 家居回顾 - 物联网架构复盘",
+      "file": "PythonAI_L1_M4_智能硬件_PYAI-1-4-12_家居回顾.json",
+      "source": "L1\\M4_智能硬件\\PYAI-1-4-12_家居回顾.md"
+    },
+    {
+      "title": "L1-M4 智能硬件与AI应用 - 模块概览",
+      "file": "PythonAI_L1_M4_智能硬件__模块概览.json",
+      "source": "L1\\M4_智能硬件\\_模块概览.md"
+    },
+    {
+      "title": "函数与封装",
+      "file": "编程概念_函数与封装.json",
+      "source": "函数与封装.md"
+    },
+    {
+      "title": "变量与数据类型",
+      "file": "编程概念_变量与数据类型.json",
+      "source": "变量与数据类型.md"
+    },
+    {
+      "title": "控制结构",
+      "file": "编程概念_控制结构.json",
+      "source": "控制结构.md"
+    },
+    {
+      "title": "数据结构",
+      "file": "编程概念_数据结构.json",
+      "source": "数据结构.md"
+    },
+    {
+      "title": "算法基础",
+      "file": "编程概念_算法基础.json",
+      "source": "算法基础.md"
+    },
+    {
+      "title": "编程概念总表",
+      "file": "编程概念_编程概念总表.json",
+      "source": "编程概念总表.md"
+    },
+    {
+      "title": "面向对象编程",
+      "file": "编程概念_面向对象.json",
+      "source": "面向对象.md"
+    },
+    {
+      "title": "ESP32开发板使用汇总",
+      "file": "硬件知识_ESP32开发板.json",
+      "source": "ESP32开发板.md"
+    },
+    {
+      "title": "传感器大全",
+      "file": "硬件知识_传感器大全.json",
+      "source": "传感器大全.md"
+    },
+    {
+      "title": "常见故障排查",
+      "file": "硬件知识_常见故障排查.json",
+      "source": "常见故障排查.md"
+    },
+    {
+      "title": "执行器大全",
+      "file": "硬件知识_执行器大全.json",
+      "source": "执行器大全.md"
+    },
+    {
+      "title": "接线规范",
+      "file": "硬件知识_接线规范.json",
+      "source": "接线规范.md"
+    },
+    {
+      "title": "斯坦星球硬件知识库总表",
+      "file": "硬件知识_硬件总表.json",
+      "source": "硬件总表.md"
+    },
+    {
+      "title": "AI知识总表",
+      "file": "AI知识_AI知识总表.json",
+      "source": "AI知识总表.md"
+    },
+    {
+      "title": "人脸识别",
+      "file": "AI知识_人脸识别.json",
+      "source": "人脸识别.md"
+    },
+    {
+      "title": "手势识别",
+      "file": "AI知识_手势识别.json",
+      "source": "手势识别.md"
+    },
+    {
+      "title": "计算机视觉",
+      "file": "AI知识_计算机视觉.json",
+      "source": "计算机视觉.md"
+    },
+    {
+      "title": "传动机构",
+      "file": "机械结构_传动机构.json",
+      "source": "传动机构.md"
+    },
+    {
+      "title": "控制机构",
+      "file": "机械结构_控制机构.json",
+      "source": "控制机构.md"
+    },
+    {
+      "title": "机械结构总表",
+      "file": "机械结构_机械结构总表.json",
+      "source": "机械结构总表.md"
+    },
+    {
+      "title": "简单机械",
+      "file": "机械结构_简单机械.json",
+      "source": "简单机械.md"
+    },
+    {
+      "title": "运动转换机构",
+      "file": "机械结构_运动转换机构.json",
+      "source": "运动转换机构.md"
+    },
+    {
+      "title": "坐标系与位置",
+      "file": "数学概念_坐标系与位置.json",
+      "source": "坐标系与位置.md"
+    },
+    {
+      "title": "数学概念总表",
+      "file": "数学概念_数学概念总表.json",
+      "source": "数学概念总表.md"
+    },
+    {
+      "title": "概率与随机",
+      "file": "数学概念_概率与随机.json",
+      "source": "概率与随机.md"
+    },
+    {
+      "title": "物理仿真数学",
+      "file": "数学概念_物理仿真数学.json",
+      "source": "物理仿真数学.md"
+    },
+    {
+      "title": "角度与三角函数",
+      "file": "数学概念_角度与三角函数.json",
+      "source": "角度与三角函数.md"
+    },
+    {
+      "title": "函数与封装进阶",
+      "file": "螺旋进阶_函数与封装进阶.json",
+      "source": "函数与封装进阶.md"
+    },
+    {
+      "title": "变量与数据进阶",
+      "file": "螺旋进阶_变量与数据进阶.json",
+      "source": "变量与数据进阶.md"
+    },
+    {
+      "title": "循环结构进阶",
+      "file": "螺旋进阶_循环结构进阶.json",
+      "source": "循环结构进阶.md"
+    },
+    {
+      "title": "思维能力进阶",
+      "file": "螺旋进阶_思维能力进阶.json",
+      "source": "思维能力进阶.md"
+    },
+    {
+      "title": "机械结构进阶",
+      "file": "螺旋进阶_机械结构进阶.json",
+      "source": "机械结构进阶.md"
+    },
+    {
+      "title": "条件判断进阶",
+      "file": "螺旋进阶_条件判断进阶.json",
+      "source": "条件判断进阶.md"
+    },
+    {
+      "title": "硬件控制进阶",
+      "file": "螺旋进阶_硬件控制进阶.json",
+      "source": "硬件控制进阶.md"
+    },
+    {
+      "title": "螺旋进阶总图",
+      "file": "螺旋进阶_螺旋进阶总图.json",
+      "source": "螺旋进阶总图.md"
+    },
+    {
+      "title": "计算思维进阶",
+      "file": "螺旋进阶_计算思维进阶.json",
+      "source": "计算思维进阶.md"
+    },
+    {
+      "title": "项目复杂度进阶",
+      "file": "螺旋进阶_项目复杂度进阶.json",
+      "source": "项目复杂度进阶.md"
+    },
+    {
+      "title": "CODE教师培训手册",
+      "file": "培训手册_CODE教师培训手册.json",
+      "source": "CODE教师培训手册.md"
+    },
+    {
+      "title": "PythonAI教师培训手册",
+      "file": "培训手册_PythonAI教师培训手册.json",
+      "source": "PythonAI教师培训手册.md"
+    },
+    {
+      "title": "STEM教师培训手册",
+      "file": "培训手册_STEM教师培训手册.json",
+      "source": "STEM教师培训手册.md"
+    },
+    {
+      "title": "通用教师培训手册",
+      "file": "培训手册_通用教师培训手册.json",
+      "source": "通用教师培训手册.md"
+    },
+    {
+      "title": "C++信奥素材资源库",
+      "file": "素材_素材_C++信奥素材资源库_V1.json",
+      "source": "素材_C++信奥素材资源库_V1.md"
+    },
+    {
+      "title": "CODE素材资源库",
+      "file": "素材_素材_CODE素材资源库_V1.json",
+      "source": "素材_CODE素材资源库_V1.md"
+    },
+    {
+      "title": "Python AI素材资源库",
+      "file": "素材_素材_PythonAI素材资源库_V1.json",
+      "source": "素材_PythonAI素材资源库_V1.md"
+    },
+    {
+      "title": "STEM素材资源库",
+      "file": "素材_素材_STEM素材资源库_V1.json",
+      "source": "素材_STEM素材资源库_V1.md"
+    },
+    {
+      "title": "编程助力升学素材资源库",
+      "file": "素材_素材_编程助力升学_V1.json",
+      "source": "素材_编程助力升学_V1.md"
+    },
+    {
+      "title": "销售话术速查表",
+      "file": "管理层_工具模板库_销售话术速查表.json",
+      "source": "工具模板库\\销售话术速查表.md"
+    },
+    {
+      "title": "常见问题处理指南",
+      "file": "管理层_问题解决库_常见问题处理指南.json",
+      "source": "问题解决库\\常见问题处理指南.md"
+    },
+    {
+      "title": "斯坦星球各级别能力发展路径图",
+      "file": "决策层_各级别能力发展路径图.json",
+      "source": "各级别能力发展路径图.md"
+    },
+    {
+      "title": "斯坦星球教学质量标准体系",
+      "file": "决策层_教学质量标准体系.json",
+      "source": "教学质量标准体系.md"
+    },
+    {
+      "title": "斯坦星球课程体系全景图",
+      "file": "决策层_斯坦星球课程体系全景图.json",
+      "source": "斯坦星球课程体系全景图.md"
+    },
+    {
+      "title": "斯坦星球新教师培训教材",
+      "file": "培训_教学部培训_新教师培训教材.json",
+      "source": "教学部培训\\新教师培训教材.md"
+    },
+    {
+      "title": "斯坦星球销售话术手册",
+      "file": "培训_销售部培训_销售话术手册.json",
+      "source": "销售部培训\\销售话术手册.md"
+    }
+  ]
+}

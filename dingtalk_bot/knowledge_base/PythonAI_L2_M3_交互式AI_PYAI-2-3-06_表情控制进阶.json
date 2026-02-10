@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-2-3-06] 表情控制进阶",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M3_交互式AI\\PYAI-2-3-06_表情控制进阶.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI 2-3-6 |\n| **课程名称** | 表情控制进阶 |\n| **认知负荷** | 高 |\n| **核心技能** | 多表情识别、表情强度计算、pygame界面 |\n| **项目内容** | 表情仪表盘 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们升级表情识别系统，不仅识别表情类型，还要计算**表情强度**！\"\n>\n> \"**表情强度计算**：\n> ```python\n> # 微笑强度 = 嘴角上扬程度\n> def smile_intensity(landmarks):\n>     left_corner = landmarks[61]\n>     right_corner = landmarks[291]\n>     mouth_center = landmarks[13]\n>\n>     # 计算嘴角相对于嘴唇中点的上扬距离\n>     left_lift = mouth_center.y - left_corner.y\n>     right_lift = mouth_center.y - right_corner.y\n>\n>     # 取平均值，归一化到0-100\n>     intensity = (left_lift + right_lift) / 2 * 1000\n>     return max(0, min(100, intensity))\n> ```\n>\n> **眉毛检测**（皱眉/惊讶）：\n> ```python\n> # 眉毛关键点\n> left_eyebrow = landmarks[70]   # 左眉中点\n> right_eyebrow = landmarks[300] # 右眉中点\n> left_eye = landmarks[159]      # 左眼上方\n>\n> # 眉毛距离眼睛越近 = 皱眉\n> eyebrow_distance = left_eyebrow.y - left_eye.y\n> if eyebrow_distance < 0.02:\n>     print('皱眉')\n> elif eyebrow_distance > 0.05:\n>     print('惊讶（眉毛上扬）')\n> ```\"\n\n### 步骤2：pygame界面设计（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"用pygame创建一个表情仪表盘：\n> ```python\n> import pygame\n>\n> def draw_emotion_meter(screen, emotion, intensity):\n>     # 绘制表情图标\n>     emoji_map = {'smile': ':)', 'sad': ':(', 'surprise': ':O'}\n>     font = pygame.font.Font(None, 72)\n>     text = font.render(emoji_map.get(emotion, ':|'), True, (255, 255, 255))\n>     screen.blit(text, (100, 100))\n>\n>     # 绘制强度条\n>     pygame.draw.rect(screen, (100, 100, 100), (50, 200, 200, 30))\n>     pygame.draw.rect(screen, (0, 255, 0), (50, 200, intensity * 2, 30))\n> ```\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 强度计算不准 | 校准系数 | 根据实际测试调整归一化系数 |\n| 想加更多表情 | 组合特征 | 眉毛+嘴巴+眼睛组合判断 |\n| pygame窗口卡顿 | 降低帧率 | 设置pygame.time.Clock().tick(30) |\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- **表情强度**：量化表情程度，不只是有/无\n- **眉毛检测**：眉毛位置判断皱眉/惊讶\n- **pygame界面**：创建实时反馈的可视化界面\n\n---"
+    },
+    {
+      "title": "导航",
+      "content": "| 上一课 | 返回模块 | 下一课 |\n|--------|----------|--------|\n| [PYAI-2-3-05 表情控制](PYAI-2-3-05_表情控制.md) | [M3 交互式AI](_模块概览.md) | [PYAI-2-3-07 手势识别](PYAI-2-3-07_手势识别.md) |"
+    }
+  ],
+  "full_content": "# [PYAI-2-3-06] 表情控制进阶\n\n> **模块**：L2-M3 交互式AI\n> **认知负荷**：高\n> **核心技能**：多表情识别、表情强度计算、pygame界面\n> **UID**：PYAI-23-06-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI 2-3-6 |\n| **课程名称** | 表情控制进阶 |\n| **认知负荷** | 高 |\n| **核心技能** | 多表情识别、表情强度计算、pygame界面 |\n| **项目内容** | 表情仪表盘 |\n\n---\n\n## 详细教学流程\n\n### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们升级表情识别系统，不仅识别表情类型，还要计算**表情强度**！\"\n>\n> \"**表情强度计算**：\n> ```python\n> # 微笑强度 = 嘴角上扬程度\n> def smile_intensity(landmarks):\n>     left_corner = landmarks[61]\n>     right_corner = landmarks[291]\n>     mouth_center = landmarks[13]\n>\n>     # 计算嘴角相对于嘴唇中点的上扬距离\n>     left_lift = mouth_center.y - left_corner.y\n>     right_lift = mouth_center.y - right_corner.y\n>\n>     # 取平均值，归一化到0-100\n>     intensity = (left_lift + right_lift) / 2 * 1000\n>     return max(0, min(100, intensity))\n> ```\n>\n> **眉毛检测**（皱眉/惊讶）：\n> ```python\n> # 眉毛关键点\n> left_eyebrow = landmarks[70]   # 左眉中点\n> right_eyebrow = landmarks[300] # 右眉中点\n> left_eye = landmarks[159]      # 左眼上方\n>\n> # 眉毛距离眼睛越近 = 皱眉\n> eyebrow_distance = left_eyebrow.y - left_eye.y\n> if eyebrow_distance < 0.02:\n>     print('皱眉')\n> elif eyebrow_distance > 0.05:\n>     print('惊讶（眉毛上扬）')\n> ```\"\n\n### 步骤2：pygame界面设计（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"用pygame创建一个表情仪表盘：\n> ```python\n> import pygame\n>\n> def draw_emotion_meter(screen, emotion, intensity):\n>     # 绘制表情图标\n>     emoji_map = {'smile': ':)', 'sad': ':(', 'surprise': ':O'}\n>     font = pygame.font.Font(None, 72)\n>     text = font.render(emoji_map.get(emotion, ':|'), True, (255, 255, 255))\n>     screen.blit(text, (100, 100))\n>\n>     # 绘制强度条\n>     pygame.draw.rect(screen, (100, 100, 100), (50, 200, 200, 30))\n>     pygame.draw.rect(screen, (0, 255, 0), (50, 200, intensity * 2, 30))\n> ```\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 强度计算不准 | 校准系数 | 根据实际测试调整归一化系数 |\n| 想加更多表情 | 组合特征 | 眉毛+嘴巴+眼睛组合判断 |\n| pygame窗口卡顿 | 降低帧率 | 设置pygame.time.Clock().tick(30) |\n\n---\n\n## 核心知识点\n\n- **表情强度**：量化表情程度，不只是有/无\n- **眉毛检测**：眉毛位置判断皱眉/惊讶\n- **pygame界面**：创建实时反馈的可视化界面\n\n---\n\n## 导航\n\n| 上一课 | 返回模块 | 下一课 |\n|--------|----------|--------|\n| [PYAI-2-3-05 表情控制](PYAI-2-3-05_表情控制.md) | [M3 交互式AI](_模块概览.md) | [PYAI-2-3-07 手势识别](PYAI-2-3-07_手势识别.md) |\n"
+}

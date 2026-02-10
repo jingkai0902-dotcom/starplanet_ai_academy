@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-1-3-02] 特立独行",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L1\\M3_数据结构\\PYAI-1-3-02_特立独行.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI-1-3-02 |\n| **课程名称** | 特立独行 |\n| **认知负荷** | 中-高 |\n| **核心技能** | append()添加元素、动态列表 |\n| **项目内容** | 找不同 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n\n> \"上节课我们学了列表，但列表是固定的。如果我想往列表里加东西怎么办？用**append()**方法！\"\n>\n> \"**append()方法**：在列表末尾添加元素\n> ```python\n> fruits = ['apple', 'banana']\n> fruits.append('cherry')\n> print(fruits)  # 输出: ['apple', 'banana', 'cherry']\n> ```\n>\n> **动态列表**：从空列表开始，逐个添加\n> ```python\n> numbers = []  # 空列表\n> numbers.append(1)\n> numbers.append(2)\n> numbers.append(3)\n> print(numbers)  # 输出: [1, 2, 3]\n> ```\n>\n> **结合循环添加**：\n> ```python\n> squares = []\n> i = 1\n> while i <= 5:\n>     squares.append(i * i)\n>     i += 1\n> print(squares)  # 输出: [1, 4, 9, 16, 25]\n> ```\"\n\n---\n\n### 步骤2：闯关实践（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n\n> \"现在我们来做一个'找不同'游戏！给你两个列表，找出第二个列表中有但第一个列表中没有的元素。\"\n>\n> ```python\n> list1 = [1, 2, 3, 4, 5]\n> list2 = [1, 2, 6, 4, 7]\n> different = []\n> i = 0\n> while i < 5:\n>     if list2[i] != list1[i]:\n>         different.append(list2[i])\n>     i += 1\n> print(different)  # 输出: [6, 7]\n> ```\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 忘记括号 | 强调方法调用 | \"append是方法，必须加括号和参数\" |\n| 想一次加多个 | 预告extend | \"extend可以一次加多个，下次学\" |\n| 列表长度不同 | 引导思考 | \"如果两个列表长度不同怎么办？\" |\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- **append()方法**：在列表末尾添加单个元素\n- **动态列表**：从空列表开始逐步构建\n- **结合循环**：用循环批量添加元素\n\n---\n\n`#执行层` `#测评项`\n\n---"
+    },
+    {
+      "title": "导航",
+      "content": "- **上一课**：[PYAI-1-3-01 无中生有](PYAI-1-3-01_无中生有.md)\n- **下一课**：[PYAI-1-3-03 移花接木](PYAI-1-3-03_移花接木.md)\n- **返回模块**：[M3 数据结构概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-1-3-02] 特立独行\n\n> **模块**：L1-M3 数据结构\n> **认知负荷**：中-高\n> **核心技能**：append()添加元素、动态列表\n> **UID**：PYAI-13-02-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI-1-3-02 |\n| **课程名称** | 特立独行 |\n| **认知负荷** | 中-高 |\n| **核心技能** | append()添加元素、动态列表 |\n| **项目内容** | 找不同 |\n\n---\n\n## 详细教学流程\n\n### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n\n> \"上节课我们学了列表，但列表是固定的。如果我想往列表里加东西怎么办？用**append()**方法！\"\n>\n> \"**append()方法**：在列表末尾添加元素\n> ```python\n> fruits = ['apple', 'banana']\n> fruits.append('cherry')\n> print(fruits)  # 输出: ['apple', 'banana', 'cherry']\n> ```\n>\n> **动态列表**：从空列表开始，逐个添加\n> ```python\n> numbers = []  # 空列表\n> numbers.append(1)\n> numbers.append(2)\n> numbers.append(3)\n> print(numbers)  # 输出: [1, 2, 3]\n> ```\n>\n> **结合循环添加**：\n> ```python\n> squares = []\n> i = 1\n> while i <= 5:\n>     squares.append(i * i)\n>     i += 1\n> print(squares)  # 输出: [1, 4, 9, 16, 25]\n> ```\"\n\n---\n\n### 步骤2：闯关实践（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n\n> \"现在我们来做一个'找不同'游戏！给你两个列表，找出第二个列表中有但第一个列表中没有的元素。\"\n>\n> ```python\n> list1 = [1, 2, 3, 4, 5]\n> list2 = [1, 2, 6, 4, 7]\n> different = []\n> i = 0\n> while i < 5:\n>     if list2[i] != list1[i]:\n>         different.append(list2[i])\n>     i += 1\n> print(different)  # 输出: [6, 7]\n> ```\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 忘记括号 | 强调方法调用 | \"append是方法，必须加括号和参数\" |\n| 想一次加多个 | 预告extend | \"extend可以一次加多个，下次学\" |\n| 列表长度不同 | 引导思考 | \"如果两个列表长度不同怎么办？\" |\n\n---\n\n## 核心知识点\n\n- **append()方法**：在列表末尾添加单个元素\n- **动态列表**：从空列表开始逐步构建\n- **结合循环**：用循环批量添加元素\n\n---\n\n`#执行层` `#测评项`\n\n---\n\n## 导航\n\n- **上一课**：[PYAI-1-3-01 无中生有](PYAI-1-3-01_无中生有.md)\n- **下一课**：[PYAI-1-3-03 移花接木](PYAI-1-3-03_移花接木.md)\n- **返回模块**：[M3 数据结构概览](_模块概览.md)\n"
+}

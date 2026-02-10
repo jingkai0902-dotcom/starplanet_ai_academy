@@ -1,0 +1,31 @@
+{
+  "title": "[PYAI-2-3-09] 手势绘画板",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M3_交互式AI\\PYAI-2-3-09_手势绘画板.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI 2-3-9 |\n| **课程名称** | 手势绘画板 |\n| **认知负荷** | 高 |\n| **核心技能** | 指尖追踪、轨迹绘制、颜色切换 |\n| **项目内容** | 空中绘画 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们做一个**空中绘画板**！用食指在空中画画，电脑会记录轨迹。\"\n>\n> \"**指尖追踪**：\n> ```python\n> # 获取食指指尖坐标\n> index_tip = landmarks[8]\n>\n> # 转换为像素坐标\n> h, w = frame.shape[:2]\n> x = int(index_tip.x * w)\n> y = int(index_tip.y * h)\n> ```\n>\n> **轨迹绘制**：\n> ```python\n> # 用列表存储轨迹点\n> draw_points = []\n>\n> # 只有食指伸出时才绘制\n> if fingers_up == [0, 1, 0, 0, 0]:\n>     draw_points.append((x, y))\n>\n> # 绘制轨迹\n> for i in range(1, len(draw_points)):\n>     cv2.line(canvas, draw_points[i-1], draw_points[i], color, 5)\n> ```\n>\n> **手势切换颜色**：\n> ```python\n> colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0)]\n> color_index = 0\n>\n> # 竖起两根手指切换颜色\n> if fingers_up == [0, 1, 1, 0, 0]:\n>     color_index = (color_index + 1) % len(colors)\n> ```\"\n\n### 步骤2：代码实践（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"创建你的手势绘画板：\n> - 食指绘画\n> - 两指切换颜色\n> - 握拳清除画布\n> - 五指张开保存图片\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 线条断断续续 | 降低检测阈值 | 或增加点之间的连线距离阈值 |\n| 想画不同粗细 | 添加手势 | 用手指数量控制线条粗细 |\n| 想加橡皮擦 | 特殊手势 | 用拇指+小指表示橡皮擦模式 |\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\n# 手势绘画板完整框架\nimport cv2\nimport numpy as np\nimport mediapipe as mp\n\nclass GestureDrawingBoard:\n    def __init__(self, width=1280, height=720):\n        self.canvas = np.zeros((height, width, 3), dtype=np.uint8)\n        self.colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]\n        self.color_index = 0\n        self.prev_point = None\n        self.drawing = False\n\n    def process(self, frame, landmarks, fingers_up):\n        h, w = frame.shape[:2]\n        x = int(landmarks[8].x * w)\n        y = int(landmarks[8].y * h)\n\n        # 食指绘画\n        if fingers_up == [0, 1, 0, 0, 0]:\n            if self.prev_point:\n                cv2.line(self.canvas, self.prev_point, (x, y),\n                        self.colors[self.color_index], 5)\n            self.prev_point = (x, y)\n        else:\n            self.prev_point = None\n\n        # 两指切换颜色\n        if fingers_up == [0, 1, 1, 0, 0]:\n            self.color_index = (self.color_index + 1) % len(self.colors)\n\n        # 握拳清除\n        if fingers_up == [0, 0, 0, 0, 0]:\n            self.canvas = np.zeros_like(self.canvas)\n\n        return self.canvas\n```\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- **指尖追踪**：获取landmark[8]的坐标并转换为像素\n- **轨迹绘制**：存储点序列，用cv2.line连接相邻点\n- **画布叠加**：用numpy创建透明画布，与视频帧叠加\n\n---"
+    },
+    {
+      "title": "导航",
+      "content": "| 上一课 | 返回模块 | 下一课 |\n|--------|----------|--------|\n| [PYAI-2-3-08 手势控制应用](PYAI-2-3-08_手势控制应用.md) | [M3 交互式AI](_模块概览.md) | [PYAI-2-3-10 机械手游戏](PYAI-2-3-10_机械手游戏.md) |"
+    }
+  ],
+  "full_content": "# [PYAI-2-3-09] 手势绘画板\n\n> **模块**：L2-M3 交互式AI\n> **认知负荷**：高\n> **核心技能**：指尖追踪、轨迹绘制、颜色切换\n> **UID**：PYAI-23-09-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI 2-3-9 |\n| **课程名称** | 手势绘画板 |\n| **认知负荷** | 高 |\n| **核心技能** | 指尖追踪、轨迹绘制、颜色切换 |\n| **项目内容** | 空中绘画 |\n\n---\n\n## 详细教学流程\n\n### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天我们做一个**空中绘画板**！用食指在空中画画，电脑会记录轨迹。\"\n>\n> \"**指尖追踪**：\n> ```python\n> # 获取食指指尖坐标\n> index_tip = landmarks[8]\n>\n> # 转换为像素坐标\n> h, w = frame.shape[:2]\n> x = int(index_tip.x * w)\n> y = int(index_tip.y * h)\n> ```\n>\n> **轨迹绘制**：\n> ```python\n> # 用列表存储轨迹点\n> draw_points = []\n>\n> # 只有食指伸出时才绘制\n> if fingers_up == [0, 1, 0, 0, 0]:\n>     draw_points.append((x, y))\n>\n> # 绘制轨迹\n> for i in range(1, len(draw_points)):\n>     cv2.line(canvas, draw_points[i-1], draw_points[i], color, 5)\n> ```\n>\n> **手势切换颜色**：\n> ```python\n> colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0)]\n> color_index = 0\n>\n> # 竖起两根手指切换颜色\n> if fingers_up == [0, 1, 1, 0, 0]:\n>     color_index = (color_index + 1) % len(colors)\n> ```\"\n\n### 步骤2：代码实践（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"创建你的手势绘画板：\n> - 食指绘画\n> - 两指切换颜色\n> - 握拳清除画布\n> - 五指张开保存图片\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 线条断断续续 | 降低检测阈值 | 或增加点之间的连线距离阈值 |\n| 想画不同粗细 | 添加手势 | 用手指数量控制线条粗细 |\n| 想加橡皮擦 | 特殊手势 | 用拇指+小指表示橡皮擦模式 |\n\n---\n\n## 核心代码模式\n\n```python\n# 手势绘画板完整框架\nimport cv2\nimport numpy as np\nimport mediapipe as mp\n\nclass GestureDrawingBoard:\n    def __init__(self, width=1280, height=720):\n        self.canvas = np.zeros((height, width, 3), dtype=np.uint8)\n        self.colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255)]\n        self.color_index = 0\n        self.prev_point = None\n        self.drawing = False\n\n    def process(self, frame, landmarks, fingers_up):\n        h, w = frame.shape[:2]\n        x = int(landmarks[8].x * w)\n        y = int(landmarks[8].y * h)\n\n        # 食指绘画\n        if fingers_up == [0, 1, 0, 0, 0]:\n            if self.prev_point:\n                cv2.line(self.canvas, self.prev_point, (x, y),\n                        self.colors[self.color_index], 5)\n            self.prev_point = (x, y)\n        else:\n            self.prev_point = None\n\n        # 两指切换颜色\n        if fingers_up == [0, 1, 1, 0, 0]:\n            self.color_index = (self.color_index + 1) % len(self.colors)\n\n        # 握拳清除\n        if fingers_up == [0, 0, 0, 0, 0]:\n            self.canvas = np.zeros_like(self.canvas)\n\n        return self.canvas\n```\n\n---\n\n## 核心知识点\n\n- **指尖追踪**：获取landmark[8]的坐标并转换为像素\n- **轨迹绘制**：存储点序列，用cv2.line连接相邻点\n- **画布叠加**：用numpy创建透明画布，与视频帧叠加\n\n---\n\n## 导航\n\n| 上一课 | 返回模块 | 下一课 |\n|--------|----------|--------|\n| [PYAI-2-3-08 手势控制应用](PYAI-2-3-08_手势控制应用.md) | [M3 交互式AI](_模块概览.md) | [PYAI-2-3-10 机械手游戏](PYAI-2-3-10_机械手游戏.md) |\n"
+}

@@ -1,0 +1,23 @@
+{
+  "title": "[PYAI-MP-09] 声光互动",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\MP\\PYAI-MP-09_声光互动.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L9 |\n| **课程名称** | 声光互动 |\n| **认知负荷** | 中-高 |\n| **核心技能** | RGB三基色(0-255)、NeoPixel库、声音传感器 |\n| **项目内容** | 音强流水灯 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**教师话术**\n> \"今天做一个**音强流水灯**——灯光随着声音的强弱变化！\"\n>\n> \"**RGB三基色**：\n> - R(红)、G(绿)、B(蓝)，每个值0-255\n> - (255, 0, 0) = 红色\n> - (0, 255, 0) = 绿色\n> - (255, 255, 0) = 黄色（红+绿）\n>\n> **NeoPixel灯带**：可以单独控制每颗LED的颜色\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\nfrom novaMP import NeoPixel, Microphone\nimport time\n\n# 创建实例\nnp = NeoPixel(4, 12)  # Pin 4, 12颗灯珠\nmic = Microphone(34)\n\nwhile True:\n    # 读取音量\n    sound = mic.read()\n\n    # 根据音量调整亮度\n    brightness = min(255, sound // 16)\n\n    # 设置所有灯珠颜色\n    for i in range(12):\n        np[i] = (brightness, 0, brightness)  # 紫色\n\n    np.write()  # 更新显示\n    time.sleep_ms(50)\n```\n\n---"
+    },
+    {
+      "title": "RGB颜色参考",
+      "content": "| 颜色 | RGB值 |\n|------|-------|\n| 红色 | (255, 0, 0) |\n| 绿色 | (0, 255, 0) |\n| 蓝色 | (0, 0, 255) |\n| 黄色 | (255, 255, 0) |\n| 紫色 | (255, 0, 255) |\n| 青色 | (0, 255, 255) |\n| 白色 | (255, 255, 255) |\n| 关闭 | (0, 0, 0) |\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L9-001]\n\n---\n\n[上一课](PYAI-MP-08_舵机与映射.md) | [模块概览](_模块概览.md) | [下一课](PYAI-MP-10_海龟雷达1.md)"
+    }
+  ],
+  "full_content": "# [PYAI-MP-09] 声光互动\n\n> **模块**：MicroPython硬件开发\n> **认知负荷**：中-高\n> **核心技能**：RGB三基色(0-255)、NeoPixel库、声音传感器\n> **UID**：PYAI-MP-09-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L9 |\n| **课程名称** | 声光互动 |\n| **认知负荷** | 中-高 |\n| **核心技能** | RGB三基色(0-255)、NeoPixel库、声音传感器 |\n| **项目内容** | 音强流水灯 |\n\n---\n\n## 详细教学流程\n\n**教师话术**\n> \"今天做一个**音强流水灯**——灯光随着声音的强弱变化！\"\n>\n> \"**RGB三基色**：\n> - R(红)、G(绿)、B(蓝)，每个值0-255\n> - (255, 0, 0) = 红色\n> - (0, 255, 0) = 绿色\n> - (255, 255, 0) = 黄色（红+绿）\n>\n> **NeoPixel灯带**：可以单独控制每颗LED的颜色\"\n\n---\n\n## 核心代码模式\n\n```python\nfrom novaMP import NeoPixel, Microphone\nimport time\n\n# 创建实例\nnp = NeoPixel(4, 12)  # Pin 4, 12颗灯珠\nmic = Microphone(34)\n\nwhile True:\n    # 读取音量\n    sound = mic.read()\n\n    # 根据音量调整亮度\n    brightness = min(255, sound // 16)\n\n    # 设置所有灯珠颜色\n    for i in range(12):\n        np[i] = (brightness, 0, brightness)  # 紫色\n\n    np.write()  # 更新显示\n    time.sleep_ms(50)\n```\n\n---\n\n## RGB颜色参考\n\n| 颜色 | RGB值 |\n|------|-------|\n| 红色 | (255, 0, 0) |\n| 绿色 | (0, 255, 0) |\n| 蓝色 | (0, 0, 255) |\n| 黄色 | (255, 255, 0) |\n| 紫色 | (255, 0, 255) |\n| 青色 | (0, 255, 255) |\n| 白色 | (255, 255, 255) |\n| 关闭 | (0, 0, 0) |\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L9-001]\n\n---\n\n[上一课](PYAI-MP-08_舵机与映射.md) | [模块概览](_模块概览.md) | [下一课](PYAI-MP-10_海龟雷达1.md)\n"
+}

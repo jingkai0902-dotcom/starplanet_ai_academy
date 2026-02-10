@@ -1,0 +1,23 @@
+{
+  "title": "[PYAI-MP-07] 温湿度数据采集",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\MP\\PYAI-MP-07_温湿度数据采集.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L7 |\n| **课程名称** | 温湿度数据采集 |\n| **认知负荷** | 中-高 |\n| **核心技能** | DHT11传感器、RTC时间戳、文件操作、CSV保存 |\n| **项目内容** | 温湿度记录仪 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**教师话术**\n> \"今天我们用**DHT11传感器**采集温湿度数据，并保存到文件里！\"\n>\n> \"**DHT11注意事项**：\n> - 两次读取之间必须间隔**至少1秒**\n> - 否则会数据冲突或报错\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\nfrom novaMP import DHT11\nfrom machine import RTC\nimport time\n\n# 创建传感器实例\ndht = DHT11(4)  # 连接到Pin 4\nrtc = RTC()\n\n# 读取数据\ndht.measure()  # 触发测量\ntemp = dht.temperature  # 获取温度\nhumi = dht.humidity     # 获取湿度\n\nprint(f\"温度: {temp}C, 湿度: {humi}%\")\n\n# 保存到文件\nwith open('data.csv', 'a') as f:\n    timestamp = rtc.datetime()\n    f.write(f\"{timestamp},{temp},{humi}\\n\")\n\n# 注意：下次读取前要等待1秒\ntime.sleep(1)\n```\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- **DHT11读取间隔<1秒**——会报错或数据不准\n- **忘记调用measure()**——temperature/humidity不会更新\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L7-001]\n\n---\n\n[上一课](PYAI-MP-06_硬件驱动封装.md) | [模块概览](_模块概览.md) | [下一课](PYAI-MP-08_舵机与映射.md)"
+    }
+  ],
+  "full_content": "# [PYAI-MP-07] 温湿度数据采集\n\n> **模块**：MicroPython硬件开发\n> **认知负荷**：中-高\n> **核心技能**：DHT11传感器、RTC时间戳、文件操作、CSV保存\n> **UID**：PYAI-MP-07-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L7 |\n| **课程名称** | 温湿度数据采集 |\n| **认知负荷** | 中-高 |\n| **核心技能** | DHT11传感器、RTC时间戳、文件操作、CSV保存 |\n| **项目内容** | 温湿度记录仪 |\n\n---\n\n## 详细教学流程\n\n**教师话术**\n> \"今天我们用**DHT11传感器**采集温湿度数据，并保存到文件里！\"\n>\n> \"**DHT11注意事项**：\n> - 两次读取之间必须间隔**至少1秒**\n> - 否则会数据冲突或报错\"\n\n---\n\n## 核心代码模式\n\n```python\nfrom novaMP import DHT11\nfrom machine import RTC\nimport time\n\n# 创建传感器实例\ndht = DHT11(4)  # 连接到Pin 4\nrtc = RTC()\n\n# 读取数据\ndht.measure()  # 触发测量\ntemp = dht.temperature  # 获取温度\nhumi = dht.humidity     # 获取湿度\n\nprint(f\"温度: {temp}C, 湿度: {humi}%\")\n\n# 保存到文件\nwith open('data.csv', 'a') as f:\n    timestamp = rtc.datetime()\n    f.write(f\"{timestamp},{temp},{humi}\\n\")\n\n# 注意：下次读取前要等待1秒\ntime.sleep(1)\n```\n\n---\n\n## 禁忌提醒\n\n- **DHT11读取间隔<1秒**——会报错或数据不准\n- **忘记调用measure()**——temperature/humidity不会更新\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L7-001]\n\n---\n\n[上一课](PYAI-MP-06_硬件驱动封装.md) | [模块概览](_模块概览.md) | [下一课](PYAI-MP-08_舵机与映射.md)\n"
+}

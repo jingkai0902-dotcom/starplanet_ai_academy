@@ -1,0 +1,31 @@
+{
+  "title": "[PYAI-2-2-09] 举重若轻1",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M2_项目应用\\PYAI-2-2-09_举重若轻1.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-2-9 |\n| **课程名称** | 举重若轻1 |\n| **认知负荷** | 高 |\n| **核心技能** | 图像导入变换、能量值变化、游戏环节控制 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天开始做一个**大炮射击**游戏！这是一个三节课的大项目，我们会学到图像处理、物理运动、音效等很多知识。\"\n>\n> \"**Pygame图像加载**：\n> ```python\n> import pygame\n>\n> # 加载图像\n> cannon_img = pygame.image.load('cannon.png')\n>\n> # 缩放图像\n> cannon_img = pygame.transform.scale(cannon_img, (100, 50))\n>\n> # 旋转图像（角度，逆时针为正）\n> rotated = pygame.transform.rotate(cannon_img, 45)\n>\n> # 绘制到屏幕\n> screen.blit(cannon_img, (x, y))\n> ```\n>\n> **能量条设计**：\n> - 按住空格键蓄力，能量值增加\n> - 松开空格键发射，能量值决定初速度\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\nimport pygame\n\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\n\n# 加载图像\ncannon_img = pygame.image.load('cannon.png')\ncannon_img = pygame.transform.scale(cannon_img, (80, 40))\n\n# 大炮位置和角度\ncannon_x, cannon_y = 50, 500\ncannon_angle = 45\n\n# 能量系统\nenergy = 0\nmax_energy = 100\ncharging = False\n\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_SPACE:\n                charging = True\n        if event.type == pygame.KEYUP:\n            if event.key == pygame.K_SPACE:\n                charging = False\n                # 发射炮弹（下节课实现）\n                print(f'发射！能量：{energy}')\n                energy = 0\n\n    # 蓄力\n    if charging and energy < max_energy:\n        energy += 2\n\n    # 角度控制\n    keys = pygame.key.get_pressed()\n    if keys[pygame.K_UP] and cannon_angle < 80:\n        cannon_angle += 1\n    if keys[pygame.K_DOWN] and cannon_angle > 10:\n        cannon_angle -= 1\n\n    screen.fill((135, 206, 235))  # 天蓝色背景\n\n    # 绘制大炮（旋转）\n    rotated_cannon = pygame.transform.rotate(cannon_img, cannon_angle)\n    screen.blit(rotated_cannon, (cannon_x, cannon_y - cannon_angle))\n\n    # 绘制能量条\n    pygame.draw.rect(screen, (100, 100, 100), (20, 20, 104, 24))  # 边框\n    pygame.draw.rect(screen, (0, 255, 0), (22, 22, energy, 20))   # 能量\n\n    pygame.display.flip()\n    pygame.time.delay(16)\n\npygame.quit()\n```\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 图像加载失败 | 检查路径 | 确认图片文件在正确位置 |\n| 旋转后图像变形 | 解释原理 | 旋转会改变图像尺寸，需要调整位置 |\n| 能量条不显示 | 检查坐标 | 确认绘制位置在屏幕范围内 |\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- ❌ 图像路径错误——FileNotFoundError\n- ❌ 忘记convert()——大图像可能卡顿\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- 图像加载：`pygame.image.load()`\n- 图像变换：`pygame.transform.scale()` / `rotate()`\n- 能量系统：按键蓄力、松开释放\n- 游戏状态：用变量控制不同阶段\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-22-09-001]\n\n---\n\n[上一课](PYAI-2-2-08_积小致巨2.md) | [下一课](PYAI-2-2-10_举重若轻2.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-2-09] 举重若轻1\n\n> **模块**：L2-M2 项目应用\n> **认知负荷**：高\n> **核心技能**：图像导入变换、能量值变化、游戏环节控制\n> **UID**：PYAI-22-09-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-2-9 |\n| **课程名称** | 举重若轻1 |\n| **认知负荷** | 高 |\n| **核心技能** | 图像导入变换、能量值变化、游戏环节控制 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天开始做一个**大炮射击**游戏！这是一个三节课的大项目，我们会学到图像处理、物理运动、音效等很多知识。\"\n>\n> \"**Pygame图像加载**：\n> ```python\n> import pygame\n>\n> # 加载图像\n> cannon_img = pygame.image.load('cannon.png')\n>\n> # 缩放图像\n> cannon_img = pygame.transform.scale(cannon_img, (100, 50))\n>\n> # 旋转图像（角度，逆时针为正）\n> rotated = pygame.transform.rotate(cannon_img, 45)\n>\n> # 绘制到屏幕\n> screen.blit(cannon_img, (x, y))\n> ```\n>\n> **能量条设计**：\n> - 按住空格键蓄力，能量值增加\n> - 松开空格键发射，能量值决定初速度\"\n\n---\n\n## 核心代码模式\n\n```python\nimport pygame\n\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\n\n# 加载图像\ncannon_img = pygame.image.load('cannon.png')\ncannon_img = pygame.transform.scale(cannon_img, (80, 40))\n\n# 大炮位置和角度\ncannon_x, cannon_y = 50, 500\ncannon_angle = 45\n\n# 能量系统\nenergy = 0\nmax_energy = 100\ncharging = False\n\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_SPACE:\n                charging = True\n        if event.type == pygame.KEYUP:\n            if event.key == pygame.K_SPACE:\n                charging = False\n                # 发射炮弹（下节课实现）\n                print(f'发射！能量：{energy}')\n                energy = 0\n\n    # 蓄力\n    if charging and energy < max_energy:\n        energy += 2\n\n    # 角度控制\n    keys = pygame.key.get_pressed()\n    if keys[pygame.K_UP] and cannon_angle < 80:\n        cannon_angle += 1\n    if keys[pygame.K_DOWN] and cannon_angle > 10:\n        cannon_angle -= 1\n\n    screen.fill((135, 206, 235))  # 天蓝色背景\n\n    # 绘制大炮（旋转）\n    rotated_cannon = pygame.transform.rotate(cannon_img, cannon_angle)\n    screen.blit(rotated_cannon, (cannon_x, cannon_y - cannon_angle))\n\n    # 绘制能量条\n    pygame.draw.rect(screen, (100, 100, 100), (20, 20, 104, 24))  # 边框\n    pygame.draw.rect(screen, (0, 255, 0), (22, 22, energy, 20))   # 能量\n\n    pygame.display.flip()\n    pygame.time.delay(16)\n\npygame.quit()\n```\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 图像加载失败 | 检查路径 | 确认图片文件在正确位置 |\n| 旋转后图像变形 | 解释原理 | 旋转会改变图像尺寸，需要调整位置 |\n| 能量条不显示 | 检查坐标 | 确认绘制位置在屏幕范围内 |\n\n---\n\n## 禁忌提醒\n\n- ❌ 图像路径错误——FileNotFoundError\n- ❌ 忘记convert()——大图像可能卡顿\n\n---\n\n## 核心知识点\n\n- 图像加载：`pygame.image.load()`\n- 图像变换：`pygame.transform.scale()` / `rotate()`\n- 能量系统：按键蓄力、松开释放\n- 游戏状态：用变量控制不同阶段\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-22-09-001]\n\n---\n\n[上一课](PYAI-2-2-08_积小致巨2.md) | [下一课](PYAI-2-2-10_举重若轻2.md) | [返回模块概览](_模块概览.md)\n"
+}

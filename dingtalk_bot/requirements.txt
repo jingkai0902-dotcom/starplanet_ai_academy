@@ -1,0 +1,6 @@
+# 斯坦星球钉钉机器人依赖
+flask>=2.3.0
+requests>=2.28.0
+dingtalk-stream==0.24.3
+gunicorn>=21.0.0
+python-dotenv>=1.0.0

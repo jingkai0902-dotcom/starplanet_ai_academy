@@ -1,0 +1,31 @@
+{
+  "title": "[PYAI-MP-12] 海龟雷达(3)",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\MP\\PYAI-MP-12_海龟雷达3.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L12 |\n| **课程名称** | 海龟雷达(3) |\n| **认知负荷** | 高 |\n| **核心技能** | 综合调试、Python海龟画图、数据可视化 |\n| **项目内容** | 雷达扫描系统 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**教师话术**\n> \"最后一步，把所有功能整合起来！\n> - 舵机扫描（0-180度）\n> - 超声波测距\n> - 串口发送数据\n> - 电脑用Python海龟画图显示雷达图\"\n\n---"
+    },
+    {
+      "title": "核心代码模式（ESP32端）",
+      "content": "```python\nfrom novaMP import SG90, HCSR04\nfrom machine import UART\nimport time\n\nservo = SG90(15)\nsonar = HCSR04(trig=5, echo=18)\nuart = UART(2, baudrate=9600, tx=17, rx=16)\n\n# 雷达扫描\nfor angle in range(0, 181, 5):\n    servo.move_to(angle)\n    time.sleep_ms(100)\n\n    distance = sonar.distance_cm()\n\n    # 发送数据：角度,距离\n    uart.write(f\"{angle},{distance}\\n\")\n```\n\n---"
+    },
+    {
+      "title": "电脑端接收代码（Python）",
+      "content": "```python\nimport serial\nimport turtle\n\n# 打开串口\nser = serial.Serial('COM3', 9600)\n\n# 设置海龟画图\nscreen = turtle.Screen()\nt = turtle.Turtle()\nt.speed(0)\n\nwhile True:\n    if ser.in_waiting:\n        line = ser.readline().decode().strip()\n        angle, distance = map(int, line.split(','))\n\n        # 绘制雷达扫描线\n        t.setheading(angle)\n        t.forward(distance)\n        t.backward(distance)\n```\n\n---"
+    },
+    {
+      "title": "评估标准",
+      "content": "- 舵机能转动（0-180度扫描）\n- 超声波能测距\n- 电脑屏幕能画出雷达扫描图\n- 重点：**功能实现优先，底层原理可略讲**\n\n---"
+    },
+    {
+      "title": "项目整合流程",
+      "content": "```\n1. 舵机转动到指定角度\n       |\n       v\n2. 超声波测量距离\n       |\n       v\n3. 串口发送数据（角度,距离）\n       |\n       v\n4. 电脑接收数据\n       |\n       v\n5. 海龟画图绘制雷达图\n```\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L12-001]\n\n---\n\n[上一课](PYAI-MP-11_海龟雷达2.md) | [模块概览](_模块概览.md) | [返回索引](../_索引.md)"
+    }
+  ],
+  "full_content": "# [PYAI-MP-12] 海龟雷达(3)\n\n> **模块**：MicroPython硬件开发\n> **认知负荷**：高\n> **核心技能**：综合调试、Python海龟画图、数据可视化\n> **UID**：PYAI-MP-12-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L12 |\n| **课程名称** | 海龟雷达(3) |\n| **认知负荷** | 高 |\n| **核心技能** | 综合调试、Python海龟画图、数据可视化 |\n| **项目内容** | 雷达扫描系统 |\n\n---\n\n## 详细教学流程\n\n**教师话术**\n> \"最后一步，把所有功能整合起来！\n> - 舵机扫描（0-180度）\n> - 超声波测距\n> - 串口发送数据\n> - 电脑用Python海龟画图显示雷达图\"\n\n---\n\n## 核心代码模式（ESP32端）\n\n```python\nfrom novaMP import SG90, HCSR04\nfrom machine import UART\nimport time\n\nservo = SG90(15)\nsonar = HCSR04(trig=5, echo=18)\nuart = UART(2, baudrate=9600, tx=17, rx=16)\n\n# 雷达扫描\nfor angle in range(0, 181, 5):\n    servo.move_to(angle)\n    time.sleep_ms(100)\n\n    distance = sonar.distance_cm()\n\n    # 发送数据：角度,距离\n    uart.write(f\"{angle},{distance}\\n\")\n```\n\n---\n\n## 电脑端接收代码（Python）\n\n```python\nimport serial\nimport turtle\n\n# 打开串口\nser = serial.Serial('COM3', 9600)\n\n# 设置海龟画图\nscreen = turtle.Screen()\nt = turtle.Turtle()\nt.speed(0)\n\nwhile True:\n    if ser.in_waiting:\n        line = ser.readline().decode().strip()\n        angle, distance = map(int, line.split(','))\n\n        # 绘制雷达扫描线\n        t.setheading(angle)\n        t.forward(distance)\n        t.backward(distance)\n```\n\n---\n\n## 评估标准\n\n- 舵机能转动（0-180度扫描）\n- 超声波能测距\n- 电脑屏幕能画出雷达扫描图\n- 重点：**功能实现优先，底层原理可略讲**\n\n---\n\n## 项目整合流程\n\n```\n1. 舵机转动到指定角度\n       |\n       v\n2. 超声波测量距离\n       |\n       v\n3. 串口发送数据（角度,距离）\n       |\n       v\n4. 电脑接收数据\n       |\n       v\n5. 海龟画图绘制雷达图\n```\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L12-001]\n\n---\n\n[上一课](PYAI-MP-11_海龟雷达2.md) | [模块概览](_模块概览.md) | [返回索引](../_索引.md)\n"
+}

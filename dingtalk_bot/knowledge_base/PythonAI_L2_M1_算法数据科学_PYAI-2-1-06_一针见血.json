@@ -1,0 +1,31 @@
+{
+  "title": "[PYAI-2-1-06] 一针见血",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M1_算法数据科学\\PYAI-2-1-06_一针见血.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-6 |\n| **课程名称** | 一针见血 |\n| **认知负荷** | 高 |\n| **核心技能** | 二分搜索、有序列表、搜索优化 |\n| **项目内容** | 高效查找器 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"线性搜索太慢了！如果数据是**有序的**，可以用**二分搜索**，快得多！\"\n>\n> \"**二分搜索原理**：每次排除一半\n> - 猜数字游戏：1-100，我想的是73\n> - 你猜50，我说'大了'，排除1-50\n> - 你猜75，我说'小了'，排除75-100\n> - 你猜62，我说'大了'...\n> - 最多7次就能猜中！\n>\n> ```python\n> def binary_search(arr, target):\n>     left, right = 0, len(arr) - 1\n>\n>     while left <= right:\n>         mid = (left + right) // 2\n>         if arr[mid] == target:\n>             return mid\n>         elif arr[mid] < target:\n>             left = mid + 1  # 在右半边找\n>         else:\n>             right = mid - 1  # 在左半边找\n>\n>     return -1  # 没找到\n> ```\n>\n> **时间复杂度**：O(log n)\n> - 1000个数据：线性搜索最多1000次，二分搜索最多10次！\"\n\n**步骤2：代码实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"对比实验：\n> 1. 生成10000个有序数字\n> 2. 分别用线性搜索和二分搜索查找\n> 3. 统计比较次数，看差多少\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 边界条件错误 | 强调<=和+1/-1 | 这是二分搜索最易错的地方 |\n| 数据无序 | 先排序 | 二分搜索前提是有序 |\n| 想用递归实现 | 展示递归版本 | 递归版本更直观但效率略低 |\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\ndef binary_search_recursive(arr, target, left, right):\n    \"\"\"递归版二分搜索\"\"\"\n    if left > right:\n        return -1\n\n    mid = (left + right) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] < target:\n        return binary_search_recursive(arr, target, mid + 1, right)\n    else:\n        return binary_search_recursive(arr, target, left, mid - 1)\n```\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 对无序数据使用二分搜索——结果不正确\n- 边界条件写错——`left <= right`不是`left < right`\n- mid计算溢出——大数据时用`left + (right - left) // 2`\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- 二分搜索：每次排除一半，O(log n)\n- 前提条件：数据必须有序\n- 效率对比：比线性搜索快得多\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-06-001]\n\n---\n\n[上一课](PYAI-2-1-05_顺藤摸瓜.md) | [下一课](PYAI-2-1-07_数据画像.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-1-06] 一针见血\n\n> **模块**：L2-M1 算法数据科学\n> **认知负荷**：高\n> **核心技能**：二分搜索、有序列表、搜索优化\n> **UID**：PYAI-21-06-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-6 |\n| **课程名称** | 一针见血 |\n| **认知负荷** | 高 |\n| **核心技能** | 二分搜索、有序列表、搜索优化 |\n| **项目内容** | 高效查找器 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"线性搜索太慢了！如果数据是**有序的**，可以用**二分搜索**，快得多！\"\n>\n> \"**二分搜索原理**：每次排除一半\n> - 猜数字游戏：1-100，我想的是73\n> - 你猜50，我说'大了'，排除1-50\n> - 你猜75，我说'小了'，排除75-100\n> - 你猜62，我说'大了'...\n> - 最多7次就能猜中！\n>\n> ```python\n> def binary_search(arr, target):\n>     left, right = 0, len(arr) - 1\n>\n>     while left <= right:\n>         mid = (left + right) // 2\n>         if arr[mid] == target:\n>             return mid\n>         elif arr[mid] < target:\n>             left = mid + 1  # 在右半边找\n>         else:\n>             right = mid - 1  # 在左半边找\n>\n>     return -1  # 没找到\n> ```\n>\n> **时间复杂度**：O(log n)\n> - 1000个数据：线性搜索最多1000次，二分搜索最多10次！\"\n\n**步骤2：代码实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"对比实验：\n> 1. 生成10000个有序数字\n> 2. 分别用线性搜索和二分搜索查找\n> 3. 统计比较次数，看差多少\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 边界条件错误 | 强调<=和+1/-1 | 这是二分搜索最易错的地方 |\n| 数据无序 | 先排序 | 二分搜索前提是有序 |\n| 想用递归实现 | 展示递归版本 | 递归版本更直观但效率略低 |\n\n---\n\n## 核心代码模式\n\n```python\ndef binary_search_recursive(arr, target, left, right):\n    \"\"\"递归版二分搜索\"\"\"\n    if left > right:\n        return -1\n\n    mid = (left + right) // 2\n    if arr[mid] == target:\n        return mid\n    elif arr[mid] < target:\n        return binary_search_recursive(arr, target, mid + 1, right)\n    else:\n        return binary_search_recursive(arr, target, left, mid - 1)\n```\n\n---\n\n## 禁忌提醒\n\n- 对无序数据使用二分搜索——结果不正确\n- 边界条件写错——`left <= right`不是`left < right`\n- mid计算溢出——大数据时用`left + (right - left) // 2`\n\n---\n\n## 核心知识点\n\n- 二分搜索：每次排除一半，O(log n)\n- 前提条件：数据必须有序\n- 效率对比：比线性搜索快得多\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-06-001]\n\n---\n\n[上一课](PYAI-2-1-05_顺藤摸瓜.md) | [下一课](PYAI-2-1-07_数据画像.md) | [返回模块概览](_模块概览.md)\n"
+}

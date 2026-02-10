@@ -1,0 +1,31 @@
+{
+  "title": "[PYAI-2-3-08] 手势控制应用",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M3_交互式AI\\PYAI-2-3-08_手势控制应用.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI 2-3-8 |\n| **课程名称** | 手势控制应用 |\n| **认知负荷** | 高 |\n| **核心技能** | 手势映射、pygame交互控制 |\n| **项目内容** | 手势控制游戏 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"上节课我们学会了识别手势，今天把手势变成**控制指令**！\"\n>\n> \"**手势映射设计**：\n> ```python\n> def gesture_to_command(fingers_up):\n>     '''\n>     fingers_up: [拇指, 食指, 中指, 无名指, 小指]\n>     返回: 控制指令\n>     '''\n>     if fingers_up == [0, 1, 0, 0, 0]:  # 只有食指\n>         return 'UP'\n>     elif fingers_up == [0, 1, 1, 0, 0]:  # 食指+中指\n>         return 'DOWN'\n>     elif fingers_up == [1, 1, 1, 1, 1]:  # 全部张开\n>         return 'STOP'\n>     elif fingers_up == [0, 0, 0, 0, 0]:  # 握拳\n>         return 'GO'\n>     return None\n> ```\n>\n> **pygame控制小球**：\n> ```python\n> import pygame\n>\n> ball_x, ball_y = 400, 300\n> speed = 5\n>\n> def move_ball(command):\n>     global ball_x, ball_y\n>     if command == 'UP':\n>         ball_y -= speed\n>     elif command == 'DOWN':\n>         ball_y += speed\n>     elif command == 'LEFT':\n>         ball_x -= speed\n>     elif command == 'RIGHT':\n>         ball_x += speed\n> ```\"\n\n### 步骤2：代码实践（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"创建一个手势控制游戏：\n> - 用手势控制小球移动\n> - 收集屏幕上的金币\n> - 避开障碍物\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 手势识别不稳定 | 添加确认机制 | 连续3帧相同手势才执行 |\n| 想用左右手 | 区分左右 | 检测handedness属性 |\n| 控制太灵敏 | 添加冷却时间 | 每个指令间隔0.5秒 |\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\n# 手势控制游戏框架\nimport cv2\nimport mediapipe as mp\nimport pygame\n\nclass GestureController:\n    def __init__(self):\n        self.hands = mp.solutions.hands.Hands()\n        self.finger_tips = [4, 8, 12, 16, 20]  # 指尖索引\n        self.finger_pips = [3, 6, 10, 14, 18]  # 指根索引\n\n    def get_fingers_up(self, landmarks):\n        fingers = []\n        # 拇指特殊处理（比较x坐标）\n        if landmarks[4].x < landmarks[3].x:\n            fingers.append(1)\n        else:\n            fingers.append(0)\n        # 其他四指（比较y坐标）\n        for tip, pip in zip(self.finger_tips[1:], self.finger_pips[1:]):\n            if landmarks[tip].y < landmarks[pip].y:\n                fingers.append(1)\n            else:\n                fingers.append(0)\n        return fingers\n```\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- **手势映射**：将手指状态组合映射为控制指令\n- **指尖检测**：比较指尖和指根的y坐标判断伸直\n- **pygame交互**：实时响应手势控制游戏元素\n\n---"
+    },
+    {
+      "title": "导航",
+      "content": "| 上一课 | 返回模块 | 下一课 |\n|--------|----------|--------|\n| [PYAI-2-3-07 手势识别](PYAI-2-3-07_手势识别.md) | [M3 交互式AI](_模块概览.md) | [PYAI-2-3-09 手势绘画板](PYAI-2-3-09_手势绘画板.md) |"
+    }
+  ],
+  "full_content": "# [PYAI-2-3-08] 手势控制应用\n\n> **模块**：L2-M3 交互式AI\n> **认知负荷**：高\n> **核心技能**：手势映射、pygame交互控制\n> **UID**：PYAI-23-08-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI 2-3-8 |\n| **课程名称** | 手势控制应用 |\n| **认知负荷** | 高 |\n| **核心技能** | 手势映射、pygame交互控制 |\n| **项目内容** | 手势控制游戏 |\n\n---\n\n## 详细教学流程\n\n### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"上节课我们学会了识别手势，今天把手势变成**控制指令**！\"\n>\n> \"**手势映射设计**：\n> ```python\n> def gesture_to_command(fingers_up):\n>     '''\n>     fingers_up: [拇指, 食指, 中指, 无名指, 小指]\n>     返回: 控制指令\n>     '''\n>     if fingers_up == [0, 1, 0, 0, 0]:  # 只有食指\n>         return 'UP'\n>     elif fingers_up == [0, 1, 1, 0, 0]:  # 食指+中指\n>         return 'DOWN'\n>     elif fingers_up == [1, 1, 1, 1, 1]:  # 全部张开\n>         return 'STOP'\n>     elif fingers_up == [0, 0, 0, 0, 0]:  # 握拳\n>         return 'GO'\n>     return None\n> ```\n>\n> **pygame控制小球**：\n> ```python\n> import pygame\n>\n> ball_x, ball_y = 400, 300\n> speed = 5\n>\n> def move_ball(command):\n>     global ball_x, ball_y\n>     if command == 'UP':\n>         ball_y -= speed\n>     elif command == 'DOWN':\n>         ball_y += speed\n>     elif command == 'LEFT':\n>         ball_x -= speed\n>     elif command == 'RIGHT':\n>         ball_x += speed\n> ```\"\n\n### 步骤2：代码实践（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"创建一个手势控制游戏：\n> - 用手势控制小球移动\n> - 收集屏幕上的金币\n> - 避开障碍物\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 手势识别不稳定 | 添加确认机制 | 连续3帧相同手势才执行 |\n| 想用左右手 | 区分左右 | 检测handedness属性 |\n| 控制太灵敏 | 添加冷却时间 | 每个指令间隔0.5秒 |\n\n---\n\n## 核心代码模式\n\n```python\n# 手势控制游戏框架\nimport cv2\nimport mediapipe as mp\nimport pygame\n\nclass GestureController:\n    def __init__(self):\n        self.hands = mp.solutions.hands.Hands()\n        self.finger_tips = [4, 8, 12, 16, 20]  # 指尖索引\n        self.finger_pips = [3, 6, 10, 14, 18]  # 指根索引\n\n    def get_fingers_up(self, landmarks):\n        fingers = []\n        # 拇指特殊处理（比较x坐标）\n        if landmarks[4].x < landmarks[3].x:\n            fingers.append(1)\n        else:\n            fingers.append(0)\n        # 其他四指（比较y坐标）\n        for tip, pip in zip(self.finger_tips[1:], self.finger_pips[1:]):\n            if landmarks[tip].y < landmarks[pip].y:\n                fingers.append(1)\n            else:\n                fingers.append(0)\n        return fingers\n```\n\n---\n\n## 核心知识点\n\n- **手势映射**：将手指状态组合映射为控制指令\n- **指尖检测**：比较指尖和指根的y坐标判断伸直\n- **pygame交互**：实时响应手势控制游戏元素\n\n---\n\n## 导航\n\n| 上一课 | 返回模块 | 下一课 |\n|--------|----------|--------|\n| [PYAI-2-3-07 手势识别](PYAI-2-3-07_手势识别.md) | [M3 交互式AI](_模块概览.md) | [PYAI-2-3-09 手势绘画板](PYAI-2-3-09_手势绘画板.md) |\n"
+}

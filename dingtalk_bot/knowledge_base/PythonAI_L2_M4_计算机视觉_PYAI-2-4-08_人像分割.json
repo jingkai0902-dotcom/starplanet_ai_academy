@@ -1,0 +1,23 @@
+{
+  "title": "[PYAI-2-4-08] 人像分割",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M4_计算机视觉\\PYAI-2-4-08_人像分割.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI-2-4-08/09 |\n| **课程名称** | 人像分割 - 视频会议虚拟背景 |\n| **认知负荷** | 高 |\n| **核心技能** | MediaPipe Selfie Segmentation、Mask掩膜 |\n| **项目内容** | 视频会议虚拟背景 |\n| **课时** | 2节课（08-09） |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"大家用过视频会议的虚拟背景吗？今天我们来做一个！\n>\n> 原理是**人像分割**：AI模型识别出哪些像素是人，哪些是背景。然后用新背景替换掉原背景。\n>\n> ```python\n> import mediapipe as mp\n>\n> # 初始化人像分割模型\n> selfie_segmentation = mp.solutions.selfie_segmentation\n> segment = selfie_segmentation.SelfieSegmentation()\n>\n> # 获取掩膜\n> results = segment.process(frame)\n> mask = results.segmentation_mask  # 人像区域是1，背景是0\n> ```\"\n\n**变体示例**\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 边缘不干净 | 调整阈值 | `mask > 0.5` 改成 `mask > 0.7` |\n| 想用自己的背景 | 加载自定义图片 | 用cv2.imread加载背景图 |\n| 帧率太低 | 降低分辨率 | 先resize再处理 |\n\n---\n\n### 步骤2：代码实践（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"现在我们用`numpy.where`来替换背景：\n>\n> ```python\n> import numpy as np\n>\n> # 三通道掩膜\n> mask_3d = np.stack([mask, mask, mask], axis=-1)\n>\n> # 替换背景\n> output = np.where(mask_3d > 0.5, frame, background)\n> ```\n>\n> `np.where`的意思是：如果条件成立，用第一个值；否则用第二个值。\"\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 图像尺寸不匹配——frame和background必须尺寸相同\n- 通道数不一致——都必须是3通道\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- Selfie Segmentation：人像分割模型\n- Mask掩膜：0/1遮罩原理\n- 背景融合：`numpy.where` 替换背景\n\n`#执行层` `#测评项`\n[UID: PYAI-24-08-001]\n[关联: PYAI-24-06-001 文件扫描（前置课程）]\n[关联: PYAI-24-10-001 虚拟墨镜（后续课程）]\n\n---\n\n[上一课](PYAI-2-4-06_文件扫描.md) | [模块概览](_模块概览.md) | [下一课](PYAI-2-4-10_虚拟墨镜.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-4-08] 人像分割\n\n> **模块**：L2-M4 计算机视觉\n> **认知负荷**：高\n> **核心技能**：MediaPipe Selfie Segmentation、Mask掩膜\n> **UID**：PYAI-24-08-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | PYAI-2-4-08/09 |\n| **课程名称** | 人像分割 - 视频会议虚拟背景 |\n| **认知负荷** | 高 |\n| **核心技能** | MediaPipe Selfie Segmentation、Mask掩膜 |\n| **项目内容** | 视频会议虚拟背景 |\n| **课时** | 2节课（08-09） |\n\n---\n\n## 详细教学流程\n\n### 步骤1：知识讲解（20分钟）\n\n`#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"大家用过视频会议的虚拟背景吗？今天我们来做一个！\n>\n> 原理是**人像分割**：AI模型识别出哪些像素是人，哪些是背景。然后用新背景替换掉原背景。\n>\n> ```python\n> import mediapipe as mp\n>\n> # 初始化人像分割模型\n> selfie_segmentation = mp.solutions.selfie_segmentation\n> segment = selfie_segmentation.SelfieSegmentation()\n>\n> # 获取掩膜\n> results = segment.process(frame)\n> mask = results.segmentation_mask  # 人像区域是1，背景是0\n> ```\"\n\n**变体示例**\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 边缘不干净 | 调整阈值 | `mask > 0.5` 改成 `mask > 0.7` |\n| 想用自己的背景 | 加载自定义图片 | 用cv2.imread加载背景图 |\n| 帧率太低 | 降低分辨率 | 先resize再处理 |\n\n---\n\n### 步骤2：代码实践（35分钟）\n\n`#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"现在我们用`numpy.where`来替换背景：\n>\n> ```python\n> import numpy as np\n>\n> # 三通道掩膜\n> mask_3d = np.stack([mask, mask, mask], axis=-1)\n>\n> # 替换背景\n> output = np.where(mask_3d > 0.5, frame, background)\n> ```\n>\n> `np.where`的意思是：如果条件成立，用第一个值；否则用第二个值。\"\n\n---\n\n## 禁忌提醒\n\n- 图像尺寸不匹配——frame和background必须尺寸相同\n- 通道数不一致——都必须是3通道\n\n---\n\n## 核心知识点\n\n- Selfie Segmentation：人像分割模型\n- Mask掩膜：0/1遮罩原理\n- 背景融合：`numpy.where` 替换背景\n\n`#执行层` `#测评项`\n[UID: PYAI-24-08-001]\n[关联: PYAI-24-06-001 文件扫描（前置课程）]\n[关联: PYAI-24-10-001 虚拟墨镜（后续课程）]\n\n---\n\n[上一课](PYAI-2-4-06_文件扫描.md) | [模块概览](_模块概览.md) | [下一课](PYAI-2-4-10_虚拟墨镜.md)\n"
+}

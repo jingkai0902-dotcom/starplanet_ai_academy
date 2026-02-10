@@ -1,0 +1,12 @@
+{
+    "app_key": "你的钉钉应用AppKey",
+    "app_secret": "你的钉钉应用AppSecret",
+    "agent_id": "你的钉钉机器人AgentID",
+    "kb_path": "",
+    "llm_provider": "zhipu",
+    "llm_api_key": "你的智谱API Key",
+    "llm_base_url": "https://open.bigmodel.cn/api/paas/v4",
+    "llm_model": "glm-4.7",
+    "claude_api_key": "",
+    "claude_base_url": ""
+}

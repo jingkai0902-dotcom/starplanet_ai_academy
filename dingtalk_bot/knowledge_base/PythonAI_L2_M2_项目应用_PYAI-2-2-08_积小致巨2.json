@@ -1,0 +1,35 @@
+{
+  "title": "[PYAI-2-2-08] 积小致巨2",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M2_项目应用\\PYAI-2-2-08_积小致巨2.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-2-8 |\n| **课程名称** | 积小致巨2 |\n| **认知负荷** | 高 |\n| **核心技能** | 多角色联动、列表数据存取、贪食蛇逻辑 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天做经典游戏**贪食蛇**！蛇的身体是一串方块，吃到食物就变长。\"\n>\n> \"**贪食蛇的核心逻辑**：\n> 1. 蛇身用**列表**存储每个方块的坐标\n> 2. 移动时：头部添加新位置，尾部删除\n> 3. 吃到食物：头部添加，尾部不删除（变长）\n>\n> ```python\n> snake = [(100, 100), (80, 100), (60, 100)]  # 头在前\n> direction = (20, 0)  # 向右移动\n>\n> # 移动\n> new_head = (snake[0][0] + direction[0], snake[0][1] + direction[1])\n> snake.insert(0, new_head)  # 头部添加\n> snake.pop()  # 尾部删除\n> ```\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\nimport pygame\nimport random\n\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\n\nGRID_SIZE = 20\n\n# 蛇身（列表存储坐标）\nsnake = [(200, 200), (180, 200), (160, 200)]\ndirection = (GRID_SIZE, 0)  # 初始向右\n\n# 食物\nfood = (random.randint(0, 39) * GRID_SIZE, random.randint(0, 29) * GRID_SIZE)\n\nscore = 0\ngame_over = False\n\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT and direction != (GRID_SIZE, 0):\n                direction = (-GRID_SIZE, 0)\n            elif event.key == pygame.K_RIGHT and direction != (-GRID_SIZE, 0):\n                direction = (GRID_SIZE, 0)\n            elif event.key == pygame.K_UP and direction != (0, GRID_SIZE):\n                direction = (0, -GRID_SIZE)\n            elif event.key == pygame.K_DOWN and direction != (0, -GRID_SIZE):\n                direction = (0, GRID_SIZE)\n\n    if not game_over:\n        # 计算新头部位置\n        new_head = (snake[0][0] + direction[0], snake[0][1] + direction[1])\n\n        # 边界检测\n        if new_head[0] < 0 or new_head[0] >= 800 or new_head[1] < 0 or new_head[1] >= 600:\n            game_over = True\n\n        # 自身碰撞检测\n        if new_head in snake:\n            game_over = True\n\n        if not game_over:\n            snake.insert(0, new_head)\n\n            # 吃到食物\n            if new_head == food:\n                score += 10\n                food = (random.randint(0, 39) * GRID_SIZE, random.randint(0, 29) * GRID_SIZE)\n            else:\n                snake.pop()  # 没吃到就删除尾部\n\n    # 绘制\n    screen.fill((0, 0, 0))\n\n    # 绘制食物\n    pygame.draw.rect(screen, (255, 0, 0), (food[0], food[1], GRID_SIZE-2, GRID_SIZE-2))\n\n    # 绘制蛇\n    for i, segment in enumerate(snake):\n        color = (0, 255, 0) if i == 0 else (0, 200, 0)  # 头部亮一点\n        pygame.draw.rect(screen, color, (segment[0], segment[1], GRID_SIZE-2, GRID_SIZE-2))\n\n    pygame.display.flip()\n    pygame.time.delay(100)  # 控制蛇的速度\n\npygame.quit()\n```\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 蛇移动太快 | 增加delay | 把100改成150或200 |\n| 想加障碍物 | 添加墙壁列表 | 碰到墙壁也游戏结束 |\n| 想显示分数 | 用font渲染 | 在屏幕上显示当前分数 |\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- ❌ 允许180度转向——蛇会撞到自己\n- ❌ 食物生成在蛇身上——需要检测避免\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- 列表作为数据结构：存储蛇身坐标\n- insert()和pop()：实现蛇的移动\n- 方向控制：防止180度转向\n\n---"
+    },
+    {
+      "title": "底层逻辑",
+      "content": "- **队列思想**：头部入队，尾部出队\n- **状态管理**：用变量控制游戏状态\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-22-08-001]\n\n---\n\n[上一课](PYAI-2-2-07_积小致巨1.md) | [下一课](PYAI-2-2-09_举重若轻1.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-2-08] 积小致巨2\n\n> **模块**：L2-M2 项目应用\n> **认知负荷**：高\n> **核心技能**：多角色联动、列表数据存取、贪食蛇逻辑\n> **UID**：PYAI-22-08-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-2-8 |\n| **课程名称** | 积小致巨2 |\n| **认知负荷** | 高 |\n| **核心技能** | 多角色联动、列表数据存取、贪食蛇逻辑 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天做经典游戏**贪食蛇**！蛇的身体是一串方块，吃到食物就变长。\"\n>\n> \"**贪食蛇的核心逻辑**：\n> 1. 蛇身用**列表**存储每个方块的坐标\n> 2. 移动时：头部添加新位置，尾部删除\n> 3. 吃到食物：头部添加，尾部不删除（变长）\n>\n> ```python\n> snake = [(100, 100), (80, 100), (60, 100)]  # 头在前\n> direction = (20, 0)  # 向右移动\n>\n> # 移动\n> new_head = (snake[0][0] + direction[0], snake[0][1] + direction[1])\n> snake.insert(0, new_head)  # 头部添加\n> snake.pop()  # 尾部删除\n> ```\"\n\n---\n\n## 核心代码模式\n\n```python\nimport pygame\nimport random\n\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\n\nGRID_SIZE = 20\n\n# 蛇身（列表存储坐标）\nsnake = [(200, 200), (180, 200), (160, 200)]\ndirection = (GRID_SIZE, 0)  # 初始向右\n\n# 食物\nfood = (random.randint(0, 39) * GRID_SIZE, random.randint(0, 29) * GRID_SIZE)\n\nscore = 0\ngame_over = False\n\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n        if event.type == pygame.KEYDOWN:\n            if event.key == pygame.K_LEFT and direction != (GRID_SIZE, 0):\n                direction = (-GRID_SIZE, 0)\n            elif event.key == pygame.K_RIGHT and direction != (-GRID_SIZE, 0):\n                direction = (GRID_SIZE, 0)\n            elif event.key == pygame.K_UP and direction != (0, GRID_SIZE):\n                direction = (0, -GRID_SIZE)\n            elif event.key == pygame.K_DOWN and direction != (0, -GRID_SIZE):\n                direction = (0, GRID_SIZE)\n\n    if not game_over:\n        # 计算新头部位置\n        new_head = (snake[0][0] + direction[0], snake[0][1] + direction[1])\n\n        # 边界检测\n        if new_head[0] < 0 or new_head[0] >= 800 or new_head[1] < 0 or new_head[1] >= 600:\n            game_over = True\n\n        # 自身碰撞检测\n        if new_head in snake:\n            game_over = True\n\n        if not game_over:\n            snake.insert(0, new_head)\n\n            # 吃到食物\n            if new_head == food:\n                score += 10\n                food = (random.randint(0, 39) * GRID_SIZE, random.randint(0, 29) * GRID_SIZE)\n            else:\n                snake.pop()  # 没吃到就删除尾部\n\n    # 绘制\n    screen.fill((0, 0, 0))\n\n    # 绘制食物\n    pygame.draw.rect(screen, (255, 0, 0), (food[0], food[1], GRID_SIZE-2, GRID_SIZE-2))\n\n    # 绘制蛇\n    for i, segment in enumerate(snake):\n        color = (0, 255, 0) if i == 0 else (0, 200, 0)  # 头部亮一点\n        pygame.draw.rect(screen, color, (segment[0], segment[1], GRID_SIZE-2, GRID_SIZE-2))\n\n    pygame.display.flip()\n    pygame.time.delay(100)  # 控制蛇的速度\n\npygame.quit()\n```\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 蛇移动太快 | 增加delay | 把100改成150或200 |\n| 想加障碍物 | 添加墙壁列表 | 碰到墙壁也游戏结束 |\n| 想显示分数 | 用font渲染 | 在屏幕上显示当前分数 |\n\n---\n\n## 禁忌提醒\n\n- ❌ 允许180度转向——蛇会撞到自己\n- ❌ 食物生成在蛇身上——需要检测避免\n\n---\n\n## 核心知识点\n\n- 列表作为数据结构：存储蛇身坐标\n- insert()和pop()：实现蛇的移动\n- 方向控制：防止180度转向\n\n---\n\n## 底层逻辑\n\n- **队列思想**：头部入队，尾部出队\n- **状态管理**：用变量控制游戏状态\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-22-08-001]\n\n---\n\n[上一课](PYAI-2-2-07_积小致巨1.md) | [下一课](PYAI-2-2-09_举重若轻1.md) | [返回模块概览](_模块概览.md)\n"
+}

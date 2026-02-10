@@ -1,0 +1,23 @@
+{
+  "title": "[PYAI-MP-06] 硬件驱动封装",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\MP\\PYAI-MP-06_硬件驱动封装.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L6 |\n| **课程名称** | 硬件驱动封装 |\n| **认知负荷** | 中-高 |\n| **核心技能** | import三种方式、NPY部件库、help()/test()标准接口 |\n| **项目内容** | 调用封装驱动 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**教师话术**\n> \"前两节课我们学了类和实例。现在来看看**NovaMP部件库**——它就是把各种传感器的驱动封装成了类！\"\n>\n> \"**三种import方式**：\n> ```python\n> # 方式1：导入整个模块\n> import novaMP\n> led = novaMP.LED(pin)\n>\n> # 方式2：从模块导入特定类\n> from novaMP import LED\n> led = LED(pin)\n>\n> # 方式3：导入所有（不推荐）\n> from novaMP import *\n> ```\n>\n> **标准化接口**：所有NovaMP驱动都有统一的方法\n> - `help()` - 查看使用说明\n> - `test()` - 测试硬件是否正常\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\n# 导入NovaMP部件库\nfrom novaMP import LED, Button\n\n# 创建LED实例\nled = LED(2)\n\n# 查看帮助\nled.help()  # 显示LED的使用说明\n\n# 测试硬件\nled.test()  # LED会闪烁几下，确认硬件正常\n\n# 正常使用\nled.fill((255, 0, 0))  # 设置红色\nled.write()            # 更新显示\n```\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 不知道用哪种import | 推荐方式2 | \"from...import最清晰，知道导入了什么\" |\n| 硬件不工作 | 先用test() | \"先测试硬件好坏，再检查代码\" |\n| 不会用新驱动 | 先用help() | \"不知道怎么用就先看帮助文档\" |\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L6-001]\n\n---\n\n[上一课](PYAI-MP-05_类与实例2.md) | [模块概览](_模块概览.md) | [下一课](PYAI-MP-07_温湿度数据采集.md)"
+    }
+  ],
+  "full_content": "# [PYAI-MP-06] 硬件驱动封装\n\n> **模块**：MicroPython硬件开发\n> **认知负荷**：中-高\n> **核心技能**：import三种方式、NPY部件库、help()/test()标准接口\n> **UID**：PYAI-MP-06-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L6 |\n| **课程名称** | 硬件驱动封装 |\n| **认知负荷** | 中-高 |\n| **核心技能** | import三种方式、NPY部件库、help()/test()标准接口 |\n| **项目内容** | 调用封装驱动 |\n\n---\n\n## 详细教学流程\n\n**教师话术**\n> \"前两节课我们学了类和实例。现在来看看**NovaMP部件库**——它就是把各种传感器的驱动封装成了类！\"\n>\n> \"**三种import方式**：\n> ```python\n> # 方式1：导入整个模块\n> import novaMP\n> led = novaMP.LED(pin)\n>\n> # 方式2：从模块导入特定类\n> from novaMP import LED\n> led = LED(pin)\n>\n> # 方式3：导入所有（不推荐）\n> from novaMP import *\n> ```\n>\n> **标准化接口**：所有NovaMP驱动都有统一的方法\n> - `help()` - 查看使用说明\n> - `test()` - 测试硬件是否正常\"\n\n---\n\n## 核心代码模式\n\n```python\n# 导入NovaMP部件库\nfrom novaMP import LED, Button\n\n# 创建LED实例\nled = LED(2)\n\n# 查看帮助\nled.help()  # 显示LED的使用说明\n\n# 测试硬件\nled.test()  # LED会闪烁几下，确认硬件正常\n\n# 正常使用\nled.fill((255, 0, 0))  # 设置红色\nled.write()            # 更新显示\n```\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 不知道用哪种import | 推荐方式2 | \"from...import最清晰，知道导入了什么\" |\n| 硬件不工作 | 先用test() | \"先测试硬件好坏，再检查代码\" |\n| 不会用新驱动 | 先用help() | \"不知道怎么用就先看帮助文档\" |\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L6-001]\n\n---\n\n[上一课](PYAI-MP-05_类与实例2.md) | [模块概览](_模块概览.md) | [下一课](PYAI-MP-07_温湿度数据采集.md)\n"
+}

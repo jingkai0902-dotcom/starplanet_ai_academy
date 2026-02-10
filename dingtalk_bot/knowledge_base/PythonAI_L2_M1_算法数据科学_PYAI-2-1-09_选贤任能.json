@@ -1,0 +1,31 @@
+{
+  "title": "[PYAI-2-1-09] 选贤任能",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M1_算法数据科学\\PYAI-2-1-09_选贤任能.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-9 |\n| **课程名称** | 选贤任能 |\n| **认知负荷** | 高 |\n| **核心技能** | 选择排序、插入排序、排序对比 |\n| **项目内容** | 排序算法对比 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"上节课学了冒泡排序，今天学两种新的排序算法！\"\n>\n> \"**选择排序**：每次选最小的放前面\n> ```python\n> def selection_sort(arr):\n>     n = len(arr)\n>     for i in range(n):\n>         # 找到最小元素的位置\n>         min_idx = i\n>         for j in range(i+1, n):\n>             if arr[j] < arr[min_idx]:\n>                 min_idx = j\n>         # 交换到前面\n>         arr[i], arr[min_idx] = arr[min_idx], arr[i]\n>     return arr\n> ```\n>\n> **插入排序**：像整理扑克牌，每张牌插入正确位置\n> ```python\n> def insertion_sort(arr):\n>     for i in range(1, len(arr)):\n>         key = arr[i]\n>         j = i - 1\n>         # 把比key大的元素往后移\n>         while j >= 0 and arr[j] > key:\n>             arr[j+1] = arr[j]\n>             j -= 1\n>         arr[j+1] = key\n>     return arr\n> ```\"\n\n**步骤2：代码实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"排序算法大比拼：\n> 1. 用三种排序算法排序同一组数据\n> 2. 统计每种算法的比较次数和交换次数\n> 3. 分析哪种算法更快\"\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 混淆三种排序 | 用动画演示 | 网上有很多排序可视化动画 |\n| 想知道最快的 | 介绍快速排序 | 高级课程会学O(n log n)的算法 |\n| 想排序字符串 | 演示字符串比较 | Python字符串按字典序比较 |\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\ndef sort_with_count(arr, sort_func):\n    \"\"\"带计数的排序包装器\"\"\"\n    comparisons = 0\n    swaps = 0\n    # 在排序函数中统计操作次数\n    result = sort_func(arr.copy())\n    return result, comparisons, swaps\n```\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 选择排序找最小值时索引错误——注意是min_idx不是min值\n- 插入排序边界条件——while循环要检查j >= 0\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- 选择排序：每次选最小，O(n²)\n- 插入排序：逐个插入正确位置，O(n²)\n- 排序对比：三种O(n²)排序各有特点\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-09-001]\n\n---\n\n[上一课](PYAI-2-1-08_拨乱反正.md) | [下一课](PYAI-2-1-10_文件读写.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-1-09] 选贤任能\n\n> **模块**：L2-M1 算法数据科学\n> **认知负荷**：高\n> **核心技能**：选择排序、插入排序、排序对比\n> **UID**：PYAI-21-09-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-1-9 |\n| **课程名称** | 选贤任能 |\n| **认知负荷** | 高 |\n| **核心技能** | 选择排序、插入排序、排序对比 |\n| **项目内容** | 排序算法对比 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（25分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"上节课学了冒泡排序，今天学两种新的排序算法！\"\n>\n> \"**选择排序**：每次选最小的放前面\n> ```python\n> def selection_sort(arr):\n>     n = len(arr)\n>     for i in range(n):\n>         # 找到最小元素的位置\n>         min_idx = i\n>         for j in range(i+1, n):\n>             if arr[j] < arr[min_idx]:\n>                 min_idx = j\n>         # 交换到前面\n>         arr[i], arr[min_idx] = arr[min_idx], arr[i]\n>     return arr\n> ```\n>\n> **插入排序**：像整理扑克牌，每张牌插入正确位置\n> ```python\n> def insertion_sort(arr):\n>     for i in range(1, len(arr)):\n>         key = arr[i]\n>         j = i - 1\n>         # 把比key大的元素往后移\n>         while j >= 0 and arr[j] > key:\n>             arr[j+1] = arr[j]\n>             j -= 1\n>         arr[j+1] = key\n>     return arr\n> ```\"\n\n**步骤2：代码实践（35分钟）** `#高负荷-产出` `#IFC-即时`\n\n**教师话术**\n> \"排序算法大比拼：\n> 1. 用三种排序算法排序同一组数据\n> 2. 统计每种算法的比较次数和交换次数\n> 3. 分析哪种算法更快\"\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 混淆三种排序 | 用动画演示 | 网上有很多排序可视化动画 |\n| 想知道最快的 | 介绍快速排序 | 高级课程会学O(n log n)的算法 |\n| 想排序字符串 | 演示字符串比较 | Python字符串按字典序比较 |\n\n---\n\n## 核心代码模式\n\n```python\ndef sort_with_count(arr, sort_func):\n    \"\"\"带计数的排序包装器\"\"\"\n    comparisons = 0\n    swaps = 0\n    # 在排序函数中统计操作次数\n    result = sort_func(arr.copy())\n    return result, comparisons, swaps\n```\n\n---\n\n## 禁忌提醒\n\n- 选择排序找最小值时索引错误——注意是min_idx不是min值\n- 插入排序边界条件——while循环要检查j >= 0\n\n---\n\n## 核心知识点\n\n- 选择排序：每次选最小，O(n²)\n- 插入排序：逐个插入正确位置，O(n²)\n- 排序对比：三种O(n²)排序各有特点\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-21-09-001]\n\n---\n\n[上一课](PYAI-2-1-08_拨乱反正.md) | [下一课](PYAI-2-1-10_文件读写.md) | [返回模块概览](_模块概览.md)\n"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-MP-05] 类与实例(2)",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\MP\\PYAI-MP-05_类与实例2.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L5 |\n| **课程名称** | 类与实例(2) |\n| **认知负荷** | 高 |\n| **核心技能** | self关键字、__init__初始化、实例属性 |\n| **项目内容** | 类的属性和方法 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**教师话术**\n> \"上节课我们学了类和实例的基本概念。今天深入学习两个重要知识点：\n>\n> **self关键字**：代表实例本身\n> - 在方法里用self访问实例的属性\n> - 方法的第一个参数必须是self\n>\n> **__init__方法**：初始化方法\n> - 创建实例时自动调用\n> - 用来设置实例的初始属性\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\nclass Student:\n    # 初始化方法，创建对象时自动调用\n    def __init__(self, name, score):\n        self.name = name   # 实例属性\n        self.score = score\n\n    # 实例方法\n    def introduce(self):\n        print(f'我是{self.name}，考了{self.score}分')\n\n# 创建实例时传入参数\ns1 = Student('小明', 98)\ns2 = Student('小红', 100)\n\n# 调用方法\ns1.introduce()  # 输出：我是小明，考了98分\ns2.introduce()  # 输出：我是小红，考了100分\n```\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 忘记写self | 强调规则 | \"方法的第一个参数必须是self，代表'我自己'\" |\n| __init__写错 | 强调双下划线 | \"左右各两个下划线，不是单下划线\" |\n| 不理解self | 用\"我\"类比 | \"self就是'我'，self.name就是'我的名字'\" |\n\n---"
+    },
+    {
+      "title": "禁忌提醒",
+      "content": "- 方法定义忘记self——TypeError错误\n- __init__写成_init_——不会自动调用\n- 类名用小写——应该用大驼峰命名法\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L5-001]\n\n---\n\n[上一课](PYAI-MP-04_类与实例1.md) | [模块概览](_模块概览.md) | [下一课](PYAI-MP-06_硬件驱动封装.md)"
+    }
+  ],
+  "full_content": "# [PYAI-MP-05] 类与实例(2)\n\n> **模块**：MicroPython硬件开发\n> **认知负荷**：高\n> **核心技能**：self关键字、__init__初始化、实例属性\n> **UID**：PYAI-MP-05-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | MP1-L5 |\n| **课程名称** | 类与实例(2) |\n| **认知负荷** | 高 |\n| **核心技能** | self关键字、__init__初始化、实例属性 |\n| **项目内容** | 类的属性和方法 |\n\n---\n\n## 详细教学流程\n\n**教师话术**\n> \"上节课我们学了类和实例的基本概念。今天深入学习两个重要知识点：\n>\n> **self关键字**：代表实例本身\n> - 在方法里用self访问实例的属性\n> - 方法的第一个参数必须是self\n>\n> **__init__方法**：初始化方法\n> - 创建实例时自动调用\n> - 用来设置实例的初始属性\"\n\n---\n\n## 核心代码模式\n\n```python\nclass Student:\n    # 初始化方法，创建对象时自动调用\n    def __init__(self, name, score):\n        self.name = name   # 实例属性\n        self.score = score\n\n    # 实例方法\n    def introduce(self):\n        print(f'我是{self.name}，考了{self.score}分')\n\n# 创建实例时传入参数\ns1 = Student('小明', 98)\ns2 = Student('小红', 100)\n\n# 调用方法\ns1.introduce()  # 输出：我是小明，考了98分\ns2.introduce()  # 输出：我是小红，考了100分\n```\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 忘记写self | 强调规则 | \"方法的第一个参数必须是self，代表'我自己'\" |\n| __init__写错 | 强调双下划线 | \"左右各两个下划线，不是单下划线\" |\n| 不理解self | 用\"我\"类比 | \"self就是'我'，self.name就是'我的名字'\" |\n\n---\n\n## 禁忌提醒\n\n- 方法定义忘记self——TypeError错误\n- __init__写成_init_——不会自动调用\n- 类名用小写——应该用大驼峰命名法\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-23-MP1-L5-001]\n\n---\n\n[上一课](PYAI-MP-04_类与实例1.md) | [模块概览](_模块概览.md) | [下一课](PYAI-MP-06_硬件驱动封装.md)\n"
+}

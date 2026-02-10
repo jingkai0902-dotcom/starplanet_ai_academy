@@ -1,0 +1,27 @@
+{
+  "title": "[PYAI-2-2-04] 规矩方圆",
+  "source": "C:\\Users\\Frank.J\\starplanet_ai_academy\\知识库\\萃取报告\\PythonAI\\L2\\M2_项目应用\\PYAI-2-2-04_规矩方圆.md",
+  "sections": [
+    {
+      "title": "课程基本信息",
+      "content": "| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-2-4 |\n| **课程名称** | 规矩方圆 |\n| **认知负荷** | 中-高 |\n| **核心技能** | pygame.draw.line()、二维列表、RGB色彩 |\n\n---"
+    },
+    {
+      "title": "详细教学流程",
+      "content": "**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天学习Pygame的**绑图函数**！用代码画出各种图形。\"\n>\n> \"**pygame.draw模块**：\n> ```python\n> # 画线\n> pygame.draw.line(screen, color, start_pos, end_pos, width)\n>\n> # 画矩形\n> pygame.draw.rect(screen, color, (x, y, width, height), width)\n>\n> # 画圆\n> pygame.draw.circle(screen, color, center, radius, width)\n> ```\n>\n> **RGB色彩**：\n> - (255, 0, 0) = 红色\n> - (0, 255, 0) = 绿色\n> - (0, 0, 255) = 蓝色\n> - (255, 255, 255) = 白色\n> - (0, 0, 0) = 黑色\"\n\n---"
+    },
+    {
+      "title": "核心代码模式",
+      "content": "```python\nimport pygame\n\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\n\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n\n    screen.fill((255, 255, 255))\n\n    # 画线（红色，从(100,100)到(300,300)，宽度3）\n    pygame.draw.line(screen, (255, 0, 0), (100, 100), (300, 300), 3)\n\n    # 画矩形（蓝色，位置(400,100)，大小200x150，边框宽度2）\n    pygame.draw.rect(screen, (0, 0, 255), (400, 100, 200, 150), 2)\n\n    # 画填充矩形（宽度为0表示填充）\n    pygame.draw.rect(screen, (0, 255, 0), (400, 300, 200, 150), 0)\n\n    # 画圆（黄色，圆心(200,400)，半径50，填充）\n    pygame.draw.circle(screen, (255, 255, 0), (200, 400), 50, 0)\n\n    pygame.display.flip()\n\npygame.quit()\n```\n\n---"
+    },
+    {
+      "title": "变体示例",
+      "content": "| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 分不清填充和边框 | 演示width参数 | width=0填充，width>0画边框 |\n| 想画更多图形 | 介绍其他函数 | polygon多边形、ellipse椭圆 |\n| 颜色不对 | 检查RGB顺序 | 是(R,G,B)不是(B,G,R) |\n\n---"
+    },
+    {
+      "title": "核心知识点",
+      "content": "- pygame.draw.line()：画线\n- pygame.draw.rect()：画矩形\n- pygame.draw.circle()：画圆\n- RGB色彩模型：三原色混合\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-22-04-001]\n\n---\n\n[上一课](PYAI-2-2-03_弹幕生成器.md) | [下一课](PYAI-2-2-05_蒙特卡洛法.md) | [返回模块概览](_模块概览.md)"
+    }
+  ],
+  "full_content": "# [PYAI-2-2-04] 规矩方圆\n\n> **模块**：L2-M2 项目应用\n> **认知负荷**：中-高\n> **核心技能**：pygame.draw.line()、二维列表、RGB色彩\n> **UID**：PYAI-22-04-001\n\n---\n\n## 课程基本信息\n\n| 项目 | 内容 |\n|------|------|\n| **课程编号** | 2-2-4 |\n| **课程名称** | 规矩方圆 |\n| **认知负荷** | 中-高 |\n| **核心技能** | pygame.draw.line()、二维列表、RGB色彩 |\n\n---\n\n## 详细教学流程\n\n**步骤1：知识讲解（20分钟）** `#中负荷-操练` `#IFC-即时`\n\n**教师话术**\n> \"今天学习Pygame的**绑图函数**！用代码画出各种图形。\"\n>\n> \"**pygame.draw模块**：\n> ```python\n> # 画线\n> pygame.draw.line(screen, color, start_pos, end_pos, width)\n>\n> # 画矩形\n> pygame.draw.rect(screen, color, (x, y, width, height), width)\n>\n> # 画圆\n> pygame.draw.circle(screen, color, center, radius, width)\n> ```\n>\n> **RGB色彩**：\n> - (255, 0, 0) = 红色\n> - (0, 255, 0) = 绿色\n> - (0, 0, 255) = 蓝色\n> - (255, 255, 255) = 白色\n> - (0, 0, 0) = 黑色\"\n\n---\n\n## 核心代码模式\n\n```python\nimport pygame\n\npygame.init()\nscreen = pygame.display.set_mode((800, 600))\n\nrunning = True\nwhile running:\n    for event in pygame.event.get():\n        if event.type == pygame.QUIT:\n            running = False\n\n    screen.fill((255, 255, 255))\n\n    # 画线（红色，从(100,100)到(300,300)，宽度3）\n    pygame.draw.line(screen, (255, 0, 0), (100, 100), (300, 300), 3)\n\n    # 画矩形（蓝色，位置(400,100)，大小200x150，边框宽度2）\n    pygame.draw.rect(screen, (0, 0, 255), (400, 100, 200, 150), 2)\n\n    # 画填充矩形（宽度为0表示填充）\n    pygame.draw.rect(screen, (0, 255, 0), (400, 300, 200, 150), 0)\n\n    # 画圆（黄色，圆心(200,400)，半径50，填充）\n    pygame.draw.circle(screen, (255, 255, 0), (200, 400), 50, 0)\n\n    pygame.display.flip()\n\npygame.quit()\n```\n\n---\n\n## 变体示例\n\n| 学生情况 | 调整方案 | 说明 |\n|----------|----------|------|\n| 分不清填充和边框 | 演示width参数 | width=0填充，width>0画边框 |\n| 想画更多图形 | 介绍其他函数 | polygon多边形、ellipse椭圆 |\n| 颜色不对 | 检查RGB顺序 | 是(R,G,B)不是(B,G,R) |\n\n---\n\n## 核心知识点\n\n- pygame.draw.line()：画线\n- pygame.draw.rect()：画矩形\n- pygame.draw.circle()：画圆\n- RGB色彩模型：三原色混合\n\n---\n\n`#执行层` `#测评项`\n[UID: PYAI-22-04-001]\n\n---\n\n[上一课](PYAI-2-2-03_弹幕生成器.md) | [下一课](PYAI-2-2-05_蒙特卡洛法.md) | [返回模块概览](_模块概览.md)\n"
+}
