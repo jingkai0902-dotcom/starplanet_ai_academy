@@ -30,8 +30,70 @@ import {
   StarOutlined,
   SyncOutlined,
 } from '@ant-design/icons';
-const Column = (_props: any) => null;
-const Line = (_props: any) => null;
+const toChartNumber = (v: any): number => {
+  const n = Number(v);
+  return Number.isFinite(n) ? n : 0;
+};
+
+const Column = (props: any) => {
+  const data = Array.isArray(props?.data) ? props.data.slice(0, 40) : [];
+  const xField = props?.xField || 'x';
+  const yField = props?.yField || 'y';
+  const max = Math.max(...data.map((d: any) => toChartNumber(d?.[yField])), 1);
+
+  return (
+    <div style={{ height: props?.height || 260, display: 'flex', alignItems: 'flex-end', gap: 8, overflowX: 'auto', padding: '8px 4px' }}>
+      {data.length === 0 ? (
+        <div style={{ color: '#999', width: '100%', textAlign: 'center' }}>暂无数据</div>
+      ) : (
+        data.map((d: any, i: number) => {
+          const v = toChartNumber(d?.[yField]);
+          const h = Math.max(6, (v / max) * 170);
+          return (
+            <div key={i} style={{ minWidth: 24, textAlign: 'center' }}>
+              <div style={{ height: `${h}px`, background: '#1677ff', borderRadius: 4 }} />
+              <div style={{ fontSize: 10, color: '#666', marginTop: 4, whiteSpace: 'nowrap' }}>
+                {String(d?.[xField] ?? i)}
+              </div>
+            </div>
+          );
+        })
+      )}
+    </div>
+  );
+};
+
+const Line = (props: any) => {
+  const data = Array.isArray(props?.data) ? props.data.slice(0, 80) : [];
+  const yField = props?.yField || 'y';
+  const w = 700;
+  const h = props?.height || 260;
+
+  if (data.length === 0) {
+    return <div style={{ height: h, color: '#999', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>暂无数据</div>;
+  }
+
+  const ys = data.map((d: any) => toChartNumber(d?.[yField]));
+  const min = Math.min(...ys, 0);
+  const max = Math.max(...ys, 1);
+  const range = max - min || 1;
+  const left = 14;
+  const top = 12;
+  const plotW = w - 28;
+  const plotH = h - 24;
+
+  const points = ys.map((y, i) => {
+    const x = left + (i / Math.max(ys.length - 1, 1)) * plotW;
+    const py = top + (1 - (y - min) / range) * plotH;
+    return `${x},${py}`;
+  }).join(' ');
+
+  return (
+    <svg viewBox={`0 0 ${w} ${h}`} style={{ width: '100%', height: h }}>
+      <polyline fill="none" stroke="#1677ff" strokeWidth="2" points={points} />
+    </svg>
+  );
+};
 import {
   getAdminDashboard,
   type AdminOverview,

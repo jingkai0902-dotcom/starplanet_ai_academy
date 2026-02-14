@@ -34,8 +34,80 @@ import {
   CheckCircleOutlined,
   ExclamationCircleOutlined,
 } from '@ant-design/icons';
-const Line = (_props: any) => null;
-const Gauge = (_props: any) => null;
+const toChartNumber = (v: any): number => {
+  const n = Number(v);
+  return Number.isFinite(n) ? n : 0;
+};
+
+const Line = (props: any) => {
+  const data = Array.isArray(props?.data) ? props.data.slice(0, 80) : [];
+  const yField = props?.yField || 'y';
+  const w = 700;
+  const h = props?.height || 260;
+
+  if (data.length === 0) {
+    return <div style={{ height: h, color: '#999', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>暂无数据</div>;
+  }
+
+  const ys = data.map((d: any) => toChartNumber(d?.[yField]));
+  const min = Math.min(...ys, 0);
+  const max = Math.max(...ys, 1);
+  const range = max - min || 1;
+  const left = 14;
+  const top = 12;
+  const plotW = w - 28;
+  const plotH = h - 24;
+
+  const points = ys.map((y, i) => {
+    const x = left + (i / Math.max(ys.length - 1, 1)) * plotW;
+    const py = top + (1 - (y - min) / range) * plotH;
+    return `${x},${py}`;
+  }).join(' ');
+
+  return (
+    <svg viewBox={`0 0 ${w} ${h}`} style={{ width: '100%', height: h }}>
+      <polyline fill="none" stroke="#1677ff" strokeWidth="2" points={points} />
+    </svg>
+  );
+};
+
+const Gauge = (props: any) => {
+  const p = Math.max(0, Math.min(1, toChartNumber(props?.percent)));
+  const deg = p * 360;
+  const h = props?.height || 220;
+
+  return (
+    <div style={{ height: h, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div
+        style={{
+          width: 160,
+          height: 160,
+          borderRadius: '50%',
+          background: `conic-gradient(#1677ff ${deg}deg, #f0f0f0 0deg)`,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <div
+          style={{
+            width: 118,
+            height: 118,
+            borderRadius: '50%',
+            background: '#fff',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            fontWeight: 600,
+            color: '#1677ff',
+          }}
+        >
+          {(p * 100).toFixed(1)}%
+        </div>
+      </div>
+    </div>
+  );
+};
 import { useResponsive } from '../hooks/useResponsive';
 import {
   getDashboardOverview,
